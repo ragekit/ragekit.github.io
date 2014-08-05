@@ -2,9 +2,9 @@
 ---
 
 $dark-gray: #333;
-$menuSelected : #DEDEDE;
-$menuNotSelected : #EFEFEF;
-$menuNotSelectedColor : #000;
+$menuSelected : #EEE;
+$menuNotSelected : #fff;
+$menuNotSelectedColor : #777;
 $menuSize : 150px;
 $footerSize : 50px;
 $minWidth : 1280px;
@@ -68,15 +68,15 @@ body{
   z-index:300;
 min-width:$minWidth;
   ul{
+    position:absolute;
     list-style-type: none;
     //text-transform:uppercase;
     font-weight:300;
     font-size:15px;
-    float:right;
     margin:0;
     padding:0;
-    margin-top:64px;
-    margin-right:100px;
+    top:64px;
+    right:100px;
     z-index:1000;
     li{
       display:inline-block;
@@ -136,10 +136,10 @@ div.mainText,.homeContent{
     font-family: 'Roboto', sans-serif;
   }
   p:first-of-type:first-letter{
-    font-size:43px;
+    font-size:45px;
     float:left;
     line-height:40px;
-    margin-top:2px;
+    margin-top:3px;
     margin-right:3px;
   }
 
@@ -387,39 +387,43 @@ div.mainText,.homeContent{
     text-align:center;
 
     .prevArrow,.nextArrow{
-      position:absolute;
-
+      width:30px;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
       img{
         height:40px;
       }
     }
 
     .prevArrow{
-      margin-left:-90px;
-      img{
-        position:relative;
-        top:15px;
-        left:0px;
-        transition:all .2s;
-      }
-      img:hover{
-        left:-3px;
-        transition:all .2s;
-      }
-    }
-    .nextArrow{
-      margin-left:-50px;
-      img{
-        position:relative;
-        top:15px;
-        left:0px;
-        transition:all .2s;
-      }
-      img:hover{
-        left:3px;
-        transition:all .2s;
-      }
-    }
+  left:-880px;
+  img{
+    position:relative;
+    top:15px;
+    left:0px;
+    transition:all .2s;
+  }
+  img:hover{
+    left:-3px;
+    transition:all .2s;
+  }
+}
+.nextArrow{
+  left:-820px;
+  img{
+    position:relative;
+    top:15px;
+    left:0px;
+    transition:all .2s;
+  }
+  img:hover{
+    left:3px;
+    transition:all .2s;
+  }
+}
 
 
 
@@ -471,7 +475,7 @@ div.mainText,.homeContent{
     overflow-y: scroll;
     li:not(.selected){
       background-color:$menuNotSelected;
-      a{
+      a div span{
         color:$menuNotSelectedColor !important;
       }
       //border-bottom:1px dotted \\\$menuNotSelectedColor;
@@ -479,7 +483,7 @@ div.mainText,.homeContent{
     }
     li:not(.selected):hover{
       background-color:$menuSelected;
-      a{
+      a div span{
         color:black !important;
         transition:.3s;
       }

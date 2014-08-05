@@ -3,7 +3,7 @@ layout: project
 title:  "Twitter in 24h"
 subtitle: "Choose your own Twitter adventure"
 permalink: twitterin24h
-cover: twitter/twitter.png
+cover: twitter/twitter.jpg
 shortDes:  A snapshot of 24 hours of my twitter feed built like a choose-your-own-adventure book
 color: 55ACEE
 what: Concept/Development

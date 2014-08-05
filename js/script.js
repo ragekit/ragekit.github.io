@@ -177,6 +177,9 @@
     }
     openedUp = up;
     menuOpened = true;
+
+    scroll();
+
   }
 
   function menuOut(callback) {
@@ -275,7 +278,7 @@
   resize();
 
   menuDiv.style.position = "absolute";
-  document.onscroll = scroll;
+  window.onscroll = scroll;
 
 
   var prev = document.getElementsByClassName("prevArrow")[0];
