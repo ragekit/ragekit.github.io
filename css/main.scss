@@ -117,12 +117,7 @@ background-size: cover;
     display:block;
 }
 
-.homeContent{
-  a{
-    color:$dark-gray;
-    font-weight:700;
-  }
-}
+
 
 div.mainText,.homeContent{
   width:500px;
@@ -161,9 +156,14 @@ div.mainText,.homeContent{
     transition:all .5s;
   }
 }
-
 .homeContent{
+  a{
+    color:$dark-gray;
+    font-weight:700;
+  }
+  margin-bottom:100px;
   width:550px;
+
 }
 
 .homeWrapper{
