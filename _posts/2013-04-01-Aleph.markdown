@@ -1,0 +1,25 @@
+---
+layout: project
+title:  "Aleph"
+subtitle: "A collaborative reading framework"
+permalink: aleph
+cover: aleph/aleph.png
+shortDes: A concept about reading and shaping stories together.
+color: A59F26
+what: Everything
+where: Geneva
+linkName : pdf
+link : assets/aleph/explanation.pdf
+---
+
+###Multiplayer reading.
+This project was made during a small workshop about the work of Jorge Luis Borges and it's link to hypertext narratives. I tried to build a way to read together in collaboration. A story, in this framework, is separated into different parts given to different people. Each time they read a passage, they gather and discuss about what they read to take decisions for their next reading session. Indeed: reading a part can have consequences on what others are reading, because it fixes what has been read into reality.
+
+####The story changes as it is read
+For instance, if a person read some vital information about a suspect in a police novel, this information would be available to the main character in a further questioning.
+
+Paths emerge, are closed, get mixed up, depending on what is read.
+
+You can download the pdf of my presentation on the right collumn
+
+![]({{ site.baseurl }}assets/aleph/1.png)

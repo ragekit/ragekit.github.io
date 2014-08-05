@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrap">
+      {{ content }}
+      </div>
+    </div>
+
+    <script type="text/javascript" src="{{ "js/CSSPlugin.min.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ "js/EasePack.min.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ "js/TweenLite.min.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ "js/rk.js" | prepend: site.baseurl }}"></script>
+    </body>
+</html>

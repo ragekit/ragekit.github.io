@@ -1,0 +1,22 @@
+---
+layout: default
+title : "Benjamin Gattet || Art and Play."
+subtitle : "Menu"
+---
+
+<div class="home">
+{% include menu.html %}
+
+<div class="homeWrapper">
+
+<div class="homeContent">
+{% capture home %}{% include home.markdown %}{% endcapture %}
+{{ home | markdownify }}
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<script type="text/javascript" src="{{ "js/smallscript.js" | prepend: site.baseurl }}"></script>
+
+</div>

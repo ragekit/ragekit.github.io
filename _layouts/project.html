@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="lightbox"></div>
+<div class="cover" style="background-image:url({{site.baseurl}}assets/{{ page.cover }})"></div>
+<div class="project">
+
+    {% include menu.html %}
+  <article class="project-content">
+
+  <div class="shortDes">{{page.shortDes}}</div>
+  <hr/>
+  <ul class="metas">
+    <li class="when"><span class="left">When :</span> <span class="right">{{page.date | date: "%Y"}}</span></li>
+      <li class="where"><span class="left">Where :</span> <span class="right">{{page.where}}</span></li>
+      <li class="what"><span class="left">What :</span> <span class="right">{{page.what | replace:'/','<br/>'}}</span></li>
+      {% if page.with != null %}
+      <li class="with"><span class="left">With :</span> <span class="right">{{page.with | replace:'/','<br/>'}}</span></li>
+      {% endif %}
+      {% if page.link != null %}
+      {% if page.link contains "http" %}
+      <a href="{{page.link}}"><li class="link">{{page.linkName}}</li></a>
+      {% else %}
+      <a href="{{ page.link | prepend: site.baseurl }}"><li class="link">{{page.linkName}}</li></a>
+      {% endif %}
+      {% endif %}
+  </ul>
+  <div class="mainText">
+  {{ content }}
+  </div>
+  </article>
+  {% include footer.html %}
+
+  {% if page.color != null %}
+  <style>
+  .mainText p:first-of-type:first-letter{
+    color:#{{ page.color }}
+  }
+  ul.metas span.right{
+    color:#{{ page.color }}
+  }
+  h3:before,h4:before,h3:after,h4:after{
+    color:#{{ page.color }}
+  }
+
+  .mainText a{
+    color:#{{ page.color }}
+  }
+    </style>
+    {% endif %}
+
+  <div style="clear:both"></div>
+
+  <script type="text/javascript" src="{{ "js/script.js" | prepend: site.baseurl }}"></script>
+
+</div>

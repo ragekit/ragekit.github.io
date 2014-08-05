@@ -1,0 +1,35 @@
+---
+layout: project
+title:  "7911"
+subtitle: "Alternate reality Biological Computers"
+permalink: "7911"
+cover: 7911/7911.png
+shortDes : Real time strategy game taking place inside your computer.
+color: 5DA333
+what: "Concept/Game-Design/Development"
+with: Charles Chalas
+where: Paris
+---
+
+###Vitruvia Science, gateway to the future
+
+Welcome to the Vitruvia Science Defense Agency highly classified project 7911. This project is a biological experiment disguised as a real time strategy, management game. The project was first put together by Charles Chalas and Benjamin Gattet when they were both students at Gobelins Paris.
+
+As a scientist working with us, you'll have a colony of  newly discovered digital bacteries at your command. These little creatures live inside your company-issued biological computer, and their well-being directly impacts its performance, so treat them carefully.
+
+####Watch and learn from a colony of digital bacteries
+Your goal is to analyse the behaviour of your colony and to try to discover what can be done with them. Previous research has discovered that these bacteria actually have different "types" they can evolve into, making them faster, or stronger.
+Besides, as they are part of your computer, the more digital bacteria you have, the faster your computer will be and the quicker you will manage to discover new abilities and functions in your interface.
+
+###Check their well being while away
+Since your colony continues to thrive even when you're not at your computer, Vitruvia also issued you a special company smartphone that will allow you to check on your colony while you are away. You'll also be able to upload some special bacteria to it and try to interact with them.
+
+*_0_00°LL1P2OE3°°40 S_SECURITYNOTE78439_FOR_YOU_EYES_ONYLYFLM_ never believed that experimenters would create such a special emotional bond with their test subjects, some even think that they are capable of sentient thoughts and of feeling pain.
+This has slowed down our research because some experimenters refused to execute orders we gave them. Some even tried to use the digital bacteria against us. They have now been terminated.
+Hopefully, in the future, we will find new collaborators that won't have misplaced guilt and won't put themselves at the forefront of the scientific battle.*
+
+![]({{ site.baseurl }}assets/7911/0.png)
+![]({{ site.baseurl }}assets/7911/1.png)
+![]({{ site.baseurl }}assets/7911/2.png)
+![]({{ site.baseurl }}assets/7911/3.png)
+![]({{ site.baseurl }}assets/7911/4.png)

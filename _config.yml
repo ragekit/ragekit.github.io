@@ -1,0 +1,13 @@
+# Site settings
+title: ragek.it
+email: bgattet@gmail.com
+description: "Portfolio of @ragekit"
+#baseurl: "/u/10148883/"
+baseurl: "/"
+url: "http://yourdomain.com"
+twitter_username: ragekit
+github_username:  ragekit
+
+# Build settings
+markdown: kramdown
+permalink: pretty
