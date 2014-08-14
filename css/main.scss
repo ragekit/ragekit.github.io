@@ -99,6 +99,7 @@ min-width:$minWidth;
     }
   }
   canvas{
+    position:absolute;
     margin-top:44px;
     margin-left:100px;
     z-index:1000;
@@ -171,7 +172,9 @@ div.mainText,.homeContent{
   margin:0 auto;
   margin-top:200px;
 }
-
+.home{
+  min-width:$minWidth;
+}
 .project
 {
   margin:0 auto;

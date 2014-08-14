@@ -5,7 +5,6 @@
   var cover = document.getElementsByClassName("cover")[0];
   var projectStartHeight = 0;
   var menuDiv = document.getElementsByClassName("menu")[0];
-  var mainMenu = document.getElementsByClassName("mainMenu")[0];
 
   var lis = menuDiv.getElementsByTagName("li");
   lis = Array.prototype.slice.call(lis, 0);
@@ -33,6 +32,8 @@
     // cover.style.height = window.innerHeight + "px";
     // cover.style.width = window.innerWidth + "px";
     //
+
+    console.log("resize");
     projects[0].style.top = (window.innerHeight - 150) +
       "px";
     projects[0].style.position = "relative";

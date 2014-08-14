@@ -26,7 +26,6 @@
       // cover.style.height = window.innerHeight + "px";
       // cover.style.width = window.innerWidth + "px";
       //
-
       ulContainer.style.height = window.innerHeight + "px";
       menuUl.style.height = (window.innerHeight-150) + "px";
       menuUl.style.width = (window.innerWidth + 15) + "px";
