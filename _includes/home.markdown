@@ -1,4 +1,4 @@
-Benjamin Gattet, who is also known as “ragekit” by almost 2 people on the internet, is a French multimedia artist with an interest in video games, especially all the new things that can be done with them.
+Benjamin Gattet is a French multimedia artist with an interest in video games, especially all the new things that can be done with them.
 
 He's freshly out of the the University of Art and Design of Geneva (HEAD) where he studied media design. Before that, he also studied multimedia and digital design at Gobelins, the prestigious school of visual communication in Paris.
 
