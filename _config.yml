@@ -4,9 +4,14 @@ email: bgattet@gmail.com
 description: "Portfolio of @ragekit"
 baseurl: "/"
 url: "http://yourdomain.com"
+encoding: utf-8
 twitter_username: ragekit
 github_username:  ragekit
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+#necesarry for windows scss compilation (bug)
+sass:
+    sass_dir: css
