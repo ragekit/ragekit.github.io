@@ -1,14 +1,19 @@
 ---
 ---
 $dark-gray: #333333 ;
-$menuSelected : #DADADA;
+
 $menuNotSelected : #fff;
-$menuNotSelectedColor : #777;
+$menuNotSelectedColor : #000;
 $menuSize : 150px;
 $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#EAEAEA;
-$bckground: #F1F1F1;
+$bckground: #FFF;
+$hover : #E5E5E5;
+$menuSelected : $hover;
+
+$headerColor : #F5F5F5;
+
 body{
   margin:0;
   padding:0;
@@ -85,7 +90,7 @@ min-width:$minWidth;
       }
     }
     li.licontent{
-      background:linear-gradient( $light-gray, $light-gray) no-repeat;
+      background:linear-gradient( $hover, $hover) no-repeat;
       background-size:0% 100%;
       background-position:center;
       padding:2px 10px;
@@ -123,12 +128,12 @@ div.mainText,.homeContent{
   width:500px;
   margin:0;
   p{
-    font-size:15px;
+    font-size:14px;
     font-weight:400;
-    line-height:1.5;
+    line-height:1.7;
     color:$dark-gray;
     margin:27px 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
   }
   p:first-of-type:first-letter{
     font-size:45px;
@@ -152,7 +157,7 @@ div.mainText,.homeContent{
     display:block;
   }
   img:hover{
-    background-color:$light-gray;
+    background-color:$hover;
     transition:all .5s;
   }
 }
@@ -278,7 +283,7 @@ div.mainText,.homeContent{
 
     }
     span.right{
-      font-weight:300;
+      font-weight:400;
       display:inline-block;
     //  width:70px;
     }
@@ -392,7 +397,6 @@ div.mainText,.homeContent{
     transition:all .3s;
     line-height:150px;
     text-align:center;
-
     .prevArrow,.nextArrow{
       width:30px;
       position: absolute;
@@ -432,12 +436,10 @@ div.mainText,.homeContent{
   }
 }
 
-
-
       position:relative;
       z-index:100;
       height:$menuSize;
-      background-color:white;
+      background-color:$headerColor;
       div.innerSelected{
         cursor: pointer; cursor: hand;
         width:752px;

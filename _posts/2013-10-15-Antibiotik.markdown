@@ -5,7 +5,7 @@ subtitle: "60s art-house arcade cabinet"
 permalink: antibiotic
 cover: antibiotic/antibiotic.jpg
 shortDes : An impossible arcade cabinet that will put you in harms way.
-color: B7A632
+color: 8F8124
 what: Paint/Development/Concept/Game/Design
 with: Nanaui Amoros/Kumiko Kuwabara/Pompon Pasfrais
 where: Geneva

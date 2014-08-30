@@ -49,18 +49,7 @@
 
     ulContainer.style.height = window.innerHeight + "px";
     menuUl.style.height = (window.innerHeight-150) + "px";
-
-    // projects[0].style.height = (window.innerHeight > projectStartHeight + 100 ?
-    //   window.innerHeight : projectStartHeight + 100) + "px";
-    console.log(projects[0].style.height);
-    console.log(window.innerHeight);
-
-
-
-    projects[0].style.width = (window.innerWidth - 100) + "px";
-    menuUl.style.width = (window.innerWidth - 100 + 15) + "px";
-
-    menuDiv.style.width = (window.innerWidth - 100) + "px";
+    menuUl.style.width = (window.innerWidth + 15) + "px";
   }
 
   function scroll() {
