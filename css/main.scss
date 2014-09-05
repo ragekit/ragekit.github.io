@@ -7,7 +7,7 @@ $menuNotSelectedColor : #000;
 $menuSize : 150px;
 $footerSize : 50px;
 $minWidth : 1280px;
-$light-gray:#EAEAEA;
+$light-gray:#E0E0E0;
 $bckground: #FFF;
 $hover : #E5E5E5;
 $menuSelected : $hover;
@@ -199,8 +199,8 @@ div.mainText,.homeContent{
     width : 600px;
 
     font-size:30px;
-    font-weight:100;
-    color:$dark-gray;
+    font-weight:300;
+    color:#444;
   }
 
   hr{
@@ -487,8 +487,11 @@ div.mainText,.homeContent{
       a div span{
         color:$menuNotSelectedColor !important;
       }
-      //border-bottom:1px dotted \\\$menuNotSelectedColor;
-      margin:2px 0;
+
+      //margin:2px 0;
+    }
+    li:not(.selected):not(first-child){
+      border-bottom:1px solid $light-gray;
     }
     li:not(.selected):hover{
       background-color:$menuSelected;
