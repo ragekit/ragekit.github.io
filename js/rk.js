@@ -1,7 +1,10 @@
-(function rk() {
-  var canvas = document.getElementsByClassName("logo")[0];
-  canvas.width = 100;
-  canvas.height = 100;
+function rk(target,options) {
+  var canvas = target;
+  canvas.width = options.sizeX;
+  canvas.height = options.sizeY;
+
+  var delay = options.delay;
+  var color = options.color;
   var ctx = canvas.getContext("2d");
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -65,20 +68,30 @@ function overlapWithLineIn(al, l)
   return false;
 }
 
-
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
 
 
   function Grid(sizeX, sizeY, nbX, nbY) {
-    this.sizeX = sizeX;
-    this.sizeY = sizeY;
+    this.spaceX = sizeX/nbX;
+    this.spaceY = sizeY/nbY;
     this.nbX = nbX;
     this.nbY = nbY;
     this.lineWidth = 6;
 
-    this.offset = 10;
+    this.offsetX = this.spaceX/2;
+    this.offsetY = this.spaceY/2;
 
     this.points = [];
-    this.color = "#333";
+    this.color = hexToRgb(color);
+
+
     this.links = [];
     for (i = 0; i < this.nbX; i++) {
       for (j = 0; j < this.nbY; j++) {
@@ -138,11 +151,11 @@ function overlapWithLineIn(al, l)
   Grid.prototype.drawline = function(l) {
     ctx.beginPath();
     ctx.lineCap = 'round';
-    ctx.moveTo(l.a.x * this.sizeX + this.offset, l.a.y * this.sizeY + this.offset);
-    ctx.lineTo(l.b.x * this.sizeX + this.offset, l.b.y * this.sizeY + this.offset);
+    ctx.moveTo(l.a.x * this.spaceX + this.offsetX, l.a.y * this.spaceY + this.offsetY);
+    ctx.lineTo(l.b.x * this.spaceX + this.offsetX, l.b.y * this.spaceY + this.offsetY);
     ctx.lineWidth = this.lineWidth;
-    ctx.strokeStyle = "rgba(0, 0, 0, "+l.alpha+")";
 
+    ctx.strokeStyle = "rgba("+this.color.r+", "+this.color.g+", "+this.color.b+", "+l.alpha+")";
     ctx.stroke();
 
   }
@@ -190,12 +203,8 @@ function overlapWithLineIn(al, l)
   }
 
 
-  var grid = new Grid(20, 20, 3, 3);
+  var grid = new Grid(options.sizeX, options.sizeY, 3, 3);
   grid.drawRk();
-  //grid.generate();
-  //grid.drawLinks();
-
-//grid.showBlink();
 
   var start = 0;
 
@@ -203,7 +212,7 @@ function overlapWithLineIn(al, l)
     canvas.width = canvas.width;
     grid.drawLinks();
 
-    if(timestamp - start > 12000)
+    if(timestamp - start > delay )
     {
       start = timestamp;
       grid.changePattern();
@@ -219,6 +228,12 @@ function overlapWithLineIn(al, l)
     update(timestamp);
   })();
 
+}
 
-
-})()
+rk(document.getElementsByClassName("logo")[0],{delay:12000,color:"#000000",sizeX:60,sizeY:60});
+//RK loader :
+var loaders = document.getElementsByClassName("loader");
+for(i=0;i<loaders.length;i++)
+  {
+    rk(loaders[i],{delay:1000,color:"#AAAAAA",sizeX:300,sizeY:300})
+  }

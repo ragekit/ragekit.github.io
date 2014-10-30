@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  "Impossible Architecture"
-subtitle: "No way it doesn't fall apart"
+subtitle: "Virtuality-allowed gigantism"
 permalink: impossiblearchitecture
 cover: impossible/1.png
 shortDes: Reflection and experimentation about architecture outside of the constraints of physical reality

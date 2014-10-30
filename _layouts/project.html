@@ -3,7 +3,10 @@ layout: default
 ---
 
 <div class="lightbox"></div>
-<div class="cover" style="background-image:url({{site.baseurl}}assets/{{ page.cover }})"></div>
+<div class="cover">
+  <img src="{{site.baseurl}}assets/{{ page.cover }}"/>
+  <canvas class="loader">RK</canvas>
+</div>
 <div class="project">
 
     {% include menu.html %}
@@ -51,7 +54,5 @@ layout: default
     {% endif %}
 
   <div style="clear:both"></div>
-
-  <script type="text/javascript" src="{{ "js/script.js" | prepend: site.baseurl }}"></script>
 
 </div>
