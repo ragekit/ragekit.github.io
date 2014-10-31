@@ -20,7 +20,6 @@
   var pojects,projectHeader,projectStartHeight;
   document.body.style.display = "block";
   var menuHeightClosed = menuDiv.clientHeight;
-  console.log(menuHeightClosed);
   if(document.getElementsByClassName("home").length >0 )
   {
     home = true;
@@ -49,8 +48,6 @@
       // cover.style.height = window.innerHeight + "px";
       // cover.style.width = window.innerWidth + "px";
       //
-
-      console.log("resize");
       projects[0].style.top = (window.innerHeight - menuHeightClosed) +
         "px";
       projects[0].style.position = "relative";

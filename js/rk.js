@@ -99,7 +99,6 @@ function hexToRgb(hex) {
       }
 
     }
-    console.log(this.points);
   }
 
   Grid.prototype.randomPoint = function() {
