@@ -17,7 +17,7 @@ $headerColor : #F5F5F5;
 body{
   margin:0;
   padding:0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', serif;
   min-width:1080px;
   display:none;
 }
@@ -145,7 +145,7 @@ div.mainText{
     line-height:1.7;
     color:$dark-gray;
     margin:27px 0;
-    font-family: 'Roboto Slab', sans-serif;
+  //  font-family: 'Roboto Slab', sans-serif;
   }
   p:first-of-type:first-letter{
     font-size:45px;
@@ -208,7 +208,7 @@ div.mainText{
     line-height:1.7;
     color:$dark-gray;
     margin:27px 0;
-    font-family: 'Roboto Slab', sans-serif;
+  //  font-family: 'Roboto Slab', sans-serif;
   }
   p:first-of-type:first-letter{
     font-size:45px;
@@ -421,7 +421,7 @@ div.mainText{
   top:0;
   position: fixed;
   li{
-      position:relative;
+    // position:relative;
       z-index:100;
       height:$menuSize;
       background-color:white;
@@ -429,6 +429,7 @@ div.mainText{
         cursor: pointer; cursor: hand;
         width:752px;
         margin:0 auto;
+        display:block;
         height:100%;
         line-height:$menuSize;
         color:black !important;
@@ -513,8 +514,8 @@ div.mainText{
         color:black !important;
         text-decoration:none;
         letter-spacing:2.5px;
-        display:inline-block;
         text-align:left;
+        margin:0 auto;
       }
       span{
       }
@@ -564,8 +565,10 @@ div.mainText{
       a div span{
         color:black !important;
         transition:.3s;
+        transition-property: color;
       }
       transition:.5s;
+      transition-property: background-color;
     }
   }
 

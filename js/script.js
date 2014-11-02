@@ -65,9 +65,13 @@
     ulContainer.style.height = window.innerHeight + "px";
     menuUl.style.height = (window.innerHeight-menuHeightClosed) + "px";
     menuUl.style.width = (window.innerWidth) + "px";
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].style.width = (window.innerWidth-15) + "px";
+    }
   }
 
   function scroll() {
+    console.log("scroll");
     if(!home)
     {
       var scrollValue = document.documentElement.scrollTop || document.body.scrollTop;
@@ -81,17 +85,21 @@
 
       }
 
+menuUl.style.overflowX = "hidden";
+      if (scrollValue > parseInt(projects[0].style.top, 10) || scrollValue <=0)
+      {
+        menuUl.style.overflowY="scroll";
+      //  menuUl.style.width = (window.innerWidth -15) + "px";
+      }else
+        {
+          console.log("menu lot locked");
+
+          menuUl.style.overflowY="hidden";
+        //  menuUl.style.width = (window.innerWidth) + "px";
+
+        }
 
       if(menuOpened){
-        if (scrollValue > parseInt(projects[0].style.top, 10) || scrollValue <=0)
-        {
-          menuUl.style.overflowY="scroll";
-        }else
-          {
-            menuUl.style.overflowY="hidden";
-
-          }
-
         var menuPos = projects[0].getBoundingClientRect();
 
         if(openedUp)
@@ -174,6 +182,7 @@
           });
         }
       }
+
     }
 
     ulContainer.style.display ="block";
@@ -186,9 +195,6 @@
     }
     openedUp = up;
     menuOpened = true;
-
-    scroll();
-
   }
 
   function menuOut(callback) {
