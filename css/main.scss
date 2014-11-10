@@ -13,7 +13,7 @@ $hover : #E5E5E5;
 $menuSelected : $hover;
 $mainFont : "Open Sans";
 $titleFont : "Roboto Slab";
-$mainTextSize : 14px;
+$mainTextSize : 13.5px;
 
 $headerColor : #F5F5F5;
 
@@ -206,7 +206,7 @@ div.mainText{
   }
 
   p{
-    font-size:14px;
+    font-size:$mainTextSize;
     font-weight:400;
     line-height:1.7;
     color:$dark-gray;
