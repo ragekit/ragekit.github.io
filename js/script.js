@@ -75,7 +75,7 @@
     if(!home)
     {
       var scrollValue = document.documentElement.scrollTop || document.body.scrollTop;
-      cover.style.marginTop = - (scrollValue /8) +"px";
+      cover.style.marginTop = - (scrollValue /2.5) +"px";
 
       if (scrollValue > parseInt(projects[0].style.top, 10)) {
 
