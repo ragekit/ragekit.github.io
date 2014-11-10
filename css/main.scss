@@ -1,6 +1,6 @@
 ---
 ---
-$dark-gray: #333333 ;
+$dark-gray: #6A6A6A ;
 
 $menuNotSelected : #fff;
 $menuNotSelectedColor : #000;
@@ -13,8 +13,8 @@ $hover : #E5E5E5;
 $menuSelected : $hover;
 $mainFont : "Open Sans";
 $titleFont : "Roboto Slab";
-$mainTextSize : 13.5px;
-
+$mainTextSize : 14px;
+$bigdarkgray : #252525;
 $headerColor : #F5F5F5;
 
 body{
@@ -388,6 +388,7 @@ div.mainText{
     font-weight:600;
     padding:5px;
     transition: all .3s;
+    color:$bigdarkgray;
   }
 
   h3:hover,h4:hover{
@@ -414,6 +415,7 @@ div.mainText{
   h5{
     font-weight:bold;
     font-size:17px;
+    color: $bigdarkgray;
   //  text-decoration:underline;
   }
 }
