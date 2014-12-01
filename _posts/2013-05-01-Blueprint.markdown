@@ -8,6 +8,9 @@ shortDes : A two player coop roguelike-like-like-like game about infiltration an
 color: 7682A8
 what: Everything
 where: Geneva
+media :
+  - assets/blueprint/blueprint.png
+  - assets/blueprint/1.png
 ---
 
 ###Cooperate First...
@@ -23,6 +26,3 @@ The players can also count on a variety of tools to aid them in their task. Ther
 Once they have it, it's every man for himself: only one agent is allowed to come back to base, and the treachery begins.
 
 Blueprint is in a very early Alpha stage.
-
-![]({{ site.baseurl }}assets/blueprint/blueprint.png)
-![]({{ site.baseurl }}assets/blueprint/1.png)

@@ -10,6 +10,8 @@ what: Everything
 where: Geneva
 linkName : pdf
 link : assets/aleph/explanation.pdf
+media :
+  - assets/aleph/1.png
 ---
 
 ###Multiplayer reading.
@@ -21,5 +23,3 @@ For instance, if a person read some vital information about a suspect in a polic
 Paths emerge, are closed, get mixed up, depending on what is read.
 
 You can download the pdf of my presentation on the right collumn
-
-![]({{ site.baseurl }}assets/aleph/1.png)

@@ -42,7 +42,6 @@ body{
 
 .site-footer{
   //position:absolute;
-  padding-top:10px;
   height:$footerSize;
   background-color:#FFF;
   width:100%;
@@ -175,7 +174,23 @@ div.mainText{
   }
 }
 
-
+.media {
+  width:100%;
+  margin-top:70px;
+  div.image{
+    cursor: pointer; cursor: hand;
+    width:100%;
+    height:300px;
+    margin:0;
+    padding:0;
+    background-position: center;
+    opacity:.5;
+  }
+  div.image:hover{
+    opacity:1;
+    transition:all .5s;
+  }
+}
 
 #homeCover{
   background-position: center;

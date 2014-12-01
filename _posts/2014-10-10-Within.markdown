@@ -10,6 +10,11 @@ what: Everything
 where: Geneva
 linkName : "itch.io"
 link : "http://ragekit.itch.io/within"
+media :
+  - assets/within/1.png
+  - assets/within/2.png
+  - assets/within/3.png
+  - assets/within/4.png
 ---
 
 ###An experimentation around the notion space
@@ -31,10 +36,3 @@ This project taught me to design by iteration and by substraction: I had a lot o
 [Giga](http://www.giga.de/extra/independence-play/specials/independence-play-huepfender-bacon-fehlende-moral-und-irres-wrestling/)
 [Giocoindie](http://www.giocoindie.it/within-confusione-spazio-figure-misteriose/)
 [Plnehry](http://plnehry.idnes.cz/within-recenze-01r-/Clanek.aspx?c=A140718_011950_bw-plnehry-adventury_haj)
-
-
-
-![]({{ site.baseurl }}assets/within/1.png)
-![]({{ site.baseurl }}assets/within/2.png)
-![]({{ site.baseurl }}assets/within/3.png)
-![]({{ site.baseurl }}assets/within/4.png)

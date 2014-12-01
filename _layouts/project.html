@@ -30,9 +30,14 @@ layout: default
       {% endif %}
   </ul>
   <div class="mainText">
-  {{ content }}
+    {{ content }}
   </div>
   </article>
+  <div class="media">
+    {% for media in page.media %}
+    <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})></div>
+    {% endfor %}
+  </div>
   {% include footer.html %}
 
   {% if page.color != null %}

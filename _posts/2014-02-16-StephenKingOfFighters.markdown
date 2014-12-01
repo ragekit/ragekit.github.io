@@ -10,6 +10,10 @@ what: Everything
 where: Geneva
 linkName : "pdf"
 link : "assets/thesis/Stephen King of Fighters Benjamin Gattet.pdf"
+media :
+  - assets/thesis/1.JPG
+  - assets/thesis/2.JPG
+  - assets/thesis/3.JPG
 ---
 
 ###An old question under a new light
@@ -26,7 +30,3 @@ Taking a more holistic approach, I tried to analyse what I think makes narration
 In the final part I analysed two games that looks very different to each other, but which both hold - in my opinion - a narration that you can only find in games: Spelunky and it’s narration of action and phenomena, and Proteus and it’s "off-camera" narration.
 
 You can download the full pdf (in French) by clicking on the link in the right column.
-
-![]({{ site.baseurl }}assets/thesis/1.JPG)
-![]({{ site.baseurl }}assets/thesis/2.JPG)
-![]({{ site.baseurl }}assets/thesis/3.JPG)

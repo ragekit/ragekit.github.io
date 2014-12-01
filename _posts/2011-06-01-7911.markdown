@@ -9,6 +9,12 @@ color: 5DA333
 what: "Concept/Game-Design/Development"
 with: Charles Chalas
 where: Paris
+media :
+  - assets/7911/0.png
+  - assets/7911/1.png
+  - assets/7911/2.png
+  - assets/7911/3.png
+  - assets/7911/4.png
 ---
 
 ###Vitruvia Science, gateway to the future
@@ -27,9 +33,3 @@ Since your colony continues to thrive even when you're not at your computer, Vit
 *_0_00°LL1P2OE3°°40 S_SECURITYNOTE78439_FOR_YOU_EYES_ONYLYFLM_ never believed that experimenters would create such a special emotional bond with their test subjects, some even think that they are capable of sentient thoughts and of feeling pain.
 This has slowed down our research because some experimenters refused to execute orders we gave them. Some even tried to use the digital bacteria against us. They have now been terminated.
 Hopefully, in the future, we will find new collaborators that won't have misplaced guilt and won't put themselves at the forefront of the scientific battle.*
-
-![]({{ site.baseurl }}assets/7911/0.png)
-![]({{ site.baseurl }}assets/7911/1.png)
-![]({{ site.baseurl }}assets/7911/2.png)
-![]({{ site.baseurl }}assets/7911/3.png)
-![]({{ site.baseurl }}assets/7911/4.png)

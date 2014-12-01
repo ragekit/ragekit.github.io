@@ -11,6 +11,12 @@ with: Charles Chalas/Catherine Ulrich/Aurélien Gantier/Damien Mortini
 where: Paris
 linkName : website
 link : "http://www.void-spaceartifact.com/"
+media :
+  - assets/void/0.png
+  - assets/void/1.png
+  - assets/void/2.png
+  - assets/void/3.png
+  - assets/void/4.png
 ---
 
 ###New tactile interaction on tablet
@@ -23,9 +29,3 @@ Near an exoplanet in a far future, a mothership enters orbit, appearing to be in
 
 ###Use a glass tetrahedron to interact with in-game objects.
 In their hand, the player has a metallic tetrahedron which allows them to interact with the world. This artefact can absorb in game objects in it’s face to stock and move them. They will have to use it to solve physical puzzles in order to help Delta survive and save the population, still asleep in the mothership. But who is she, and where does she come from? Why does this tetrahedron hold so much power, and why does it look so familiar?
-
-![]({{ site.baseurl }}assets/void/0.png)
-![]({{ site.baseurl }}assets/void/1.png)
-![]({{ site.baseurl }}assets/void/2.png)
-![]({{ site.baseurl }}assets/void/3.jpg)
-![]({{ site.baseurl }}assets/void/4.png)

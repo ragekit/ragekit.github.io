@@ -9,6 +9,9 @@ color: 8F8124
 what: Paint/Development/Concept/Game/Design
 with: Nanaui Amoros/Kumiko Kuwabara/Pompon Pasfrais
 where: Geneva
+media:
+  - assets/antibiotic/antibiotic.jpg
+  - assets/antibiotic/1.jpg
 ---
 
 ###Alternate reality 60s cabinet
@@ -18,6 +21,3 @@ They have at any point the choice to press a big red button and end the game, sa
 
 ####Eniarof : a playful and spontaneous art exhibit
 The game in itself is very simple: each player controls only one potentiometer they use to make the diameter of a circle change. If the player circle touches the outer of the inner ring, they lose health. If it touches the small dots on the game field, they get healed and earn points. This looks easy but it is in fact very hard and most of the time, players take too much risks and always end up with water all over themselves.
-
-![]({{ site.baseurl }}assets/antibiotic/antibiotic.jpg)
-![]({{ site.baseurl }}assets/antibiotic/1.jpg)
