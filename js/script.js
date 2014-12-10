@@ -50,21 +50,6 @@
         "px";
       projects[0].style.position = "relative";
 
-      if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
-        if (menuOpened) {
-          if (openedUp) {
-            ulContainer.style.position = "relative";
-
-            ulContainer.style.top = -window.innerHeight + "px";
-            //menuUl.scrollTop =500000;
-          }
-        }
-
-        showScrollBars();
-
-      } else {
-        hideScrollBars();
-      }
 
       ulContainer.style.width = (window.innerWidth) + "px";
       menuUl.style.width = (window.innerWidth + 15) + "px";
@@ -82,8 +67,21 @@
         menuDiv.style.position = "absolute";
 
       }
+    }
+    if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
+      if (menuOpened) {
+        if (openedUp) {
+          ulContainer.style.position = "relative";
 
+          ulContainer.style.top = -window.innerHeight + "px";
+          //menuUl.scrollTop =500000;
+        }
+      }
 
+      showScrollBars();
+
+    } else {
+      hideScrollBars();
     }
   }
 
