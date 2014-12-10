@@ -20,6 +20,8 @@
   var pojects, projectHeader, projectStartHeight;
   document.body.style.display = "block";
   var menuHeightClosed = menuDiv.clientHeight;
+  var liHeight = 70;
+
   if (document.getElementsByClassName("home").length > 0) {
     home = true;
 
@@ -48,23 +50,57 @@
         "px";
       projects[0].style.position = "relative";
 
-      if (menuOpened) {
-        if (openedUp) {
-          ulContainer.style.position = "relative";
+      if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
+        if (menuOpened) {
+          if (openedUp) {
+            ulContainer.style.position = "relative";
 
-          ulContainer.style.top = (-menuDiv.offsetHeight + menuHeightClosed) +
-            "px";
-          //menuUl.scrollTop =500000;
+            ulContainer.style.top = -window.innerHeight + "px";
+            //menuUl.scrollTop =500000;
+          }
         }
-      }
-    }
 
+        showScrollBars();
+
+      } else {
+        hideScrollBars();
+      }
+
+      ulContainer.style.width = (window.innerWidth) + "px";
+      menuUl.style.width = (window.innerWidth + 15) + "px";
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].style.width = (window.innerWidth) + "px";
+      }
+
+
+      var scrollValue = document.documentElement.scrollTop || document.body
+        .scrollTop;
+      if (scrollValue > parseInt(projects[0].style.top, 10)) {
+
+        menuDiv.style.position = "fixed";
+      } else {
+        menuDiv.style.position = "absolute";
+
+      }
+
+
+    }
+  }
+
+  function hideScrollBars() {
+    ulContainer.style.height = "auto";
+    menuUl.style.height = "auto";
+    ulContainer.style.position = "relative";
+    if (openedUp) {
+      ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
+        "px ";
+    }
+  }
+
+  function showScrollBars() {
     ulContainer.style.height = window.innerHeight + "px";
     menuUl.style.height = (window.innerHeight - menuHeightClosed) + "px";
-    menuUl.style.width = (window.innerWidth) + "px";
-    for (var i = 0; i < lis.length; i++) {
-      lis[i].style.width = (window.innerWidth - 15) + "px";
-    }
+
   }
 
   function scroll() {
@@ -88,7 +124,6 @@
         menuUl.style.overflowY = "scroll";
         //  menuUl.style.width = (window.innerWidth -15) + "px";
       } else {
-        console.log("menu lot locked");
 
         menuUl.style.overflowY = "hidden";
         //  menuUl.style.width = (window.innerWidth) + "px";
@@ -147,26 +182,22 @@
 
 
         if (up) {
-
-          if (i > 0) {
-            ul.insertBefore(lis[i], lis[i - 1]);
-          } else {
-            ul.appendChild(lis[i]);
-          }
-          lis[i].style.top = (menuHeightClosed) + "px";
-          lis[i].style.zIndex = +1;
-          TweenLite.to(lis[i], timeAp, {
+          var index = lis.length - 1 - i;
+          lis[index].style.zIndex = 1;
+          //  ul.appendChild(lis[i]);
+          lis[index].style.top = (menuHeightClosed) + "px";
+          TweenLite.to(lis[index], timeAp, {
             opacity: 1,
-            delay: delay * (i),
+            delay: delay * i,
             overwrite: "all"
           });
-          TweenLite.to(lis[i], timeAp, {
+          TweenLite.to(lis[index], timeAp, {
             top: 0,
-            delay: delay * (i)
+            delay: delay * i
           });
         } else {
           lis[i].style.zIndex = 1;
-          ul.appendChild(lis[i]);
+          //ul.appendChild(lis[i]);
           lis[i].style.top = (-menuHeightClosed) + "px";
           TweenLite.to(lis[i], timeAp, {
             opacity: 1,
@@ -186,10 +217,11 @@
 
     if (up) {
       ulContainer.style.position = "relative";
-
-      ulContainer.style.top = (-menuDiv.offsetHeight + menuHeightClosed) +
+      ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
         "px";
       menuUl.scrollTop = 500000;
+    } else {
+      ulContainer.style.top = 0;
     }
     openedUp = up;
     menuOpened = true;
@@ -215,19 +247,19 @@
         if (openedUp) {
           TweenLite.to(lis[i], timeAp, {
             opacity: 0,
-            delay: delay * (lis.length - 1 - i),
+            delay: delay * (i),
             overwrite: "all"
           });
-          if (i == 0) {
+          if (i == lis.length - 1) {
             TweenLite.to(lis[i], timeAp, {
               top: menuHeightClosed,
-              delay: delay * (lis.length - 1 - i),
+              delay: delay * (i),
               onComplete: cb
             });
           } else {
             TweenLite.to(lis[i], timeAp, {
               top: menuHeightClosed,
-              delay: delay * (lis.length - 1 - i)
+              delay: delay * (i)
             });
           }
         } else {

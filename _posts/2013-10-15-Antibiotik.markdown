@@ -9,6 +9,7 @@ color: 8F8124
 what: Paint/Development/Concept/Game/Design
 with: Nanaui Amoros/Kumiko Kuwabara/Pompon Pasfrais
 where: Geneva
+type : "Arcade"
 media:
   - assets/antibiotic/antibiotic.jpg
   - assets/antibiotic/1.jpg

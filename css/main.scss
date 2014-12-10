@@ -2,20 +2,21 @@
 ---
 $dark-gray: #6A6A6A ;
 
-$menuNotSelected : #fff;
+$menuNotSelected : #F8F8F8;
 $menuNotSelectedColor : #000;
-$menuSize : 120px;
+$headerSize : 100px;
+$menuSize : 70px;
 $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#E0E0E0;
 $bckground: #FFF;
-$hover : #E5E5E5;
+$hover : #F0F0F0;
 $menuSelected : $hover;
 $mainFont : "Open Sans";
 $titleFont : "Roboto Slab";
 $mainTextSize : 14px;
 $bigdarkgray : #252525;
-$headerColor : #F5F5F5;
+$headerColor : $menuNotSelected;
 
 body{
   margin:0;
@@ -82,7 +83,7 @@ body{
     font-size:15px;
     margin:0;
     padding:0;
-    top:50px;
+    top:40px;
     right:100px;
     z-index:1000;
     li{
@@ -107,7 +108,7 @@ body{
   }
   canvas{
     position:absolute;
-    margin-top:29px;
+    margin-top:20px;
     margin-left:100px;
     z-index:1000;
   }
@@ -280,7 +281,7 @@ div.mainText{
     padding-top:30px;
   }
   .shortDes{
-    margin-top:$menuSize + 20;
+    margin-top:$headerSize ;
     width : 600px;
 
     font-size:30px;
@@ -291,7 +292,7 @@ div.mainText{
   hr{
     width:700px;
     margin:0;
-    margin-top:50px;
+    margin-top:40px;
     margin-bottom:50px;
     border-top:dotted 1px $dark-gray;
   }
@@ -345,13 +346,18 @@ div.mainText{
 
     }
 
+    li.type{
+      position:relative;
+      left:6px;
+    }
+
     li.when{
       position:relative;
       left:0px;
     }
     li.where{
       position:relative;
-      left:-3px;
+      left:-4px;
     }
     li.what{
       position:relative;
@@ -448,7 +454,7 @@ div.mainText{
       z-index:100;
       height:$menuSize;
       background-color:white;
-      div,a{
+      div:not(.schwing),a{
         cursor: pointer; cursor: hand;
         width:752px;
         margin:0 auto;
@@ -460,7 +466,7 @@ div.mainText{
         letter-spacing:2.5px;
       }
       span.title{
-        font-size:20px;
+        font-size:15px;
         text-transform:uppercase;
         font-weight:400;
       }
@@ -473,9 +479,20 @@ div.mainText{
       span.subtitle
       {
         text-transform:uppercase;
-        font-size:15px;
+        font-size:12px;
         font-weight:300;
       }
+  }
+  div.schwing{
+      background:linear-gradient( $hover, $hover) no-repeat;
+      background-size:0% 100%;
+      background-position:center;
+      transition: all .3s;
+  }
+
+  div.schwing:hover{
+    background-size:100% 100%;
+    transition: all .3s;
   }
 
   div.selected:hover{
@@ -485,7 +502,7 @@ div.mainText{
 
   div.selected{
     transition:all .3s;
-    line-height:$menuSize;
+    line-height:$headerSize;
     text-align:center;
     .prevArrow,.nextArrow{
       width:30px;
@@ -528,7 +545,7 @@ div.mainText{
 
       position:relative;
       z-index:100;
-      height:$menuSize;
+      height:$headerSize;
       background-color:$headerColor;
       div.innerSelected{
         cursor: pointer; cursor: hand;
@@ -559,6 +576,9 @@ div.mainText{
         font-size:15px;
         font-weight:300;
       }
+
+
+
     }
 
   .ulContainer{
@@ -570,28 +590,37 @@ div.mainText{
     margin:0;
     padding:0;
     list-style-type: none;
-    min-width:$minWidth+15;
     overflow-y: scroll;
+
     li:not(.selected){
       background-color:$menuNotSelected;
+      //width : 752px + 20px;
       a div span{
         color:$menuNotSelectedColor !important;
       }
-
       //margin:2px 0;
+      transition: height .5s;
+      //transition:.5s;
+      min-width:$minWidth ;
+
     }
-    li:not(.selected):not(first-child){
-      border-bottom:1px solid $light-gray;
+    li:not(.selected){
+      border-bottom:1px solid $hover;
     }
+
+    li:not(.selected):first-child{
+      border-bottom:1px solid $hover;
+      border-top:1px solid $hover;
+    }
+
     li:not(.selected):hover{
-      background-color:$menuSelected;
       a div span{
         color:black !important;
         transition:.3s;
         transition-property: color;
       }
-      transition:.5s;
-      transition-property: background-color;
+
+    // height:100px;
     }
   }
 

@@ -11,6 +11,7 @@ with: Charles Chalas/Catherine Ulrich/Aurélien Gantier/Damien Mortini
 where: Paris
 linkName : website
 link : "http://www.void-spaceartifact.com/"
+type: Game
 media :
   - assets/void/0.png
   - assets/void/1.png

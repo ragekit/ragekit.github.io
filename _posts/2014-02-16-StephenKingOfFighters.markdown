@@ -10,6 +10,7 @@ what: Everything
 where: Geneva
 linkName : "pdf"
 link : "assets/thesis/Stephen King of Fighters Benjamin Gattet.pdf"
+type: "research"
 media :
   - assets/thesis/1.JPG
   - assets/thesis/2.JPG

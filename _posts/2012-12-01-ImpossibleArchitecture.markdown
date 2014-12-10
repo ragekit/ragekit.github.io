@@ -8,6 +8,7 @@ shortDes: Reflection and experimentation about architecture outside of the const
 color: 27275E
 what: Everything
 where: Geneva
+type : "3D"
 media :
   - assets/impossible/2.png
   - assets/impossible/3.png

@@ -16,7 +16,9 @@
   {% for post in site.posts %}
     {% if post.id != page.id %}
     <li>
-    <a href="{{ post.url }}"><div><span class="title">{{ post.title }}</span><span class="separator">—</span><span class="subtitle">{{ post.subtitle }}</span></div></a>
+      <div class="schwing">
+    <a href="{{ post.url }}"><span class="title">{{ post.title }}</span><span class="separator">—</span><span class="subtitle">{{ post.subtitle }} // ({{ post.type }})</span></a>
+      </div>
     {% endif %}
     </li>
   {% endfor %}

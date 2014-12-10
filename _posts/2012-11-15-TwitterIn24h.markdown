@@ -9,6 +9,7 @@ color: 55ACEE
 what: Concept/Development
 with: Julia Andreone
 where: Lausanne
+type : "print"
 media :
   - assets/twitter/1.jpg
   - assets/twitter/2.jpg

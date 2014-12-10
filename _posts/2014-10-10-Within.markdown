@@ -10,6 +10,7 @@ what: Everything
 where: Geneva
 linkName : "itch.io"
 link : "http://ragekit.itch.io/within"
+type: Game
 media :
   - assets/within/1.png
   - assets/within/2.png

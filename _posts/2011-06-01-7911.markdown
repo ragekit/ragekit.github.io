@@ -9,6 +9,7 @@ color: 5DA333
 what: "Concept/Game-Design/Development"
 with: Charles Chalas
 where: Paris
+type: Game
 media :
   - assets/7911/0.png
   - assets/7911/1.png
