@@ -2,15 +2,15 @@
 ---
 $dark-gray: #6A6A6A ;
 
-$menuNotSelected : #F8F8F8;
+$menuNotSelected : #FFFFFF;
 $menuNotSelectedColor : #000;
 $headerSize : 100px;
 $menuSize : 70px;
 $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#E0E0E0;
-$bckground: #FFF;
-$hover : #F0F0F0;
+$bckground: #F5F5F5;
+$hover : #DADADA;
 $menuSelected : $hover;
 $mainFont : "Open Sans";
 $titleFont : "Roboto Slab";
@@ -181,7 +181,7 @@ div.mainText{
   div.image{
     cursor: pointer; cursor: hand;
     width:100%;
-    height:300px;
+    height:550px;
     margin:0;
     padding:0;
     background-position: center;
@@ -203,6 +203,8 @@ div.mainText{
   margin:0;
   top:0;
   left:0;
+  background-color:$bckground;
+
   #homeCoverImage{
     display:none !important;
   }
@@ -210,7 +212,6 @@ div.mainText{
 
 .homeContent{
   margin-top:-50px;
-
   h1{
     font-size:30px;
     font-weight:300;
@@ -507,17 +508,13 @@ div.mainText{
     .prevArrow,.nextArrow{
       width:30px;
       position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
       img{
         height:40px;
       }
     }
 
     .prevArrow{
-  left:-880px;
+      right:55px;
   img{
     position:relative;
     top:15px;
@@ -530,7 +527,7 @@ div.mainText{
   }
 }
 .nextArrow{
-  left:-820px;
+  right:25px;
   img{
     position:relative;
     top:15px;
@@ -560,7 +557,7 @@ div.mainText{
       span{
       }
       span.title{
-        font-size:20px;
+        font-size:18px;
         text-transform:uppercase;
         font-weight:400;
       }
@@ -573,7 +570,7 @@ div.mainText{
       span.subtitle
       {
         text-transform:uppercase;
-        font-size:15px;
+        font-size:14px;
         font-weight:300;
       }
 
@@ -605,12 +602,12 @@ div.mainText{
 
     }
     li:not(.selected){
-      border-bottom:1px solid $hover;
+    //  border-bottom:1px solid $hover;
     }
 
     li:not(.selected):first-child{
-      border-bottom:1px solid $hover;
-      border-top:1px solid $hover;
+    //  border-bottom:1px solid $hover;
+    //  border-top:1px solid $hover;
     }
 
     li:not(.selected):hover{

@@ -22,6 +22,8 @@
   var menuHeightClosed = menuDiv.clientHeight;
   var liHeight = 70;
 
+  var siteHeader = document.getElementsByTagName("header")[0];
+
   if (document.getElementsByClassName("home").length > 0) {
     home = true;
 
@@ -108,11 +110,24 @@
         .scrollTop;
       cover.style.marginTop = -(scrollValue / 2.5) + "px";
 
+
+      var leftScroll = document.documentElement.scrollLeft || document.body
+        .scrollLeft
+
       if (scrollValue > parseInt(projects[0].style.top, 10)) {
 
+
+
         menuDiv.style.position = "fixed";
+
+        menuDiv.style.left = -leftScroll + "px";
+        siteHeader.style.left = -leftScroll + "px";
+
       } else {
         menuDiv.style.position = "absolute";
+        menuDiv.style.left = 0 + "px";
+        siteHeader.style.left = -leftScroll + "px";
+
 
       }
 
