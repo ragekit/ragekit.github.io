@@ -14,6 +14,7 @@ layout: default
 
   <div class="shortDes">{{page.shortDes}}</div>
   <hr/>
+  {% if page.type != null %}
   <ul class="metas">
     <li class="type"><span class="left">Type :</span> <span class="right">{{page.type}}</span></li>
     <li class="when"><span class="left">When :</span> <span class="right">{{page.date | date: "%Y"}}</span></li>
@@ -30,6 +31,7 @@ layout: default
       {% endif %}
       {% endif %}
   </ul>
+  {% endif %}
   <div class="mainText">
     {{ content }}
   </div>
@@ -38,6 +40,9 @@ layout: default
     {% for media in page.media %}
     <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})></div>
     {% endfor %}
+    <!-- {% for media in page.media %}
+    <img class="image" src="{{ media | prepend : site.baseurl }}"/>
+    {% endfor %} -->
   </div>
   {% include footer.html %}
 

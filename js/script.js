@@ -85,6 +85,15 @@
     } else {
       hideScrollBars();
     }
+
+    resizeMedia();
+  }
+
+  function resizeMedia() {
+    for (i = 0; i < imgs.length; i++) {
+      var im = imgs[i];
+      im.style.height = window.innerHeight - 150 + "px";
+    }
   }
 
   function hideScrollBars() {

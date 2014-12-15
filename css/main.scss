@@ -133,9 +133,9 @@ text-align:center;
   }
 }
 
-.mainText a{
-    display:block;
-}
+// .mainText a{
+//   color: black;
+// }
 
 
 
@@ -176,16 +176,20 @@ div.mainText{
 }
 
 .media {
-  width:100%;
   margin-top:70px;
+  // margin-left : auto;
+  // margin-right : auto;
+  //padding:50px;
   div.image{
     cursor: pointer; cursor: hand;
     width:100%;
-    height:550px;
-    margin:0;
-    padding:0;
+    //set in js ?
+  //  height:550px;
+//    height:500px;
     background-position: center;
-    opacity:.5;
+    background-size: cover;
+    background-repeat : no-repeat;
+    opacity:.95;
   }
   div.image:hover{
     opacity:1;

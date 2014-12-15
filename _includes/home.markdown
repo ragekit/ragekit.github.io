@@ -1,6 +1,3 @@
-
-#About
-![]({{ site.baseurl }}assets/avatar.png)
 Hi ! I'm Benjamin Gattet, a French multimedia artist/Hacker specialised in playful interactions and gamedesign, especially all the new things that can be done with them.
 
 I'm freshly out of the the University of Art and Design of Geneva (HEAD) where I studied media design. Before that, I also studied multimedia and digital design at Gobelins, the prestigious school of visual communication in Paris.
