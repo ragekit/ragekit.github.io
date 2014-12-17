@@ -16,7 +16,7 @@ media :
   - assets/void/0.png
   - assets/void/1.png
   - assets/void/2.png
-  - assets/void/3.png
+  - assets/void/3.jpg
   - assets/void/4.png
 ---
 
@@ -25,8 +25,8 @@ Void, space artifact is the project I presented for my Gobelins Paris diploma, i
 
 Void is an adventure game for tablet devices, using a real object that the player can hold in their hand.
 
-####A crash of unforeseen consequences
+###A crash of unforeseen consequences
 Near an exoplanet in a far future, a mothership enters orbit, appearing to be in distress. The ship tears the atmosphere and dives into the ground. A life capsule is ejected from it and disappears. Then it crashes, the flying Citadel meets the ground and stops. Delta wakes up in a cavern. She has been ejected from her capsule which lies a few feet behind her. Who is she? She doesn't even remember. There's a strange tetrahedron on the door of the capsule that looks familiar, but she has no time to waste, she needs to go above ground in order to survive.
 
-###Use a glass tetrahedron to interact with in-game objects.
+####Use a glass tetrahedron to interact with in-game objects.
 In their hand, the player has a metallic tetrahedron which allows them to interact with the world. This artefact can absorb in game objects in it’s face to stock and move them. They will have to use it to solve physical puzzles in order to help Delta survive and save the population, still asleep in the mothership. But who is she, and where does she come from? Why does this tetrahedron hold so much power, and why does it look so familiar?
