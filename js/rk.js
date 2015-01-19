@@ -1,4 +1,4 @@
-function rk(target,options) {
+function rk(target, options) {
   var canvas = target;
   canvas.width = options.sizeX;
   canvas.height = options.sizeY;
@@ -48,45 +48,41 @@ function rk(target,options) {
 
   }
 
-function existIn(al, l)
-{
-  for(i =0;i<al.length;i++)
-  {
-    l2 = al[i];
-    if(l2.isEqual(l)) return true;
+  function existIn(al, l) {
+    for (i = 0; i < al.length; i++) {
+      l2 = al[i];
+      if (l2.isEqual(l)) return true;
+    }
+    return false;
   }
-  return false;
-}
 
-function overlapWithLineIn(al, l)
-{
-  for(i =0;i<al.length;i++)
-  {
-    l2 = al[i];
-    if(l2.coeff() == l.coeff() && l.orig() == l2.orig()) return true;
+  function overlapWithLineIn(al, l) {
+    for (i = 0; i < al.length; i++) {
+      l2 = al[i];
+      if (l2.coeff() == l.coeff() && l.orig() == l2.orig()) return true;
+    }
+    return false;
   }
-  return false;
-}
 
-function hexToRgb(hex) {
+  function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
     } : null;
-}
+  }
 
 
   function Grid(sizeX, sizeY, nbX, nbY) {
-    this.spaceX = sizeX/nbX;
-    this.spaceY = sizeY/nbY;
+    this.spaceX = sizeX / nbX;
+    this.spaceY = sizeY / nbY;
     this.nbX = nbX;
     this.nbY = nbY;
     this.lineWidth = 6;
 
-    this.offsetX = this.spaceX/2;
-    this.offsetY = this.spaceY/2;
+    this.offsetX = this.spaceX / 2;
+    this.offsetY = this.spaceY / 2;
 
     this.points = [];
     this.color = hexToRgb(color);
@@ -108,10 +104,14 @@ function hexToRgb(hex) {
   Grid.prototype.randomLine = function() {
 
     var indexCopies = [];
-    for(i = 0;i<this.points.length;i++){ indexCopies[i] = i;}
+    for (i = 0; i < this.points.length; i++) {
+      indexCopies[i] = i;
+    }
 
-    var firstIndex = indexCopies.splice(Math.floor(Math.random() * indexCopies.length),1);
-    var secondIndex = indexCopies.splice(Math.floor(Math.random() * indexCopies.length),1);
+    var firstIndex = indexCopies.splice(Math.floor(Math.random() *
+      indexCopies.length), 1);
+    var secondIndex = indexCopies.splice(Math.floor(Math.random() *
+      indexCopies.length), 1);
 
     var first = this.points[firstIndex];
     var second = this.points[secondIndex];
@@ -136,13 +136,12 @@ function hexToRgb(hex) {
     var ret = [];
 
     for (var i = 0; i < 5; i++) {
-        var l = this.randomLine();
-          while(existIn(ret, l) || overlapWithLineIn(ret, l))
-          {
-            l = this.randomLine();
-          }
-        //this.links.push(l);
-        ret.push(l);
+      var l = this.randomLine();
+      while (existIn(ret, l) || overlapWithLineIn(ret, l)) {
+        l = this.randomLine();
+      }
+      //this.links.push(l);
+      ret.push(l);
     }
     return ret;
   }
@@ -150,49 +149,70 @@ function hexToRgb(hex) {
   Grid.prototype.drawline = function(l) {
     ctx.beginPath();
     ctx.lineCap = 'round';
-    ctx.moveTo(l.a.x * this.spaceX + this.offsetX, l.a.y * this.spaceY + this.offsetY);
-    ctx.lineTo(l.b.x * this.spaceX + this.offsetX, l.b.y * this.spaceY + this.offsetY);
+    ctx.moveTo(l.a.x * this.spaceX + this.offsetX, l.a.y * this.spaceY +
+      this.offsetY);
+    ctx.lineTo(l.b.x * this.spaceX + this.offsetX, l.b.y * this.spaceY +
+      this.offsetY);
     ctx.lineWidth = this.lineWidth;
 
-    ctx.strokeStyle = "rgba("+this.color.r+", "+this.color.g+", "+this.color.b+", "+l.alpha+")";
+    ctx.strokeStyle = "rgba(" + this.color.r + ", " + this.color.g + ", " +
+      this.color.b + ", " + l.alpha + ")";
     ctx.stroke();
 
   }
 
-  Grid.prototype.showBlink = function(){
-      for(var i=0;i<this.links.length;i++)
-        {
-          this.showLink(i);
-        }
+  Grid.prototype.showBlink = function() {
+    for (var i = 0; i < this.links.length; i++) {
+      this.showLink(i);
+    }
   }
 
-  Grid.prototype.showLink = function(i,cb){
-    var del =0;
+  Grid.prototype.showLink = function(i, cb) {
+    var del = 0;
     this.links[i].alpha = 0;
-    TweenLite.to(this.links[i],.1,{alpha:.5,delay:del});
-    TweenLite.to(this.links[i],.1,{alpha:.0,delay:del+.1});
-    TweenLite.to(this.links[i],.1,{alpha:1,delay:del +.2,onComplete:cb});
+    TweenLite.to(this.links[i], .1, {
+      alpha: .5,
+      delay: del
+    });
+    TweenLite.to(this.links[i], .1, {
+      alpha: .0,
+      delay: del + .1
+    });
+    TweenLite.to(this.links[i], .1, {
+      alpha: 1,
+      delay: del + .2,
+      onComplete: cb
+    });
   }
 
-  Grid.prototype.hideLink = function(i,cb){
-    var del =Math.random()*.6;
+  Grid.prototype.hideLink = function(i, cb) {
+    var del = Math.random() * .6;
     this.links[i].alpha = 1;
-    TweenLite.to(this.links[i],.1,{alpha:.5,delay:del});
-    TweenLite.to(this.links[i],.1,{alpha:1,delay:del+.1});
-    TweenLite.to(this.links[i],.1,{alpha:0,delay:del +.2,onComplete:cb});
+    TweenLite.to(this.links[i], .1, {
+      alpha: .5,
+      delay: del
+    });
+    TweenLite.to(this.links[i], .1, {
+      alpha: 1,
+      delay: del + .1
+    });
+    TweenLite.to(this.links[i], .1, {
+      alpha: 0,
+      delay: del + .2,
+      onComplete: cb
+    });
   }
 
-  Grid.prototype.changePattern = function(){
+  Grid.prototype.changePattern = function() {
     var newPat = this.generate();
-    for(var i=0;i<newPat.length;i++)
-      {
-        this.hideLink(i,(function(i){
-          return function(){
-            this.links[i] = newPat[i];
-            this.showLink(i);
-          }.bind(this);
-        }.bind(this))(i));
-      }
+    for (var i = 0; i < newPat.length; i++) {
+      this.hideLink(i, (function(i) {
+        return function() {
+          this.links[i] = newPat[i];
+          this.showLink(i);
+        }.bind(this);
+      }.bind(this))(i));
+    }
   }
 
   Grid.prototype.drawLinks = function() {
@@ -211,8 +231,7 @@ function hexToRgb(hex) {
     canvas.width = canvas.width;
     grid.drawLinks();
 
-    if(timestamp - start > delay )
-    {
+    if (timestamp - start > delay) {
       start = timestamp;
       grid.changePattern();
     }
@@ -229,10 +248,19 @@ function hexToRgb(hex) {
 
 }
 
-rk(document.getElementsByClassName("logo")[0],{delay:12000,color:"#000000",sizeX:60,sizeY:60});
+rk(document.getElementsByClassName("logo")[0], {
+  delay: 12000,
+  color: "#000000",
+  sizeX: 60,
+  sizeY: 60
+});
 //RK loader :
 var loaders = document.getElementsByClassName("loader");
-for(i=0;i<loaders.length;i++)
-  {
-    rk(loaders[i],{delay:1000,color:"#AAAAAA",sizeX:300,sizeY:300})
-  }
+for (i = 0; i < loaders.length; i++) {
+  rk(loaders[i], {
+    delay: 1000,
+    color: "#AAAAAA",
+    sizeX: 300,
+    sizeY: 300
+  })
+}

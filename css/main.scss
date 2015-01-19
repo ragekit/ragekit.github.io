@@ -9,8 +9,8 @@ $menuSize : 70px;
 $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#E0E0E0;
-$bckground: #F9F9FF;
-$hover : #DADADA;
+$bckground: #F9F9F9;
+$hover : #F3F3F3;
 $menuSelected : $hover;
 $mainFont : "Open Sans";
 $titleFont : "Roboto Slab";
@@ -80,7 +80,7 @@ body{
     list-style-type: none;
     //text-transform:uppercase;
     font-weight:300;
-    font-size:15px;
+    font-size:12px;
     margin:0;
     padding:0;
     top:40px;
@@ -473,7 +473,7 @@ div.mainText{
         letter-spacing:2.5px;
       }
       span.title{
-        font-size:15px;
+        font-size:13px;
         text-transform:uppercase;
         font-weight:400;
       }
@@ -486,7 +486,7 @@ div.mainText{
       span.subtitle
       {
         text-transform:uppercase;
-        font-size:12px;
+        font-size:11px;
         font-weight:300;
       }
   }
@@ -563,7 +563,7 @@ div.mainText{
       span{
       }
       span.title{
-        font-size:18px;
+        font-size:13px;
         text-transform:uppercase;
         font-weight:400;
       }
@@ -576,7 +576,7 @@ div.mainText{
       span.subtitle
       {
         text-transform:uppercase;
-        font-size:14px;
+        font-size:11px;
         font-weight:300;
       }
 
