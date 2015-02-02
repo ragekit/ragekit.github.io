@@ -84,7 +84,7 @@ body{
     list-style-type: none;
     //text-transform:uppercase;
     font-weight:300;
-    font-size:12px;
+    font-size:14px;
     margin:0;
     padding:0;
     top:40px;
@@ -611,7 +611,7 @@ div.mainText{
       //margin:2px 0;
       transition: height .5s;
       //transition:.5s;
-      min-width:$minWidth ;
+      min-width:$minWidth !important;
 
     }
     li:not(.selected){
