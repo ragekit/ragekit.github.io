@@ -22,6 +22,11 @@
   var menuHeightClosed = menuDiv.clientHeight;
   var liHeight = 70;
 
+  var s = document.createElement("div");
+  s.className += " shadow";
+
+  var invertS = document.createElement("div");
+  invertS.className += " invertShadow";
   var siteHeader = document.getElementsByTagName("header")[0];
 
   if (document.getElementsByClassName("home").length > 0) {
@@ -41,6 +46,8 @@
       lis.splice(i, 1);
     }
   }
+
+
 
   function resize() {
 
@@ -118,6 +125,7 @@
   }
 
   function scroll() {
+
     console.log("scroll");
     if (!home) {
       var scrollValue = document.documentElement.scrollTop || document.body
@@ -150,34 +158,133 @@
         0) {
         menuUl.style.overflowY = "scroll";
         //  menuUl.style.width = (window.innerWidth -15) + "px";
+
       } else {
 
         menuUl.style.overflowY = "hidden";
         //  menuUl.style.width = (window.innerWidth) + "px";
-
       }
 
       if (menuOpened) {
+        shadow();
         var menuPos = projects[0].getBoundingClientRect();
 
         if (openedUp) {
           if ((menuPos.top + menuHeightClosed / 2) < window.innerHeight / 2) {
             //changeorient down
             menuOut(function() {
-              openMenu(false)
+              //openMenu(false)
             });
             console.log("menu was up change for down")
           }
         } else {
           if ((menuPos.top + menuHeightClosed / 2) > window.innerHeight / 2) {
             menuOut(function() {
-              openMenu(true)
+              //openMenu(true)
             });
             console.log("menu was down change for up")
           }
         }
       }
     }
+  }
+
+  function menuScroll()
+  {
+    console.log("menuscroll");
+    if(!openedUp)
+    {
+      if(((menuUl.scrollHeight - parseInt(menuUl.style.height)) - menuUl.scrollTop) == 0)
+        {
+          hideShadow();
+        }else{
+          showShadow();
+      }
+    }else
+    {
+       if(menuUl.scrollTop == 0)
+        {
+          hideShadow();
+        }else{
+          showShadow();
+      }
+    }
+  }
+
+  function shadow() {
+/*
+    var menuPos = menuUl.children[0].getBoundingClientRect();
+
+    //console.log("position on screen " + positionOnScreen(menuUl).y);
+
+    var totalScroll = document.body.scrollTop + menuUl.scrollTop;
+
+    //if (menuUl.style.overflowY == "scroll") {
+    console.log(menuPos.top)
+    s.style.top = window.innerHeight - parseInt((menuPos.top > 100 ?
+        menuPos.top :
+        menuPos.top + menuUl.scrollTop)) - 50 +
+      "px"; // - menuPos.top - 100 + "px";
+
+
+      invertS.style.top = 0;
+    //*/
+  }
+
+  function showShadow() {
+  /*  console.log(menuUl.scrollHeight);
+    if(s.parentNode || invertS.parentNode) return;
+    if(openedUp == false)
+    {
+       if (menuUl.scrollHeight + 100 > window.innerHeight) {
+        //s = document.createElement("div");
+        //s.className += " shadow";
+        s.style.opacity =0;
+          menuUl.appendChild(s);
+          TweenLite.to(s, .3, {
+            opacity : 1,
+            overwrite: "all"
+          })
+         shadow();
+      }
+    }else
+    {
+      if (menuUl.scrollHeight + 100 > window.innerHeight) {
+        //s = document.createElement("div");
+        //s.className += " shadow";
+        invertS.style.opacity = 0;
+          menuUl.insertBefore(invertS,menuUl.children[0]);
+          TweenLite.to(invertS, .3, {
+            opacity : 1,
+            overwrite: "all"
+          })
+         shadow();
+      }
+    }
+   */
+  }
+
+  function hideShadow() {
+  /*  if(s.parentNode)
+    {
+     TweenLite.to(s, .3, {
+            opacity : 0,
+            onComplete : function(){
+              s.parentNode.removeChild(s);
+            },
+            overwrite: "all"
+      })
+    }
+    if(invertS.parentNode)
+    {
+      TweenLite.to(invertS, .3, {
+            opacity : 0,
+            onComplete : function(){
+              invertS.parentNode.removeChild(s);
+            },
+            overwrite: "all"
+      })
+    }*/
   }
 
   function menuOver(e) {
@@ -220,8 +327,16 @@
           });
           TweenLite.to(lis[index], timeAp, {
             top: 0,
-            delay: delay * i
+            delay: delay * i,
+            onComplete: function(it) {
+              if (it == lis.length - 1) {
+                showShadow();
+
+              }
+            },
+            onCompleteParams: [i]
           });
+
         } else {
           lis[i].style.zIndex = 1;
           //ul.appendChild(lis[i]);
@@ -231,9 +346,17 @@
             delay: delay * i,
             overwrite: "all"
           });
+
           TweenLite.to(lis[i], timeAp, {
             top: 0,
-            delay: delay * i
+            delay: delay * i,
+            onComplete: function(it) {
+              if (it == lis.length - 1) {
+                showShadow();
+
+              }
+            },
+            onCompleteParams: [i]
           });
         }
       }
@@ -241,22 +364,22 @@
     }
 
     ulContainer.style.display = "block";
+      ulContainer.style.position = "relative";
 
     if (up) {
-      ulContainer.style.position = "relative";
+
       ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
         "px";
       menuUl.scrollTop = 500000;
     } else {
       ulContainer.style.top = 0;
+      menuUl.scrollTop = 0;
     }
     openedUp = up;
     menuOpened = true;
   }
 
   function menuOut(callback) {
-
-    console.log(lis.length);
 
     function cb() {
       menuOpened = false;
@@ -268,6 +391,8 @@
       }
 
     }
+
+    hideShadow();
 
     for (var i = 0; i < lis.length; i++) {
       if (lis[i] != currentSelected) {
@@ -426,7 +551,35 @@
 
 
   // SCROLLEVENT
-  window.onscroll = scroll;
+function waitForPause(ms, callback) {
+    var timer;
+
+    return function() {
+        var self = this, args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            callback.apply(self, args);
+        }, ms);
+    };
+}
+function throttle(ms, callback) {
+    var timer, lastCall=0;
+
+    return function() {
+        var now = new Date().getTime(),
+            diff = now - lastCall;
+        console.log(diff, now, lastCall);
+        if (diff >= ms) {
+            console.log("Call callback!");
+            lastCall = now;
+            callback.apply(this, arguments);
+        }
+
+    };
+}
+
+  menuUl.onscroll = throttle(0,menuScroll);
+  window.onscroll = throttle(0,scroll);
   window.onresize = resize;
 
   resize();
