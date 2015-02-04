@@ -242,7 +242,7 @@
   }
 
 function showShadow() {
-    console.log(menuUl.scrollHeight);
+  /*  console.log(menuUl.scrollHeight);
     if (menuUl.scrollHeight + 100 > window.innerHeight) {
       // TweenLite.to(s, .3, {
       //   opacity : 1,
@@ -251,7 +251,7 @@ function showShadow() {
       s.className = "shadow show";
       invertS.className ="invertShadow show";
     }
-    shadow();
+    shadow();*/
 }
 function hideTopShadow(){
   if(invertS.className.indexOf("show") > -1)
@@ -263,17 +263,17 @@ function hideTopShadow(){
 }
 
 function showTopShadow(){
-  if(invertS.className.indexOf("show") == -1)
+  /*if(invertS.className.indexOf("show") == -1)
   {
   invertS.className = "invertShadow show";
 
-  }
+  }*/
 }
 function showBottomShadow(){
-  if(s.className.indexOf("fatShow") == -1)
+ /* if(s.className.indexOf("fatShow") == -1)
   {
       s.className = "shadow fatShow";
-  }
+  }*/
 }
 
 function hideBottomShadow(){
