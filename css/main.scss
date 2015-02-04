@@ -572,8 +572,10 @@ h3,h4{
       }
     }
 
+    $leftArrowPos : -460px; 
+    $rightArrowPos : $leftArrowPos + 30px;
     .prevArrow{
-      right:55px;
+      margin-left:$leftArrowPos;
       img{
         position:relative;
         top:15px;
@@ -586,7 +588,7 @@ h3,h4{
       }
     }
     .nextArrow{
-      right:25px;
+      margin-left:$rightArrowPos;
       img{
         position:relative;
         top:15px;
