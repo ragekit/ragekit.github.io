@@ -22,11 +22,10 @@
   var menuHeightClosed = menuDiv.clientHeight;
   var liHeight = 70;
 
-  var s = document.createElement("div");
-  s.className += " shadow";
+  var s = document.getElementsByClassName("shadow")[0];
+  var invertS = document.getElementsByClassName("invertShadow")[0];
 
-  var invertS = document.createElement("div");
-  invertS.className += " invertShadow";
+
   var siteHeader = document.getElementsByTagName("header")[0];
 
   if (document.getElementsByClassName("home").length > 0) {
@@ -56,7 +55,7 @@
       // cover.style.width = window.innerWidth + "px";
       //
       projects[0].style.top = (window.innerHeight - menuHeightClosed) +
-        "px";
+      "px";
       projects[0].style.position = "relative";
 
       //ya un truc minwidth 1280px
@@ -71,7 +70,7 @@
 
 
       var scrollValue = document.documentElement.scrollTop || document.body
-        .scrollTop;
+      .scrollTop;
       if (scrollValue > parseInt(projects[0].style.top, 10)) {
 
         menuDiv.style.position = "fixed";
@@ -97,7 +96,7 @@
       showScrollBars();
 
     }
-
+    if(menuOpened) shadow();
     resizeMedia();
   }
 
@@ -114,7 +113,7 @@
     ulContainer.style.position = "relative";
     if (openedUp) {
       ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
-        "px ";
+      "px ";
     }
   }
 
@@ -129,12 +128,12 @@
     console.log("scroll");
     if (!home) {
       var scrollValue = document.documentElement.scrollTop || document.body
-        .scrollTop;
+      .scrollTop;
       cover.style.marginTop = -(scrollValue / 2.5) + "px";
 
 
       var leftScroll = document.documentElement.scrollLeft || document.body
-        .scrollLeft
+      .scrollLeft
 
       if (scrollValue > parseInt(projects[0].style.top, 10)) {
 
@@ -191,103 +190,105 @@
 
   function menuScroll()
   {
-    console.log("menuscroll");
-    if(!openedUp)
-    {
-      if(((menuUl.scrollHeight - parseInt(menuUl.style.height)) - menuUl.scrollTop) == 0)
-        {
-          hideShadow();
-        }else{
-          showShadow();
+    shadow();
+
+      if(menuUl.scrollTop <= 0)
+      {
+        hideTopShadow();
+      }else{
+        showTopShadow();
       }
-    }else
-    {
-       if(menuUl.scrollTop == 0)
-        {
-          hideShadow();
-        }else{
-          showShadow();
+      if(menuUl.scrollTop >= menuUl.scrollHeight - menuUl.getBoundingClientRect().height)
+      {
+        hideBottomShadow();
+      }else
+      {
+        showBottomShadow();
       }
-    }
   }
 
   function shadow() {
-/*
-    var menuPos = menuUl.children[0].getBoundingClientRect();
-
+    var menuPos = projects[0].getBoundingClientRect();
     //console.log("position on screen " + positionOnScreen(menuUl).y);
 
     var totalScroll = document.body.scrollTop + menuUl.scrollTop;
 
     //if (menuUl.style.overflowY == "scroll") {
-    console.log(menuPos.top)
-    s.style.top = window.innerHeight - parseInt((menuPos.top > 100 ?
-        menuPos.top :
-        menuPos.top + menuUl.scrollTop)) - 50 +
-      "px"; // - menuPos.top - 100 + "px";
-
-
-      invertS.style.top = 0;
-    //*/
-  }
-
-  function showShadow() {
-  /*  console.log(menuUl.scrollHeight);
-    if(s.parentNode || invertS.parentNode) return;
-    if(openedUp == false)
+    // s.style.top = window.innerHeight - parseInt((menuPos.top > 100 ?
+    //     menuPos.top :
+    //     menuPos.top + menuUl.scrollTop)) - 50 +
+    //   "px"; // - menuPos.top - 100 + "px";
+    console.log(menuPos.top);
+    if(!openedUp)
     {
-       if (menuUl.scrollHeight + 100 > window.innerHeight) {
-        //s = document.createElement("div");
-        //s.className += " shadow";
-        s.style.opacity =0;
-          menuUl.appendChild(s);
-          TweenLite.to(s, .3, {
-            opacity : 1,
-            overwrite: "all"
-          })
-         shadow();
-      }
+      s.style.bottom =(menuPos.top > 0 ? menuPos.top+100 : 100) + "px";
+      invertS.style.top = 0 + "px";
+
     }else
     {
-      if (menuUl.scrollHeight + 100 > window.innerHeight) {
-        //s = document.createElement("div");
-        //s.className += " shadow";
-        invertS.style.opacity = 0;
-          menuUl.insertBefore(invertS,menuUl.children[0]);
-          TweenLite.to(invertS, .3, {
-            opacity : 1,
-            overwrite: "all"
-          })
-         shadow();
-      }
+      s.style.bottom = 100 + "px";
     }
-   */
+
+    if(openedUp)
+    {
+      invertS.style.top = (menuPos.top < (window.innerHeight - 100) ? window.innerHeight - 100 - menuPos.top : 0) + "px";
+
+    }
+    //console.log(menuPos.top < window.innerHeight);
+
+    //invertS.style.top = (window.innerWidth-menuPos)
+
+    //
   }
 
-  function hideShadow() {
-  /*  if(s.parentNode)
-    {
-     TweenLite.to(s, .3, {
-            opacity : 0,
-            onComplete : function(){
-              s.parentNode.removeChild(s);
-            },
-            overwrite: "all"
-      })
+function showShadow() {
+    console.log(menuUl.scrollHeight);
+    if (menuUl.scrollHeight + 100 > window.innerHeight) {
+      // TweenLite.to(s, .3, {
+      //   opacity : 1,
+      //   overwrite: "all"
+      // })
+      s.className = "shadow show";
+      invertS.className ="invertShadow show";
     }
-    if(invertS.parentNode)
-    {
-      TweenLite.to(invertS, .3, {
-            opacity : 0,
-            onComplete : function(){
-              invertS.parentNode.removeChild(s);
-            },
-            overwrite: "all"
-      })
-    }*/
+    shadow();
+}
+function hideTopShadow(){
+  if(invertS.className.indexOf("show") > -1)
+  {
+      invertS.className = "invertShadow";
+
   }
 
-  function menuOver(e) {
+}
+
+function showTopShadow(){
+  if(invertS.className.indexOf("show") == -1)
+  {
+  invertS.className = "invertShadow show";
+
+  }
+}
+function showBottomShadow(){
+  if(s.className.indexOf("fatShow") == -1)
+  {
+      s.className = "shadow fatShow";
+  }
+}
+
+function hideBottomShadow(){
+  if(s.className.indexOf("fatShow")> -1)
+  {
+      s.className = "shadow";
+  }
+}
+
+function hideShadow() {
+  hideTopShadow();
+  hideBottomShadow();  
+}
+
+function menuOver(e) {
     //opendown or up
     if (menuOpened) {
       menuOut();
@@ -330,8 +331,8 @@
             delay: delay * i,
             onComplete: function(it) {
               if (it == lis.length - 1) {
-                showShadow();
-
+                showTopShadow();
+                shadow();
               }
             },
             onCompleteParams: [i]
@@ -352,7 +353,8 @@
             delay: delay * i,
             onComplete: function(it) {
               if (it == lis.length - 1) {
-                showShadow();
+                showBottomShadow();
+                shadow();
 
               }
             },
@@ -364,12 +366,12 @@
     }
 
     ulContainer.style.display = "block";
-      ulContainer.style.position = "relative";
+    ulContainer.style.position = "relative";
 
     if (up) {
 
       ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
-        "px";
+      "px";
       menuUl.scrollTop = 500000;
     } else {
       ulContainer.style.top = 0;
@@ -385,7 +387,6 @@
       menuOpened = false;
       ulContainer.style.display = "none";
       ulContainer.style.top = 0;
-      console.log(callback);
       if (callback) {
         callback();
       }
@@ -551,32 +552,32 @@
 
 
   // SCROLLEVENT
-function waitForPause(ms, callback) {
+  function waitForPause(ms, callback) {
     var timer;
 
     return function() {
-        var self = this, args = arguments;
-        clearTimeout(timer);
-        timer = setTimeout(function() {
-            callback.apply(self, args);
-        }, ms);
+      var self = this, args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        callback.apply(self, args);
+      }, ms);
     };
-}
-function throttle(ms, callback) {
+  }
+  function throttle(ms, callback) {
     var timer, lastCall=0;
 
     return function() {
-        var now = new Date().getTime(),
-            diff = now - lastCall;
-        console.log(diff, now, lastCall);
-        if (diff >= ms) {
-            console.log("Call callback!");
-            lastCall = now;
-            callback.apply(this, arguments);
-        }
+      var now = new Date().getTime(),
+      diff = now - lastCall;
+      //console.log(diff, now, lastCall);
+      if (diff >= ms) {
+        //console.log("Call callback!");
+        lastCall = now;
+        callback.apply(this, arguments);
+      }
 
     };
-}
+  }
 
   menuUl.onscroll = throttle(0,menuScroll);
   window.onscroll = throttle(0,scroll);
