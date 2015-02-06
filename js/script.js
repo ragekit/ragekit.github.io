@@ -501,6 +501,27 @@ function showBottomShadow(){
 
     }
 
+    var liBackground = menuUl.getElementsByTagName("img");
+    liBackground = Array.prototype.slice.call(liBackground, 0);
+
+     for (var i = 0; i < liBackground.length; i++){
+      console.log(liBackground[i].src);
+      var parent = liBackground[i].parentNode;
+      var img = new Image();
+      img.src = liBackground[i].src;
+      parent.removeChild(liBackground[i]);
+      
+      img.onload = (function(image,parent) {
+        console.log(image.src);
+        parent.style.backgroundImage = "url(" + image.src + ")";
+        parent.style.display = "block";
+        parent.style.visibility = "hidden";
+        TweenLite.to(parent, 1, {
+          autoAlpha: 1
+        });
+      })(img,parent)
+      
+    }
 
     //KEYBOARD NAV
 

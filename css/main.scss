@@ -565,11 +565,12 @@ h3,h4{
   top:0;
   position: fixed;
   li{
+
     // position:relative;
     z-index:100;
     height:$menuSize;
-    background-color:white;
-    div:not(.schwing),a{
+    //background-color:white;
+    div.liCenter,a{
       cursor: pointer; cursor: hand;
       width:752px;
       margin:0 auto;
@@ -704,9 +705,28 @@ h3,h4{
     padding:0;
     list-style-type: none;
     overflow-y: scroll;
+    .background{
+      background-position: center;
+      background-size: cover;
+      width:100%;
+      height:100%;
+      position:absolute;
+      z-index:-2;
+      transition:all .5s;
+    }
+
+    div.liCover{
+      background-color:white;
+      transition:opacity .5s;
+      width:100%;
+      height:100%;
+      position:absolute;
+      z-index:-1;
+    }
+
 
     li:not(.selected){
-      background-color:$menuNotSelected;
+      //background-color:$menuNotSelected;
       //width : 752px + 20px;
       div a span{
         color:$menuNotSelectedColor !important;
@@ -732,6 +752,14 @@ h3,h4{
       transition:.5s;
       transition-property: color;
     }
+
+    div.liCover{
+      opacity:.6;
+    }
+    .background{
+       background-position: 0 51%;
+    }
+
 
     // height:100px;
   }
