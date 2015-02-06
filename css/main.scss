@@ -13,7 +13,7 @@ $bckground: #F9F9F9;
 $hover : #EEE;
 $menuSelected : $hover;
 $mainFont : "Open Sans";
-$titleFont : "Roboto Slab";
+$titleFont : "Open Sans";
 $mainTextSize : 14px;
 $bigdarkgray : #252525;
 $headerColor : $menuNotSelected;
@@ -527,7 +527,7 @@ h3,h4{
     span.title{
       font-size:15px;
       text-transform:uppercase;
-      font-weight:400;
+      font-weight:800;
     }
 
     span.separator{
@@ -620,7 +620,7 @@ h3,h4{
     span.title{
       font-size:15px;
       text-transform:uppercase;
-      font-weight:400;
+      font-weight:bold;
     }
 
     span.separator{
@@ -634,7 +634,7 @@ h3,h4{
     {
       text-transform:uppercase;
       font-size:14px;
-      font-weight:300;
+      font-weight:100;
     }
 
 
