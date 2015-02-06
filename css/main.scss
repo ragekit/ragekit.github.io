@@ -1,6 +1,6 @@
 ---
 ---
-$dark-gray: #6A6A6A ;
+$dark-gray: #444;
 
 $menuNotSelected : #FFFFFF;
 $menuNotSelectedColor : #AAA;
@@ -9,13 +9,13 @@ $menuSize : 100px;
 $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#E0E0E0;
-$bckground: #F9F9F9;
-$hover : #EEE;
+$bckground: #EFEFEF;
+$hover : #EFEFEF;
 $menuSelected : $hover;
-$mainFont : "Open Sans";
+$mainFont : "Merriweather";
 $titleFont : "Open Sans";
-$mainTextSize : 14px;
-$bigdarkgray : #252525;
+$mainTextSize : 16px;
+$bigdarkgray : #000000;
 $headerColor : $menuNotSelected;
 
 body{
@@ -31,6 +31,10 @@ body{
 }
 .fatShow{
   opacity: .2 !important;
+}
+
+.center{
+  margin: 0 auto;
 }
 
 .shadow{
@@ -70,6 +74,40 @@ body{
 
 }
 
+ .blink:hover {
+      animation: blink .3s 1;
+      -webkit-animation: blink .3s 1;
+    }
+    @keyframes blink {
+      from{
+        opacity:0;
+      }
+      33%{
+        opacity:.5;
+      }
+      66%{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+
+    }
+    @-webkit-keyframes blink {
+      from{
+        opacity:0;
+      }
+      33%{
+        opacity:.5;
+      }
+      66%{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
 .lightbox {
   position:fixed;
   top:0;
@@ -88,18 +126,27 @@ body{
 .site-footer{
   //position:absolute;
   height:$footerSize;
-  background-color:#FFF;
+  background-color:$bckground;
   width:100%;
   bottom:0;
+  font-family: $titleFont;
+
+
 
   div{
-    width:750px;
-    margin:0 auto;
+    width:90%;
+    margin:50px auto 0;
     font-size:12px;
     line-height:$footerSize;
 
+    hr{
+      margin:0;
+      opacity:.3;
+      width:100%;
+    }
     span.author{
       font-weight:600;
+
     }
 
     span.time{
@@ -112,6 +159,7 @@ body{
 
 
 .site-header{
+  font-family: $titleFont;
   height:0;
   width: 100%;
   top:0;
@@ -197,7 +245,9 @@ div.mainText{
   p{
     font-size:$mainTextSize;
     font-weight:400;
-    line-height:1.7;
+    //font-weight:bold;
+
+    line-height:1.8;
     color:$dark-gray;
     margin:27px 0;
   //  font-family: 'Roboto Slab', sans-serif;
@@ -342,7 +392,7 @@ width:650px;
   .shortDes{
     margin-top:$headerSize ;
     width : 600px;
-
+    line-height: 1.7;
     font-size:30px;
     font-weight:100;
     color:#444;
@@ -359,6 +409,7 @@ width:650px;
 
   ul.metas{
     //border-left:dotted 1px;
+    font-family: $titleFont;
     font-size:12px;
     line-height:22.5px;
     float:right;
@@ -407,12 +458,12 @@ width:650px;
 
     li.type{
       position:relative;
-      left:6px;
+      left:7px;
     }
 
     li.when{
       position:relative;
-      left:0px;
+      left:1px;
     }
     li.where{
       position:relative;
@@ -555,11 +606,6 @@ h3,h4{
     transition: all .3s;
   }
 
-  div.selected:hover{
-    background-color:$menuSelected;
-    transition:all .3s;
-  }
-
   div.selected{
     transition:all .3s;
     line-height:$headerSize;
@@ -645,6 +691,8 @@ h3,h4{
     overflow:hidden;
     display:none;
   }
+
+
 
   ul{
     margin:0;
