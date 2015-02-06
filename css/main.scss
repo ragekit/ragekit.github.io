@@ -1,6 +1,6 @@
 ---
 ---
-$dark-gray: #444;
+$dark-gray: #333;
 
 $menuNotSelected : #FFFFFF;
 $menuNotSelectedColor : #AAA;
@@ -10,13 +10,14 @@ $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#E0E0E0;
 $bckground: #EFEFEF;
-$hover : #EFEFEF;
-$menuSelected : $hover;
+$hover : #CCC;
+$menuSelected : #EFEFEF;
 $mainFont : "Droid Serif";
 $titleFont : "Open Sans";
 $mainTextSize : 16px;
 $bigdarkgray : #000000;
 $headerColor : $menuNotSelected;
+$mainLineHeight : 1.7; 
 
 body{
   margin:0;
@@ -247,7 +248,7 @@ div.mainText{
     font-weight:400;
     //font-weight:bold;
 
-    line-height:1.7;
+    line-height:$mainLineHeight;
     color:$dark-gray;
     margin:27px 0;
   //  font-family: 'Roboto Slab', sans-serif;

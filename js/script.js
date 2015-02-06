@@ -66,25 +66,25 @@
       for (var i = 0; i < lis.length; i++) {
         lis[i].style.width = ((window.innerWidth > 1280 ? window.innerWidth :
           1280)) + "px";
-      }*/
+}*/
 
 
-      var scrollValue = document.documentElement.scrollTop || document.body
-      .scrollTop;
-      if (scrollValue > parseInt(projects[0].style.top, 10)) {
+var scrollValue = document.documentElement.scrollTop || document.body
+.scrollTop;
+if (scrollValue > parseInt(projects[0].style.top, 10)) {
 
-        menuDiv.style.position = "fixed";
-      } else {
-        menuDiv.style.position = "absolute";
+  menuDiv.style.position = "fixed";
+} else {
+  menuDiv.style.position = "absolute";
 
-      }
-    }
-    if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
-      if (menuOpened) {
-        if (openedUp) {
-          ulContainer.style.position = "relative";
+}
+}
+if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
+  if (menuOpened) {
+    if (openedUp) {
+      ulContainer.style.position = "relative";
 
-          ulContainer.style.top = -window.innerHeight + "px";
+      ulContainer.style.top = -window.innerHeight + "px";
           //menuUl.scrollTop =500000;
         }
       }
@@ -192,19 +192,19 @@
   {
     shadow();
 
-      if(menuUl.scrollTop <= 0)
-      {
-        hideTopShadow();
-      }else{
-        showTopShadow();
-      }
-      if(menuUl.scrollTop >= menuUl.scrollHeight - menuUl.getBoundingClientRect().height)
-      {
-        hideBottomShadow();
-      }else
-      {
-        showBottomShadow();
-      }
+    if(menuUl.scrollTop <= 0)
+    {
+      hideTopShadow();
+    }else{
+      showTopShadow();
+    }
+    if(menuUl.scrollTop >= menuUl.scrollHeight - menuUl.getBoundingClientRect().height)
+    {
+      hideBottomShadow();
+    }else
+    {
+      showBottomShadow();
+    }
   }
 
   function shadow() {
@@ -241,7 +241,7 @@
     //
   }
 
-function showShadow() {
+  function showShadow() {
   /*  console.log(menuUl.scrollHeight);
     if (menuUl.scrollHeight + 100 > window.innerHeight) {
       // TweenLite.to(s, .3, {
@@ -252,43 +252,43 @@ function showShadow() {
       invertS.className ="invertShadow show";
     }
     shadow();*/
-}
-function hideTopShadow(){
-  if(invertS.className.indexOf("show") > -1)
-  {
+  }
+  function hideTopShadow(){
+    if(invertS.className.indexOf("show") > -1)
+    {
       invertS.className = "invertShadow";
+
+    }
 
   }
 
-}
-
-function showTopShadow(){
+  function showTopShadow(){
   /*if(invertS.className.indexOf("show") == -1)
   {
   invertS.className = "invertShadow show";
 
-  }*/
+}*/
 }
 function showBottomShadow(){
  /* if(s.className.indexOf("fatShow") == -1)
   {
       s.className = "shadow fatShow";
-  }*/
-}
-
-function hideBottomShadow(){
-  if(s.className.indexOf("fatShow")> -1)
-  {
-      s.className = "shadow";
+    }*/
   }
-}
 
-function hideShadow() {
-  hideTopShadow();
-  hideBottomShadow();  
-}
+  function hideBottomShadow(){
+    if(s.className.indexOf("fatShow")> -1)
+    {
+      s.className = "shadow";
+    }
+  }
 
-function menuOver(e) {
+  function hideShadow() {
+    hideTopShadow();
+    hideBottomShadow();  
+  }
+
+  function menuOver(e) {
     //opendown or up
     if (menuOpened) {
       menuOut();
@@ -453,8 +453,6 @@ function menuOver(e) {
     lightBoxDiv.style.display = "none";
   }
 
-  if (!home) {
-
     //Lightbox
 
     var imgs = document.getElementsByClassName("media")[0].getElementsByClassName(
@@ -482,16 +480,25 @@ function menuOver(e) {
       var img = new Image();
       img.src = imageObjects[0].src;
       cover.removeChild(imageObjects[0]);
-      img.onload = function() {
+      if(img.complete || img.width+img.height > 0)
+      {
         cover.style.backgroundImage = "url(" + img.src + ")";
-        cover.style.visibility = "hidden";
-        TweenLite.to(cover, 1, {
-          autoAlpha: 1
-        });
-        while (cover.firstChild) {
-          cover.removeChild(cover.firstChild);
+      }else
+      {
+        img.onload = function() {
+          cover.style.backgroundImage = "url(" + img.src + ")";
+          cover.style.visibility = "hidden";
+          TweenLite.to(cover, 1, {
+            autoAlpha: 1
+          });
+
         }
       }
+      while (cover.firstChild) {
+        console.log("in");
+          cover.removeChild(cover.firstChild);
+        }
+
     }
 
 
@@ -518,27 +525,6 @@ function menuOver(e) {
         next.click();
       }
     })
-  } else {
-    //LOAD HOME COVER
-    var homeCoverImage = document.getElementById("homeCoverImage");
-    if (homeCoverImage) {
-      var homeCover = document.getElementById("homeCover");
-      var img = new Image();
-      img.src = homeCoverImage.src;
-      while (homeCover.firstChild) {
-        homeCover.removeChild(homeCover.firstChild);
-      }
-      img.onload = function() {
-        homeCover.style.backgroundImage = "url(" + img.src + ")";
-        homeCover.style.visibility = "hidden";
-        TweenLite.to(homeCover, 1, {
-          autoAlpha: .05
-        });
-      }
-    }
-
-  }
-
   //MENU
 
   document.addEventListener('mousemove', function() {
