@@ -12,7 +12,7 @@ $light-gray:#E0E0E0;
 $bckground: #EFEFEF;
 $hover : #EFEFEF;
 $menuSelected : $hover;
-$mainFont : "Merriweather";
+$mainFont : "Droid Serif";
 $titleFont : "Open Sans";
 $mainTextSize : 16px;
 $bigdarkgray : #000000;
@@ -247,16 +247,16 @@ div.mainText{
     font-weight:400;
     //font-weight:bold;
 
-    line-height:1.8;
+    line-height:1.7;
     color:$dark-gray;
     margin:27px 0;
   //  font-family: 'Roboto Slab', sans-serif;
 }
 p:first-of-type:first-letter{
-  font-size:51px;
+  font-size:60px;
   float:left;
   line-height:40px;
-  margin-top:10px;
+  margin-top:8px;
   margin-right:3px;
 }
 
