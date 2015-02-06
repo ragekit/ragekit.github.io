@@ -295,9 +295,12 @@ background-size: cover;
 background-repeat : no-repeat;
 opacity:.95;
 }
+div.image{
+  transition:all .5s;
+}
 div.image:hover{
   opacity:1;
-  transition:all .5s;
+  //transition:all .5s;
 }
 }
 
