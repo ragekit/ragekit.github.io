@@ -59,14 +59,14 @@
       projects[0].style.position = "relative";
 
       //ya un truc minwidth 1280px
-      ulContainer.style.width = (window.innerWidth > 1280 ? window.innerWidth :
+    /*  ulContainer.style.width = (window.innerWidth > 1280 ? window.innerWidth :
         1280) + "px";
       menuUl.style.width = ((window.innerWidth > 1280 ? window.innerWidth :
         1280) + 15) + "px";
       for (var i = 0; i < lis.length; i++) {
         lis[i].style.width = ((window.innerWidth > 1280 ? window.innerWidth :
           1280)) + "px";
-      }
+      }*/
 
 
       var scrollValue = document.documentElement.scrollTop || document.body
