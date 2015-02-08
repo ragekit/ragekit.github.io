@@ -18,9 +18,7 @@
       {% if post.id != page.id %}
       <li >
         <div class="liCover"></div>
-        <div class="background" style="display:none">
-          <img src="{{site.baseurl}}assets/{{ post.cover }}"/>
-        </div>
+        <div class="background" style="background-color:white;background-image:url('{{site.baseurl}}assets/{{ post.cover }}')"></div>
         <div class="liCenter">
           <a href="{{ post.url }}"><span class="title">{{ post.title }}</span><span class="separator">—</span><span class="subtitle">{{ post.subtitle }} // ({{ post.type }})</span></a>
         </div>

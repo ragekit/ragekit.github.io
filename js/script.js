@@ -51,24 +51,11 @@
   function resize() {
 
     if (!home) {
-      // cover.style.height = window.innerHeight + "px";
-      // cover.style.width = window.innerWidth + "px";
-      //
       projects[0].style.top = (window.innerHeight - menuHeightClosed) +
       "px";
       projects[0].style.position = "relative";
-
-      //ya un truc minwidth 1280px
-    /*  ulContainer.style.width = (window.innerWidth > 1280 ? window.innerWidth :
-        1280) + "px";
-      menuUl.style.width = ((window.innerWidth > 1280 ? window.innerWidth :
-        1280) + 15) + "px";
-      for (var i = 0; i < lis.length; i++) {
-        lis[i].style.width = ((window.innerWidth > 1280 ? window.innerWidth :
-          1280)) + "px";
-}*/
-
-
+      menuUl.style.width = window.innerWidth+ "px";
+ 
 var scrollValue = document.documentElement.scrollTop || document.body
 .scrollTop;
 if (scrollValue > parseInt(projects[0].style.top, 10)) {
@@ -218,7 +205,6 @@ if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
     //     menuPos.top :
     //     menuPos.top + menuUl.scrollTop)) - 50 +
     //   "px"; // - menuPos.top - 100 + "px";
-    console.log(menuPos.top);
     if(!openedUp)
     {
       s.style.bottom =(menuPos.top > 0 ? menuPos.top+100 : 100) + "px";
@@ -310,6 +296,8 @@ function showBottomShadow(){
   function openMenu(up) {
     for (var i = 0; i < lis.length; i++) {
       if (lis[i] != currentSelected) {
+        var imgurl = lis[i].getElementsByClassName("background")[0].style.backgroundImage;
+        lis[i].getElementsByClassName("background")[0].style.backgroundImage = "";
         var ul = lis[i].parentNode;
         lis[i].style.position = "relative";
 
@@ -329,13 +317,14 @@ function showBottomShadow(){
           TweenLite.to(lis[index], timeAp, {
             top: 0,
             delay: delay * i,
-            onComplete: function(it) {
+            onComplete: function(it,imgurl) {
+              lis[it].getElementsByClassName("background")[0].style.backgroundImage = imgurl;
               if (it == lis.length - 1) {
                 showTopShadow();
                 shadow();
               }
             },
-            onCompleteParams: [i]
+            onCompleteParams: [i,imgurl]
           });
 
         } else {
@@ -351,14 +340,15 @@ function showBottomShadow(){
           TweenLite.to(lis[i], timeAp, {
             top: 0,
             delay: delay * i,
-            onComplete: function(it) {
+            onComplete: function(it,imgurl) {
+              lis[it].getElementsByClassName("background")[0].style.backgroundImage = imgurl;
               if (it == lis.length - 1) {
                 showBottomShadow();
                 shadow();
 
               }
             },
-            onCompleteParams: [i]
+            onCompleteParams: [i,imgurl]
           });
         }
       }
@@ -482,46 +472,52 @@ function showBottomShadow(){
       cover.removeChild(imageObjects[0]);
       if(img.complete || img.width+img.height > 0)
       {
+        console.log("cover in cache");
         cover.style.backgroundImage = "url(" + img.src + ")";
-      }else
-      {
+        while (cover.firstChild) {
+          cover.removeChild(cover.firstChild);
+        }
+      }else{
+
         img.onload = function() {
           cover.style.backgroundImage = "url(" + img.src + ")";
           cover.style.visibility = "hidden";
-          TweenLite.to(cover, 1, {
+          TweenLite.to(cover, .3, {
             autoAlpha: 1
           });
+          while (cover.firstChild) {
+            cover.removeChild(cover.firstChild);
+          }
 
         }
       }
-      while (cover.firstChild) {
-        console.log("in");
-          cover.removeChild(cover.firstChild);
-        }
 
     }
 
-    var liBackground = menuUl.getElementsByTagName("img");
+ /*  var liBackground = menuUl.getElementsByTagName("img");
     liBackground = Array.prototype.slice.call(liBackground, 0);
 
-     for (var i = 0; i < liBackground.length; i++){
+    for (var i = 0; i < liBackground.length; i++){
       console.log(liBackground[i].src);
       var parent = liBackground[i].parentNode;
-      var img = new Image();
-      img.src = liBackground[i].src;
-      parent.removeChild(liBackground[i]);
+      var im = new Image();
       
-      img.onload = (function(image,parent) {
-        console.log(image.src);
-        parent.style.backgroundImage = "url(" + image.src + ")";
+      im.onload = (function(i) {
+        parent.style.backgroundImage = "url(" + liBackground[i].src + ")";
         parent.style.display = "block";
         parent.style.visibility = "hidden";
-        TweenLite.to(parent, 1, {
+        while (parent.firstChild) {
+          console.log("in");
+          parent.removeChild(parent.firstChild);
+        }
+        TweenLite.to(parent, .3, {
           autoAlpha: 1
         });
-      })(img,parent)
+      })(i)
       
-    }
+      im.src = liBackground[i].src;
+
+    }*/
 
     //KEYBOARD NAV
 
