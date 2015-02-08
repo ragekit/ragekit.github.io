@@ -318,7 +318,10 @@ function showBottomShadow(){
             top: 0,
             delay: delay * i,
             onComplete: function(it,imgurl) {
-              lis[it].getElementsByClassName("background")[0].style.backgroundImage = imgurl;
+              if(lis[it].getElementsByClassName("background")[0].style.backgroundImage =="")
+              {
+                lis[it].getElementsByClassName("background")[0].style.backgroundImage = imgurl;
+              }
               if (it == lis.length - 1) {
                 showTopShadow();
                 shadow();
@@ -341,7 +344,10 @@ function showBottomShadow(){
             top: 0,
             delay: delay * i,
             onComplete: function(it,imgurl) {
-              lis[it].getElementsByClassName("background")[0].style.backgroundImage = imgurl;
+              if(lis[it].getElementsByClassName("background")[0].style.backgroundImage =="")
+              {
+                lis[it].getElementsByClassName("background")[0].style.backgroundImage = imgurl;
+              }
               if (it == lis.length - 1) {
                 showBottomShadow();
                 shadow();
@@ -494,7 +500,7 @@ function showBottomShadow(){
 
     }
 
- /*  var liBackground = menuUl.getElementsByTagName("img");
+   var liBackground = menuUl.getElementsByTagName("img");
     liBackground = Array.prototype.slice.call(liBackground, 0);
 
     for (var i = 0; i < liBackground.length; i++){
@@ -517,7 +523,7 @@ function showBottomShadow(){
       
       im.src = liBackground[i].src;
 
-    }*/
+    }
 
     //KEYBOARD NAV
 

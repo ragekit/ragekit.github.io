@@ -38,7 +38,8 @@ layout: default
   </article>
   <div class="media">
     {% for media in page.media %}
-    <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})></div>
+    <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})>
+    </div>
     {% endfor %}
     <!-- {% for media in page.media %}
     <img class="image" src="{{ media | prepend : site.baseurl }}"/>
