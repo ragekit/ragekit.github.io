@@ -4,7 +4,7 @@ I'm freshly out of the the **University of Art and Design of Geneva (HEAD)** whe
 
 I did websites and digital art before, and now I make games.
 
-I doesn't really want to choose between being a **designer** or a being a **developer**, since I'm interested in what can spawn between art and technology, and learning new things all the time. 
+I doesn't really want to choose between being a **designer** or a being a **developer**, since I'm interested in what can spawn between **art** and **technology**, and learning new things all the time. 
 
 I prefers to identify broadly as a **maker**.
 
