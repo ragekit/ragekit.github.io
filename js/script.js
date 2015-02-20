@@ -114,14 +114,16 @@
       var leftScroll = document.documentElement.scrollLeft || document.body
       .scrollLeft
 
+              cover.style.left = -leftScroll + 50 + "px";
+
       if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
         menuDiv.style.position = "fixed";
-        //menuDiv.style.left = -leftScroll  +"px";
+        menuDiv.style.left = -leftScroll +50 +"px";
         siteHeader.style.left = -leftScroll + "px";
 
       } else {
         menuDiv.style.position = "absolute";
-        //menuDiv.style.left = 0 + "px";
+        menuDiv.style.left = 0;
         siteHeader.style.left = -leftScroll + "px";
 
 
