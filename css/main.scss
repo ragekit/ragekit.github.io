@@ -20,10 +20,10 @@ $headerColor : $menuNotSelected;
 $mainLineHeight : 1.7; 
 
 body{
+  padding:100px 50px 50px 50px;
   margin:0;
-  padding:0;
   font-family: $mainFont, serif;
-  min-width:1080px;
+  min-width:$minWidth;
   display:none;
 }
 
@@ -131,11 +131,12 @@ body{
   width:100%;
   bottom:0;
   font-family: $titleFont;
-
+  margin-bottom:50px;
+  padding-bottom:10px;
 
 
   div{
-    width:90%;
+    width:95%;
     margin:50px auto 0;
     font-size:12px;
     line-height:$footerSize;
@@ -170,7 +171,7 @@ body{
   min-width:$minWidth;
 
   ul.right{
-      right:25px;
+      right:50px;
   }
 
   ul.left{
@@ -217,7 +218,10 @@ body{
 
 .cover{
   background-position: center;
-  width : 100%;
+  right:50px;
+  left:50px;
+  min-width : $minWidth;
+ // width : 100%;
   height: 100%;
   position:fixed;
 //padding-top : 550px;
@@ -380,11 +384,11 @@ width:650px;
 }
 .project
 {
-  margin:0 auto;
-  padding:0;
+
   background-color: $bckground;
 
   min-width:$minWidth;
+ // width:100%;
 
   .project-content
   {
@@ -561,8 +565,8 @@ h3,h4{
   font-family:$titleFont;
   min-width:$minWidth;
   z-index:10;
-  width:100%;
   top:0;
+  width:100%; 
   position: fixed;
   li{
 

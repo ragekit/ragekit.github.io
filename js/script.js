@@ -50,38 +50,47 @@
 
   function resize() {
 
+
     if (!home) {
-      projects[0].style.top = (window.innerHeight - menuHeightClosed) +
+          ulContainer.style.height = window.innerHeight + "px";
+    menuUl.style.height = (window.innerHeight - menuHeightClosed) + "px";
+      projects[0].style.top = (window.innerHeight - menuHeightClosed -100) +
       "px";
       projects[0].style.position = "relative";
-      menuUl.style.width = window.innerWidth+ "px";
- 
-var scrollValue = document.documentElement.scrollTop || document.body
-.scrollTop;
-if (scrollValue > parseInt(projects[0].style.top, 10)) {
+      menuDiv.style.width = document.body.clientWidth -100 + "px";
+      var scrollValue = document.documentElement.scrollTop || document.body
+      .scrollTop;
+      if (scrollValue > parseInt(projects[0].style.top, 10) +100 || scrollValue <=
+        0) {
+        menuUl.style.overflowY = "scroll";
+        //  menuUl.style.width = (window.innerWidth -15) + "px";
+        menuUl.style.width = document.body.clientWidth -100+20+ "px";
+        menuUl.style.paddingRight = "20px";
 
-  menuDiv.style.position = "fixed";
-} else {
-  menuDiv.style.position = "absolute";
+      } else {
 
-}
-}
-if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
-  if (menuOpened) {
-    if (openedUp) {
-      ulContainer.style.position = "relative";
+        menuUl.style.overflowY = "hidden";
+        menuUl.style.width = document.body.clientWidth -100+ "px";
+        menuUl.style.paddingRight = 0;
+        //  menuUl.style.width = (window.innerWidth) + "px";
+      }
+      if (scrollValue > parseInt(projects[0].style.top, 10)) {
+        
+        menuDiv.style.position = "fixed";
+      } else {
+        menuDiv.style.position = "absolute";
 
-      ulContainer.style.top = -window.innerHeight + "px";
+      }
+    }
+    if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
+      if (menuOpened) {
+        if (openedUp) {
+          ulContainer.style.position = "relative";
+
+          ulContainer.style.top = -window.innerHeight + "px";
           //menuUl.scrollTop =500000;
         }
       }
-
-      showScrollBars();
-
-    } else {
-      //hideScrollBars();
-      showScrollBars();
-
     }
     if(menuOpened) shadow();
     resizeMedia();
@@ -94,25 +103,8 @@ if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
     }
   }
 
-  function hideScrollBars() {
-    ulContainer.style.height = "auto";
-    menuUl.style.height = "auto";
-    ulContainer.style.position = "relative";
-    if (openedUp) {
-      ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
-      "px ";
-    }
-  }
-
-  function showScrollBars() {
-    ulContainer.style.height = window.innerHeight + "px";
-    menuUl.style.height = (window.innerHeight - menuHeightClosed) + "px";
-
-  }
-
   function scroll() {
 
-    console.log("scroll");
     if (!home) {
       var scrollValue = document.documentElement.scrollTop || document.body
       .scrollTop;
@@ -122,34 +114,36 @@ if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
       var leftScroll = document.documentElement.scrollLeft || document.body
       .scrollLeft
 
-      if (scrollValue > parseInt(projects[0].style.top, 10)) {
-
-
-
+      if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
         menuDiv.style.position = "fixed";
-
-        menuDiv.style.left = -leftScroll + "px";
+        //menuDiv.style.left = -leftScroll  +"px";
         siteHeader.style.left = -leftScroll + "px";
 
       } else {
         menuDiv.style.position = "absolute";
-        menuDiv.style.left = 0 + "px";
+        //menuDiv.style.left = 0 + "px";
         siteHeader.style.left = -leftScroll + "px";
 
 
       }
 
       menuUl.style.overflowX = "hidden";
-      if (scrollValue > parseInt(projects[0].style.top, 10) || scrollValue <=
+
+      if (scrollValue > parseInt(projects[0].style.top, 10) +100 || scrollValue <=
         0) {
         menuUl.style.overflowY = "scroll";
         //  menuUl.style.width = (window.innerWidth -15) + "px";
+        menuUl.style.width = document.body.clientWidth -100+20+ "px";
+        menuUl.style.paddingRight = "20px";
 
       } else {
 
         menuUl.style.overflowY = "hidden";
+        menuUl.style.width = document.body.clientWidth -100+ "px";
+        menuUl.style.paddingRight = 0;
         //  menuUl.style.width = (window.innerWidth) + "px";
       }
+
 
       if (menuOpened) {
         shadow();
@@ -500,7 +494,7 @@ function showBottomShadow(){
 
     }
 
-   var liBackground = menuUl.getElementsByTagName("img");
+    var liBackground = menuUl.getElementsByTagName("img");
     liBackground = Array.prototype.slice.call(liBackground, 0);
 
     for (var i = 0; i < liBackground.length; i++){
