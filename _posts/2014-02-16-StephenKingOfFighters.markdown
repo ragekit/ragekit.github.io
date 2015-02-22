@@ -19,9 +19,9 @@ media :
 
 ###An old question under a new light
 Stephen King of Fighters is the name of my master’s thesis written during my studies at the University of Art and Design in Geneva (HEAD). 
+My question was "What forms of narration are specific to videogames ?".
 
 ####Narration is not always where you expect it to be
-My question was "What forms of narration are specific to videogames ?".
 I stated that narration in a game is not always where you expect it to be, and that it has a different shape than the one we are used to in linear and non-interactive media (like cinema). I first introduced the subject by making a short history of narratology and then went on to criticise the main ludologist assertion that consists in dividing narration and gameplay in a video game.
 
 ###Procedurality as the main affordance of video games
