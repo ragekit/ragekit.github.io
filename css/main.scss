@@ -253,7 +253,7 @@ div.mainText{
     //font-weight:bold;
 
     line-height:$mainLineHeight;
-    color:$dark-gray;
+    color:#111;
     margin:27px 0;
   //  font-family: 'Roboto Slab', sans-serif;
 }
@@ -397,7 +397,7 @@ width:650px;
     //top:100px;
     //position:relative;
     padding-top:$menuSize + 200px;
-    padding-bottom:250px;
+    padding-bottom:200px;
     margin:0 auto;
     //padding:0 0;
   }
@@ -536,7 +536,7 @@ h3,h4{
     font-weight:700;
     padding:5px;
     transition: all .3s;
-    color:$bigdarkgray;
+    color:#111;
   }
 
   h3:hover,h4:hover{
