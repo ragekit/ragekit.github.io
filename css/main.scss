@@ -133,22 +133,22 @@ body{
   font-family: $titleFont;
   margin-bottom:50px;
   padding-bottom:10px;
-
+    hr{
+      margin:0 !important;
+      opacity:.3;
+      width:100% !important;
+    }
 
   div{
     width:100%;
-    margin:50px auto 0;
+    margin:0 auto;
     font-size:12px;
     line-height:$footerSize;
     opacity:.7;
-    hr{
-      margin:0;
-      opacity:.3;
-      width:100%;
-    }
+    width:752px;
+    
     span.author{
       font-weight:600;
-      margin-left:10px;
     }
 
     span.time{
