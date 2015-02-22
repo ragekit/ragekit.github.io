@@ -2,7 +2,7 @@
 title: ragek.it
 email: bgattet@gmail.com
 description: "Portfolio of @ragekit"
-baseurl: ""
+baseurl: "/"
 url: "http://ragekit.github.io"
 encoding: utf-8
 twitter_username: ragekit
