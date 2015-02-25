@@ -20,5 +20,5 @@ Antibiotic is a weird arcade cabinet built for the Aix-en-Provence electronic fa
 
 They have at any point the choice to press a big red button and end the game, saving their score. If they lose, their score is erased and they get splashed by water coming out of the cabinet on their crotch, to shame them making people think they peed themselves.
 
-####Eniarof : a playful and spontaneous art exhibit
+#####Eniarof : a playful and spontaneous art exhibit
 The game in itself is very simple: each player controls only one potentiometer they use to make the diameter of a circle change. If the player circle touches the outer of the inner ring, they lose health. If it touches the small dots on the game field, they get healed and earn points. This looks easy but it is in fact very hard and most of the time, players take too much risks and always end up with water all over themselves.

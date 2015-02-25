@@ -35,7 +35,9 @@ layout: default
   <div class="mainText">
     {{ content }}
   </div>
+  <div style="clear:both"></div>
   </article>
+
   <div class="media">
     {% for media in page.media %}
     <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})>

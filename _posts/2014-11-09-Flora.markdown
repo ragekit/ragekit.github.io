@@ -1,0 +1,25 @@
+---
+layout: project
+title:  "Flora"
+subtitle: "Procedural Flower Generator"
+permalink: flora
+cover: flora/flora.png
+shortDes:  Generative flowers that grow infinitely and burn your CPU
+color: E2760C
+what: Game Design/Development
+where: Tourcoing
+with: Koen Van den Steen/Héloïse Lozano/Alexandre Mattret/Nicolas Dubois
+linkName : "itch.io"
+link : "http://ragekit.itch.io/flora"
+type: "Jam Game"
+media :
+---
+
+
+###Contemplative flower generator
+Flora is a small jam game that we made at the Zoomachine festival in november.
+
+At first it was going to be a gardening simulator where you had to tend to various alien shaped flowers, but the lack of time transformed it into a contemplative experience where you watch flowers grow slowly from a simple stem to a gigantic tree.
+
+
+Flower geometry is procedurally generated from scratch, with an homemade algorithm coded in a couple of hours during the jam. 

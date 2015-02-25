@@ -19,17 +19,17 @@ media :
 ---
 
 ###An experimentation around the notion space
-Within is an extension of my master’s thesis. I first wanted to build a game around a personal experience of mine: anxiety attacks, and I tried to see how it was possible to translate it into a game which would use this experience as a subtext. My other goal was to try and see what I could do in the short timespan of my master’s practical project (3&nbsp;months), and actually finish and release a game.
+Within is an extension of my master’s thesis. I first wanted to build a game around a personal experience of mine: anxiety attacks, and I tried to see how it was possible to translate it into a game which would use this experience as a subtext. 
 
-I developed it alone, under the supervision of David Calvo.
+My other goal was to try and see what I could do in the short timespan of my master’s practical project (3&nbsp;months), and actually finish and release a game. I developed it alone, under the supervision of David Calvo.
 
-####An allegory of anxiety
+#####An allegory of anxiety
 In Within, you are lost in a strange place that seems to change when you're not looking, and chased by a mysterious figure that can appear anytime and disrupt you in your wandering and force you to flee. I wanted to make a short game, that could be played in 5/10 minutes. I later stumbled upon the term “allegorithm” on Twitter and I think it fits perfectly to describe what I wanted to do.
 
-###A self challenge
+####A self challenge
 This project taught me to design by iteration and by substraction: I had a lot of ideas that couldn't be implemented into the game, because of lack of time or because they weren't relevant enought. There are a lot of ideas in this project that I want to continue exploring in further games. Especially questioning the definition of a virtual space.
 
-#####Press :
+######Press :
 [Killscreen](http://killscreendaily.com/articles/within/)
 [FastCoDesign](http://www.fastcodesign.com/3033977/this-game-will-make-you-feel-insane-try-it)
 [Indiegames](http://indiegames.com/2014/07/freeware_pick_within_ragekit.html)
