@@ -468,14 +468,14 @@ function showBottomShadow(){
       var img = new Image();
       img.src = imageObjects[0].src;
       cover.removeChild(imageObjects[0]);
-      if(img.complete || img.width+img.height > 0)
+      /*if(img.complete || img.width+img.height > 0)
       {
         console.log("cover in cache");
         cover.style.backgroundImage = "url(" + img.src + ")";
         while (cover.firstChild) {
           cover.removeChild(cover.firstChild);
         }
-      }else{
+      }else{*/
 
         img.onload = function() {
           cover.style.backgroundImage = "url(" + img.src + ")";
@@ -488,7 +488,7 @@ function showBottomShadow(){
           }
 
         }
-      }
+      //}
 
     }
 
