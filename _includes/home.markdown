@@ -1,7 +1,8 @@
 
-###Culture & Games
+
 I'm Benjamin Gattet, a French multimedia **artist/Hacker** specialized in playful interactions, gamedesign, and exploring uncharted territories.
 
+#####Culture & Games
 I'm freshly out of the the University of Art and Design of Geneva **HEAD** where I studied media design. Before that, I studied multimedia and digital design at **Gobelins, Paris**.    
 I did websites and digital art before, and now I make games.
 

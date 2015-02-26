@@ -13,6 +13,9 @@ linkName : "itch.io"
 link : "http://ragekit.itch.io/flora"
 type: "Jam Game"
 media :
+    - assets/flora/1.png
+    - assets/flora/2.png
+    - assets/flora/3.png
 ---
 
 
@@ -23,3 +26,5 @@ At first it was going to be a gardening simulator where you had to tend to vario
 
 
 Flower geometry is procedurally generated from scratch, with an homemade algorithm coded in a couple of hours during the jam. 
+
+Also feature clouds hooked up on caffeine

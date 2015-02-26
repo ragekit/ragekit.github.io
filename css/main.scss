@@ -12,7 +12,7 @@ $light-gray:#E0E0E0;
 $bckground: #EFEFEF;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
-$mainFont : "Droid Serif";
+$mainFont : "droid serif";
 $titleFont : "Open Sans";
 $mainTextSize : 15px;
 $bigdarkgray : #000000;
@@ -234,8 +234,8 @@ img{
 }
 canvas{
   position:relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25%;
+  transform: translateY(25%);
 }
 }
 
@@ -256,7 +256,7 @@ div.mainText{
     width:500px;
     line-height:$mainLineHeight;
     color:#111;
-    margin:0 0 2.5em 0;
+    margin:0 0 1.5em 0;
   //  font-family: 'Roboto Slab', sans-serif;
 }
 
@@ -741,6 +741,12 @@ h3,h4,h5{
       position:absolute;
       z-index:-2;
       transition:all .5s;
+    }
+    .liwhitebackground{
+      width:100%;
+      height:100%;
+      z-index:-4;
+      position:absolute;
     }
 
     div.liCover{
