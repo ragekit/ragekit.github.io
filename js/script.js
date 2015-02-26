@@ -74,7 +74,7 @@
         menuUl.style.paddingRight = 0;
         //  menuUl.style.width = (window.innerWidth) + "px";
       }
-      if (scrollValue > parseInt(projects[0].style.top, 10)) {
+      if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
         
         menuDiv.style.position = "fixed";
       } else {
