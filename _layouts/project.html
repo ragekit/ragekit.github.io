@@ -60,7 +60,12 @@ layout: default
   h3:before,h4:before,h3:after,h4:after{
     color:#{{ page.color }}
   }
-
+  h3,h4,h5{
+    color:#{{ page.color }}
+  }
+  strong{
+    color:#{{ page.color }};
+  }
   .mainText a{
     color:#{{ page.color }}
   }
@@ -69,3 +74,4 @@ layout: default
 
   <div style="clear:both"></div>
 </div>
+<script type="text/javascript" src="{{ "js/script.js" | prepend: site.baseurl }}"></script>

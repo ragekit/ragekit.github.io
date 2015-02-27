@@ -1,0 +1,46 @@
+---
+---
+
+.thesis-content
+  {
+
+    //top:100px;
+    //position:relative;
+    width:800px;
+    text-align:center;
+    padding-top: 200px;
+    padding-bottom:200px;
+    margin:0 auto;
+    position:relative;
+
+    p{
+    	font-size:16px;
+	    font-weight:400;
+	    //font-weight:bold;
+	    line-height:1.7;
+	    color:#111;
+	    margin:0 0 1.5em 0;
+    }
+   
+
+    .note{
+    	position:relative;
+    	top:-10px;
+    	left:2px;
+    	font-size:13px;
+    }
+
+    //padding:0 0;
+
+    .notes{
+    	position:absolute;
+    	top:0;
+    	left:-200px;
+    	width:150px;
+    	font-size:10px;
+    }
+  }
+
+.site-header{
+	position:static !important;
+}

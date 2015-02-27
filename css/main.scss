@@ -9,7 +9,7 @@ $menuSize : 100px;
 $footerSize : 50px;
 $minWidth : 1280px;
 $light-gray:#E0E0E0;
-$bckground: #EFEFEF;
+$bckground: #F5F5F5;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Open Sans";
@@ -25,7 +25,6 @@ body{
   margin:0 auto;
   font-family: $mainFont, serif;
   min-width:$minWidth;
-  display:none;
 }
 
 .show{
@@ -245,7 +244,7 @@ canvas{
 
 
 
-div.mainText{
+.mainText{
   
   margin:0;
   
@@ -259,7 +258,18 @@ div.mainText{
     margin:0 0 1.5em 0;
   //  font-family: 'Roboto Slab', sans-serif;
 }
+strong{
+  font-style:italic;
+  font-weight:normal;
+}
 
+a:link,a:hover,a:visited,a:active{
+  color: #111;
+  text-transform:underline;
+}
+a:hover{
+  opacity:.5;
+}
 
 h5 + p{
   margin-left:$retraitMaintextGauche;
@@ -555,7 +565,7 @@ h3,h4,h5{
     font-weight:700;
     padding:5px;
     transition: all .3s;
-    color:#111;
+    //color:#111;
     margin-top:20px;
     margin-bottom:20px;
   }
@@ -565,7 +575,7 @@ h3,h4,h5{
     transition: all .3s;
   }
 
-  h3:before,h4:before,h5:before{
+ /*  h3:before,h4:before,h5:before{
     content:"\"";
     //font-size:20px;
     font-weight:600;
@@ -586,7 +596,8 @@ h3,h4,h5{
     font-size:17px;
     color: $bigdarkgray;
   //  text-decoration:underline;
-}
+  } */
+
 }
 
 .menu{

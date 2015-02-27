@@ -108,13 +108,23 @@
     if (!home) {
       var scrollValue = document.documentElement.scrollTop || document.body
       .scrollTop;
-      cover.style.marginTop = -(scrollValue / 2.5) + "px";
+
+      if(cover !=null)
+      {
+        cover.style.marginTop = -(scrollValue / 2.5) + "px";
+
+      }
 
 
       var leftScroll = document.documentElement.scrollLeft || document.body
       .scrollLeft
 
-              cover.style.left = -leftScroll + 50 + "px";
+      if(cover != null)
+      {
+        cover.style.left = -leftScroll + 50 + "px";
+
+      }
+
 
       if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
         menuDiv.style.position = "fixed";
@@ -442,13 +452,21 @@ function showBottomShadow(){
   }
 
     //Lightbox
-
-    var imgs = document.getElementsByClassName("media")[0].getElementsByClassName(
-      "image");
-    for (i = 0; i < imgs.length; i++) {
-      imgs[i].addEventListener('click', showLB, false);
+    var media = document.getElementsByClassName("media");
+     var imgs
+    if(media.length >0)
+    {
+      imgs = media[0].getElementsByClassName(
+        "image");
+      for (i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener('click', showLB, false);
+      }
+      lightBoxDiv.addEventListener('click', hideLB, false);
+    }else
+    {
+      imgs = [];
     }
-    lightBoxDiv.addEventListener('click', hideLB, false);
+  
 
     projectStartHeight = projects[0].offsetHeight;
 
@@ -461,8 +479,9 @@ function showBottomShadow(){
     var next = document.getElementsByClassName("nextArrow")[0];
 
     //Load cover
-
-    var imageObjects = cover.getElementsByTagName("img");
+    if(cover != null)
+    {
+      var imageObjects = cover.getElementsByTagName("img");
 
     if (imageObjects.length > 0) {
       var img = new Image();
@@ -491,6 +510,8 @@ function showBottomShadow(){
       //}
 
     }
+    }
+    
 
     var liBackground = menuUl.getElementsByTagName("img");
     liBackground = Array.prototype.slice.call(liBackground, 0);
