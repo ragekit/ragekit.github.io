@@ -575,19 +575,23 @@ h3,h4,h5{
     transition: all .3s;
   }
 
- /*  h3:before,h4:before,h5:before{
-    content:"\"";
+   h3:before,h4:before,h5:before{
+    content:"{";
     //font-size:20px;
-    font-weight:600;
+    //font-weight:600;
     position:relative;
+    margin-right:10px;
+    opacity:.4;
     //top:5px;
     //left:-3px;
   }
   h3:after,h4:after,h5:after{
-    content:"\"";
+    content:"}";
     //font-size:20px;
-    font-weight:600;
+   // font-weight:600;
     position:relative;
+    opacity:.4;
+    margin-left:10px;
     //top:2px;
     //left:5px;
   }
@@ -596,7 +600,7 @@ h3,h4,h5{
     font-size:17px;
     color: $bigdarkgray;
   //  text-decoration:underline;
-  } */
+  } 
 
 }
 
