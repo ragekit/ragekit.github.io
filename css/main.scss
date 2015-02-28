@@ -568,47 +568,52 @@ h3,h4,h5{
     //color:#111;
     margin-top:20px;
     margin-bottom:20px;
+  
   }
 
   h3:hover,h4:hover,h5:hover{
  //   background-size:100% 100%;
     transition: all .3s;
-    transform:scale(1.2) translateY(10%);
-    margin-top:15px;
+    transform:scale(1.1)
+    
   }
 
   h3:hover:before,h4:hover:before,h5:hover:before{
  //   background-size:100% 100%;
       
-      margin-right:50px;
+      left:-50px;
       opacity: 0;
   }
 
   h3:hover:after,h4:hover:after,h5:hover:after{
  //   background-size:100% 100%;
       
-      margin-left:50px;
+      /* margin-left:50px;
+      margin-right:-50px; */
+      left:50px;
       opacity: 0;
   }
 
    h3:before,h4:before,h5:before{
-    content:"{";
+    content:"\"";
     //font-size:20px;
     //font-weight:600;
     position:relative;
     margin-right:10px;
-    opacity:.5;
+    opacity:1;
+    left:0;
     transition: all .3s;
     //top:5px;
     //left:-3px;
   }
   h3:after,h4:after,h5:after{
-    content:"}";
+    content:"\"";
     transition: all .3s;
     //font-size:20px;
    // font-weight:600;
     position:relative;
-    opacity:.5;
+    opacity:1;
+    left:0;
     margin-left:10px;
     //top:2px;
     //left:5px;
