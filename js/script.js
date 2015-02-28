@@ -540,6 +540,20 @@ function showBottomShadow(){
 
     }
 
+    //menu
+
+    var actuallis = lis;
+
+    for (var i = 0; i < actuallis.length; i++) {
+
+      (function(i){
+        actuallis[i].onmouseover = function(){
+          console.log(i);
+          actuallis[i].parentNode.style.backgroundImage = actuallis[i].getElementsByClassName("background")[0].style.backgroundImage;
+        }
+      })(i);
+    };
+
     //KEYBOARD NAV
 
     document.addEventListener('keydown', function(e) {
