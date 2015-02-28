@@ -6,11 +6,10 @@
 
     //top:100px;
     //position:relative;
-    width:800px;
+    width:100%;
     text-align:center;
     padding-top: 200px;
     padding-bottom:200px;
-    margin:0 auto;
     position:relative;
 
     p{
@@ -19,7 +18,9 @@
 	    //font-weight:bold;
 	    line-height:1.7;
 	    color:#111;
-	    margin:0 0 1.5em 0;
+	    margin:0 auto 1.5em auto;
+        width:800px;
+        transition:.5s all;
     }
    
 
@@ -28,19 +29,50 @@
     	top:-10px;
     	left:2px;
     	font-size:13px;
+        opacity: .5;
+        color:#000;
+        transition:.5s all;
+    }
+
+    .bigNote{
+        //font-size:300px;
+        font-weight:600;
+        color:#000 !important;
+        opacity: 1;
     }
 
     //padding:0 0;
 
     .notes{
-    	position:absolute;
-    	top:0;
-    	left:-200px;
-    	width:150px;
-    	font-size:10px;
+    	.leftNote{
+            width:150px;
+            left:50px;
+            font-size:11px;
+    		position:absolute;
+    		text-align:left;
+            color:#000;
+            //opacity:.5;
+            transition:.5s all;
+    	}
     }
+
+    .fullOpacity{
+        opacity: 1 !important;
+    }
+    .halfOpacity{
+        opacity: .5 !important;
+    }
+
+    .halfColorText{
+        //color:#666;
+    }
+
+    .veryDimText{
+        opacity:.2 !important;
+    }
+
   }
 
 .site-header{
-	position:static !important;
+	position:absolute !important;
 }
