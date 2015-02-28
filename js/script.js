@@ -325,6 +325,9 @@ function showBottomShadow(){
             onComplete: function(it,imgurl) {
              //lis[it].getElementsByClassName("background")[0].style.display = "block";
               if (it == lis.length - 1) {
+                for (var j = 0; j < lis.length; j++) {
+                  lis[j].getElementsByClassName("background")[0].style.display = null;
+                };
                 showTopShadow();
                 shadow();
               }
@@ -349,7 +352,7 @@ function showBottomShadow(){
               //lis[it].getElementsByClassName("background")[0].style.display = "block";
               if (it == lis.length - 1) {
                 for (var j = 0; j < lis.length; j++) {
-                  lis[j].getElementsByClassName("background")[0].style.display = "block";
+                  lis[j].getElementsByClassName("background")[0].style.display = null;
                 };
                 showBottomShadow();
                 shadow();
