@@ -1,28 +1,64 @@
 var text = document.getElementsByClassName("text")[0];
-
 var ps = text.getElementsByTagName("p");
 
 var note = 1
 
 
-for (var i = 0; i < ps.length; i++) {
-	var p = ps[i];
-	var output = "";
-	var t= p.innerHTML;
-	var lastIndex = 0;
-	var noteIndex = p.innerHTML.indexOf("["+note+"]");
-	while(noteIndex >-1)
-	{
-		
-		var noteEnd = noteIndex + note.toString().length + 2;
-		output += t.substring(lastIndex,noteIndex)+"<span class='note'>"+t.substring(noteIndex,noteEnd)+"</span>";
-		lastIndex = noteEnd;
-		note++;
-		noteIndex = t.indexOf("["+note+"]");
-	}
-	output += t.substr(lastIndex);
-	p.innerHTML = output;
+
+var p = text;
+var output = "";
+var t= p.innerHTML;
+var lastIndex = 0;
+var noteIndex = p.innerHTML.indexOf("["+note+"]");
+while(noteIndex >-1)
+{
+	
+	var noteEnd = noteIndex + note.toString().length + 2;
+	output += t.substring(lastIndex,noteIndex)+"<span class='note'>"+t.substring(noteIndex,noteEnd)+"</span>";
+	lastIndex = noteEnd;
+	note++;
+	noteIndex = t.indexOf("["+note+"]");
 }
+output += t.substr(lastIndex);
+p.innerHTML = output;
+
+
+var p = text;
+var output = "";
+var t= p.innerHTML;
+var chapterStartIndex = 0;
+var chapterEndIndex;
+var titleIndex = p.innerHTML.indexOf("<h1");
+
+chapterStartIndex = p.innerHTML.indexOf("</h1>")+5
+
+output += p.innerHTML.substring(0,chapterStartIndex);
+var lol = 0;
+while(chapterStartIndex <p.innerHTML.length && lol<50)
+{
+	var chapterLength = p.innerHTML.substr(chapterStartIndex).indexOf("<h2",3);
+
+	console.log(chapterLength);
+	if(chapterLength == -1)  
+	{
+		//last chapter
+		chapterEndIndex = p.innerHTML.length-1;
+		output += "<div class='chapter'>"+t.substring(chapterStartIndex,chapterEndIndex)+"</div>";
+		break;
+	}else
+	{
+		chapterEndIndex = chapterStartIndex + chapterLength;
+		output += "<div class='chapter'>"+t.substring(chapterStartIndex,chapterEndIndex)+"</div>";
+		chapterStartIndex = chapterEndIndex;
+	}
+
+		
+
+	
+	lol++;
+}
+p.innerHTML = output;
+
 
 var notes = document.getElementsByClassName("notes")[0];
 
@@ -83,22 +119,22 @@ function whenLoaded(){
 	var lastTop = 0;
 	var leftNotes = notes.getElementsByTagName("div");
 	var noteNb = 0;
-	for (var i = 0; i < ps.length; i++) {
-		var spans = ps[i].getElementsByTagName("span");
+	console.log("in");
+		var spans = text.getElementsByTagName("span");
 		for (var j = 0; j < spans.length; j++) {
-			
+			//console.log(j);
 			
 			if(spans[j].offsetTop > lastTop)
 			{
 
 				leftNotes[noteNb].style.top = spans[j].offsetTop + "px";
 			}else{
+
 				leftNotes[noteNb].style.top = lastTop + "px";
 			}
 			noteCouples.push([leftNotes[noteNb],spans[j]]);
 			lastTop = parseInt(leftNotes[noteNb].style.top) + leftNotes[noteNb].clientHeight + 20;
 			noteNb++;
-		}
 	}
 
 

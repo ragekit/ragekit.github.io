@@ -7,7 +7,7 @@
     //top:100px;
     //position:relative;
     width:100%;
-    text-align:center;
+   // text-align:center;
     padding-top: 200px;
     padding-bottom:200px;
     position:relative;
@@ -19,8 +19,54 @@
 	    line-height:1.7;
 	    color:#111;
 	    margin:0 auto 1.5em auto;
-        width:800px;
+        width:700px;
         transition:.5s all;
+    }
+    p:first-of-type:first-letter{
+        font-size:130px;
+        float:left;
+        position:relative;
+        margin-top:-60px;
+        margin-bottom:-30px;
+        margin-left:80px;
+    }
+    p:first-of-type:first-line{
+        font-weight:600;
+    }
+
+    p:nth-of-type(even)
+    {
+      //  padding-left:100px;
+    }
+
+    h1{
+        margin:0 auto 200px auto;
+        font-size:60px;
+        display:block;
+        text-align:center;
+    }
+
+    h2{
+        font-size:60px;
+        text-align: center;
+        //width: 500px;
+        margin: 100px auto 50px auto;
+    }
+
+    h3{
+        text-align: center;
+        width: 500px;
+        margin: 0 auto 50px auto;
+        text-transform: uppercase;
+
+    }
+    h4{
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        width: 500px;
+        margin: 0 auto 50px auto;
+        line-height:1.7;
     }
    
 
