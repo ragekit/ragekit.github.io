@@ -18,13 +18,18 @@ $mainTextSize : 16px;
 $bigdarkgray : #000000;
 $headerColor : $menuNotSelected;
 $mainLineHeight : 1.7;
-$retraitMaintextGauche :130px;
+$retraitMaintextGauche :75px;
 
 body{
   padding:100px 50px 50px 50px;
   margin:0 auto;
   font-family: $mainFont, serif;
   min-width:$minWidth;
+}
+
+.leftTab{
+  position:relative;
+  left:$retraitMaintextGauche;
 }
 
 .show{
@@ -533,15 +538,11 @@ h3,h5{
   float:left;
   position:relative;
   //  left:-150px;
-  margin-right:30px;
+  margin-right:45px;
+  margin-left:-220px;
+
 }
-h3{
-  margin-left:-210px;
-}
-h5
-{
-  margin-left:-210px;
-}
+
 
 h4{
   float:right;
@@ -552,21 +553,16 @@ h4{
 }
 
 h3,h4,h5{
- /*  background:linear-gradient( $hover, $hover) no-repeat;
-  background-size:0% 100%;
-  overflow:visible;
-  background-position:50% 0; */
     //color:$dark-gray;
     font-size:20px;
-    width:300px;
+    width:250px;
     //height:35px;
     line-height:1.3;
     text-align:center;
     font-weight:700;
-    padding:5px;
     transition: all .3s;
     //color:#111;
-    margin-top:20px;
+    margin-top:26px;
     margin-bottom:20px;
   
   }
@@ -599,9 +595,8 @@ h3,h4,h5{
     //font-size:20px;
     //font-weight:600;
     position:relative;
-    margin-right:10px;
     opacity:1;
-    left:0;
+    left:0px;
     transition: all .3s;
     //top:5px;
     //left:-3px;
@@ -613,8 +608,7 @@ h3,h4,h5{
    // font-weight:600;
     position:relative;
     opacity:1;
-    left:0;
-    margin-left:10px;
+    left:0px;
     //top:2px;
     //left:5px;
   }
