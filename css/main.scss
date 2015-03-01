@@ -802,9 +802,9 @@ h3,h4,h5{
         color:$menuNotSelectedColor !important;
       }
       //margin:2px 0;
-      transition: height .5s;
       //transition:.5s;
       min-width:$minWidth !important;
+      overflow: hidden;
     }
     li:not(.selected){
     //  border-bottom:1px solid $hover;
@@ -826,7 +826,10 @@ h3,h4,h5{
       opacity:.6;
     }
     .background{
-       background-position: 0 51%;
+       //background-position: 0 51%;
+       transform:scale(2);
+      transition:all 50s;
+      transition-timing-function:linear;
     }
 
 
