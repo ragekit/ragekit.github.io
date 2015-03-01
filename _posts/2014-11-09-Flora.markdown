@@ -3,7 +3,7 @@ layout: project
 title:  "Flora"
 subtitle: "Procedural Flower Generator"
 permalink: flora
-cover: flora/flora.png
+cover: flora/2.png
 shortDes:  Generative flowers that grow infinitely and burn your CPU
 color: E2760C
 what: Game Design/Development
@@ -14,7 +14,7 @@ link : "http://ragekit.itch.io/flora"
 type: "Jam Game"
 media :
     - assets/flora/1.png
-    - assets/flora/2.png
+    - assets/flora/flora.png
     - assets/flora/3.png
 ---
 
