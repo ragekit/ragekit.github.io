@@ -1,6 +1,16 @@
 ---
 ---
 
+$bckground: #F9F9F9;
+$minWidth : 1180px;
+$menuSize : 100px;
+
+@import "fonts/stylesheet.css";
+
+body{
+    min-width: $minWidth !important;
+}
+
 .thesis-content
   {
 
@@ -12,6 +22,11 @@
     padding-bottom:200px;
     position:relative;
 
+    .text{
+        width:700px;
+        margin:0 auto;
+    }
+
     p{
     	font-size:16px;
 	    font-weight:400;
@@ -22,15 +37,15 @@
         width:700px;
         transition:.5s all;
     }
-    p:first-of-type:first-letter{
+    p.first:first-letter{
         font-size:130px;
         float:left;
         position:relative;
         margin-top:-60px;
         margin-bottom:-30px;
-        margin-left:80px;
+        margin-left:30px;
     }
-    p:first-of-type:first-line{
+    p.first:first-line{
         font-weight:600;
     }
 
@@ -38,35 +53,117 @@
     {
       //  padding-left:100px;
     }
+    
+
+    .blueIntro{
+        width:500px;
+        margin:0 auto 50px auto;
+        padding-right:120px;
+        font-size:20px;
+        color:#00AEEF;
+        font-style: italic;
+    }
+
+    .blueNote{
+            color:#00AEEF;
+            float:right;
+            width:300px;
+            font-size:25px;
+            margin-right:-150px;
+            margin-left:50px;
+            margin-top:50px;
+            margin-bottom:50px;
+            clear:both;
+            line-height: 1.4;
+
+    }
+    .blueNoteContainer:before{
+        content:' ';
+        display:block;
+        float:right;
+        height:100px;
+    }
+
+    .center{
+        width:400px;
+        margin:0 auto 50px auto;
+        padding-right:0;
+        color:#00AEEF;
+        font-style: italic;
+        text-align:center;
+        font-size:35px;
+    }
+
+    hr{
+        margin-bottom:40px;
+        margin-top:40px;
+    }
+
+    .subt{
+        font-size:11px;
+        //width:500px;
+        text-align:center;
+        margin:0 auto 100px auto;
+        font-family:"simon_sans_boldbold";
+        text-transform: uppercase;
+        line-height:1.5;
+        color:#666;
+    }
+
+    .large{
+        width:590px;
+        padding-right:50px;
+    }
+
+    .right{
+        text-align:right;
+        padding-right: 0;
+        margin-right:40px;
+    }
 
     h1{
-        margin:0 auto 200px auto;
+        margin:0 auto 100px auto;
         font-size:60px;
         display:block;
         text-align:center;
+        font-family:"simon_sans_boldbold";
     }
 
     h2{
         font-size:60px;
         text-align: center;
         //width: 500px;
-        margin: 100px auto 50px auto;
+        margin: 150px 0 50px 0;
+        display:inline-block;
+        left:50%;
+        position:relative;
+        border-bottom:1px solid;
+        transform:translateX(-50%);
+        font-family:"simon_sans_boldbold";
     }
 
     h3{
         text-align: center;
-        width: 500px;
+        width: 600px;
+        font-size:30px;
         margin: 0 auto 50px auto;
         text-transform: uppercase;
+        font-family:"simon_sans_boldbold";
 
     }
     h4{
         font-size: 16px;
         font-weight: normal;
         text-align: center;
-        width: 500px;
-        margin: 0 auto 50px auto;
+        width: 550px;
+        margin: 0 auto 150px auto;
         line-height:1.7;
+    }
+
+    h5{
+        text-align: center;
+        font-size:30px;
+        font-family:"simon_sans_boldbold";
     }
    
 
@@ -118,7 +215,71 @@
     }
 
   }
-
 .site-header{
-	position:absolute !important;
+	//position:absolute !important;
+    ul.right{
+        display:none;
+    }
+    height:100px;
+    background-color:white;
+    min-width:800px;
+}
+.thesisMenuContainer{
+    position: fixed;
+     top:25px;
+    z-index:5000;
+    width:100%;
+    left:0;
+    top:35px;
+    min-width:$minWidth + 100;
+}
+.thesisMenu{
+
+    width:700px;
+    margin:0 auto;
+    a:link,a:hover,a:visited,a:active{
+  color: #111;
+  text-decoration: none;
+}
+
+a.selected{
+    font-weight:600;
+}
+
+a.current{
+    text-decoration: underline;
+}
+
+a:hover{
+  opacity:.5;
+}
+    padding:0;
+    li{
+        display:inline-block;
+    }
+    li:not(:first-child)
+    {
+        margin-left:50px;
+    }
+}
+
+.thesis
+{
+
+
+  background-color: $bckground;
+
+  min-width:$minWidth;
+ // width:100%;
+
+  .thesis-content
+  {
+
+    //top:100px;
+    //position:relative;
+    padding-top:$menuSize + 200px;
+    padding-bottom:200px;
+    margin:0 auto;
+    //padding:0 0;
+  }
 }

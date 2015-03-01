@@ -115,7 +115,15 @@ while(noteIndex >-1)
 //output += notesText.substr(lastIndex);
 notes.innerHTML = output;
 
+var ids = [];
+var menuAs = [];
+
+
 function whenLoaded(){
+	Array.prototype.push.apply(ids,text.getElementsByTagName("h1"));
+	 Array.prototype.push.apply(ids,text.getElementsByTagName("h2"));
+	 
+	 Array.prototype.push.apply(menuAs,document.getElementsByClassName("thesisMenu")[0].getElementsByTagName("a"));
 	var lastTop = 0;
 	var leftNotes = notes.getElementsByTagName("div");
 	var noteNb = 0;
@@ -145,8 +153,6 @@ function whenLoaded(){
 
 
 			function coupleOver(){
-				console.log("i");
-				console.log(couple[0].innerHTML);
 				if(couple[0].className.indexOf("fullOpacity") == -1)
 				{
 					couple[0].className += " fullOpacity";
@@ -182,7 +188,8 @@ function whenLoaded(){
 				couple[1].className = "note";
 
 				for (var i = 0; i < ps.length; i++) {
-					ps[i].className = "";
+					ps[i].className = ps[i].className.replace(/\bveryDimText\b/,'');
+					ps[i].className= ps[i].className.replace(/\bhalfColorText\b/,'');
 					
 				}
 
@@ -215,12 +222,57 @@ function whenLoaded(){
 
 }
 
+function scroll(){
+	 var scrollValue = document.documentElement.scrollTop || document.body.scrollTop;
+	 var currentChapter;
+	 for (var i = 0; i < ids.length; i++) {
+	 	var current = ids[i];
+	 	if(scrollValue > ids[i].offsetTop)
+	 	{
+	 		console.log(i);
+	 		currentChapter = ids[i];
+	 			for (var j = 0; j < menuAs.length; j++) {
+	 				currentA = menuAs[j];
 
-
-
-function wrapWithSpan(){
-
+	 				if(currentA.href.indexOf(current.id)>-1)
+	 				{
+	 					if(currentA.className.indexOf("selected") == -1)
+	 					{
+	 						currentA.className += " selected";
+	 					}
+	 				}
+	 			};
+	 	}else{
+	 		for (var j = 0; j < menuAs.length; j++) {
+	 			currentA = menuAs[j];
+	 			if(currentA.href.indexOf(current.id) > -1)
+	 			{
+	 				currentA.className = currentA.className.replace(/\bselected\b/,'');
+	 			}
+	 		};
+	 	}
+	 };
+	 if(currentChapter)
+	 {
+	 	 for (var j = 0; j < menuAs.length; j++) {
+ 			currentA = menuAs[j];
+ 			if(currentA.href.indexOf(currentChapter.id) > -1)
+ 			{
+ 				if(currentA.className.indexOf("current") == -1)
+	 					{
+	 						currentA.className += " current";
+	 					}
+ 			}else
+ 			{
+ 				currentA.className = currentA.className.replace(/\bcurrent\b/,'');
+ 			}
+ 		};
+	 }
+	
 
 }
+
+window.onscroll = scroll;
+
 
 window.onload = whenLoaded;
