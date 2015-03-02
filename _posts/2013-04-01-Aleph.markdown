@@ -8,8 +8,9 @@ shortDes: A concept about reading and shaping stories together.
 color: A59F26
 what: Everything
 where: Geneva
-linkName : pdf
-link : assets/aleph/explanation.pdf
+link : 
+  - name: "pdf"
+    url : assets/aleph/explanation.pdf
 type : "Concept"
 media :
   - assets/aleph/1.png

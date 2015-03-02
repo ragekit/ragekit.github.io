@@ -53,6 +53,20 @@ body{
     {
       //  padding-left:100px;
     }
+
+    .illus{
+        margin:100px 0;
+        img{
+            width:700px;
+            margin-bottom:6px;
+        }
+        color:#666;
+        font-size:11px;
+        span.imgAuthor{
+            font-weight:600;
+            text-decoration: underline;
+        }
+    }
     
 
     .blueIntro{
@@ -99,7 +113,7 @@ body{
         margin-top:40px;
     }
 
-    .subt{
+    .subt, .thanks{
         font-size:11px;
         //width:500px;
         text-align:center;
@@ -108,6 +122,10 @@ body{
         text-transform: uppercase;
         line-height:1.5;
         color:#666;
+    }
+
+    .thanks{
+        margin-top:200px;
     }
 
     .large{
@@ -172,8 +190,7 @@ body{
     	top:-10px;
     	left:2px;
     	font-size:13px;
-        opacity: .5;
-        color:#000;
+        color: #888;
         transition:.5s all;
     }
 
@@ -181,37 +198,56 @@ body{
         //font-size:300px;
         font-weight:600;
         color:#000 !important;
-        opacity: 1;
     }
 
     //padding:0 0;
 
     .notes{
+        position: absolute;
+        top:0;
+        width:35%;
     	.leftNote{
             width:150px;
-            left:50px;
+            right:210px;
             font-size:11px;
     		position:absolute;
     		text-align:left;
             color:#000;
-            //opacity:.5;
             transition:.5s all;
+            text-indent: -20px;
     	}
+        .leftNote:first-line{
+            font-weight:600;
+            text-decoration: underline;
+        }
+        a{
+            transition:.5s all;
+        }
+
+        a:link,a:visited,a:active{
+          color: #000;
+          text-decoration: none;
+
+        }
+        a:hover{
+            color:#00AEEF;
+        }
     }
 
-    .fullOpacity{
-        opacity: 1 !important;
-    }
-    .halfOpacity{
-        opacity: .5 !important;
-    }
-
-    .halfColorText{
-        //color:#666;
-    }
 
     .veryDimText{
-        opacity:.2 !important;
+       // opacity:.2 !important;
+       color:#CCC !important;
+       a{
+        color:#CCC !important;
+       }
+    }
+
+    .veryDimNote{
+        color:#CCC !important;
+       a{
+        color:#CCC !important;
+       }
     }
 
   }
@@ -225,12 +261,10 @@ body{
     min-width:800px;
 }
 .thesisMenuContainer{
-    position: fixed;
      top:25px;
-    z-index:5000;
     width:100%;
     left:0;
-    top:35px;
+    margin-top:35px;
     min-width:$minWidth + 100;
 }
 .thesisMenu{

@@ -8,8 +8,9 @@ shortDes:  An experimental game questioning the notion of space in a virtual wor
 color: 4572B8
 what: Everything
 where: Geneva
-linkName : "itch.io"
-link : "http://ragekit.itch.io/within"
+link : 
+  - name: "itch.io"
+    url: http://ragekit.itch.io/within"
 type: Game
 media :
   - assets/within/1.png

@@ -9,8 +9,9 @@ color: 727272
 what: Concept/Game-Design/Development
 with: Charles Chalas/Catherine Ulrich/Aurélien Gantier/Damien Mortini
 where: Paris
-linkName : website
-link : "http://www.void-spaceartifact.com/"
+link : 
+  - name: "website"
+    url : "http://www.void-spaceartifact.com/"
 type: Game
 media :
   - assets/void/0.png

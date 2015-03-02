@@ -9,8 +9,9 @@ color: E2760C
 what: Game Design/Development
 where: Tourcoing
 with: Koen Van den Steen/Héloïse Lozano/Alexandre Mattret/Nicolas Dubois
-linkName : "itch.io"
-link : "http://ragekit.itch.io/flora"
+link : 
+    - name: "itch.io"
+      url : "http://ragekit.itch.io/flora"
 type: "Jam Game"
 media :
     - assets/flora/2.png

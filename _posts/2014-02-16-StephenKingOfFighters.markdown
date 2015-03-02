@@ -8,8 +8,11 @@ shortDes : A master thesis around the new kind of narration that can be found in
 color: 4572B8
 what: Everything
 where: Geneva
-linkName : "pdf"
-link : "assets/thesis/Stephen King of Fighters Benjamin Gattet.pdf"
+link : 
+  - name: "pdf"
+    url: "assets/thesis/Stephen King of Fighters Benjamin Gattet.pdf"
+  - name: "web"
+    url: "masterthesis/"
 type: "research"
 media :
   - assets/thesis/1.JPG

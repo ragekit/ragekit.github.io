@@ -129,6 +129,15 @@ function whenLoaded(){
 	var noteNb = 0;
 	console.log("in");
 		var spans = text.getElementsByTagName("span");
+
+		spans = Array.prototype.slice.call(spans,0).filter(function(e){
+			if(e.className.indexOf("imgAuthor") == -1)
+			{
+				return true;
+			}
+			return false;
+		})
+
 		for (var j = 0; j < spans.length; j++) {
 			//console.log(j);
 			
@@ -155,12 +164,10 @@ function whenLoaded(){
 			function coupleOver(){
 				if(couple[0].className.indexOf("fullOpacity") == -1)
 				{
-					couple[0].className += " fullOpacity";
 					couple[1].className += " bigNote";
 				}
 
 				for (var j = 0; j < ps.length; j++) {
-					console.log(couple[1].parentNode, ps[j]);
 					if(couple[1].parentNode != ps[j])
 					{
 						if(ps[j].className.indexOf("veryDimText") == -1)
@@ -178,7 +185,7 @@ function whenLoaded(){
 				for (var k = 0; k < noteCouples.length; k++) {
 					if(noteCouples[k][0] != couple[0])
 					{
-						noteCouples[k][0].className += " veryDimText";
+						noteCouples[k][0].className += " veryDimNote";
 					}
 				};
 			}

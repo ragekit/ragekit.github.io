@@ -23,13 +23,15 @@ layout: default
       {% if page.with != null %}
       <li class="with"><span class="left">With :</span> <span class="right">{{page.with | replace:'/','<br/>'}}</span></li>
       {% endif %}
-      {% if page.link != null %}
-      {% if page.link contains "http" %}
-      <a href="{{page.link}}"><li class="link">{{page.linkName}}</li></a>
-      {% else %}
-      <a href="{{ page.link | prepend: site.baseurl }}"><li class="link">{{page.linkName}}</li></a>
-      {% endif %}
-      {% endif %}
+      <li>
+      {% for link in page.link %}
+        {% if page.link contains "http" %}
+          <a href="{{link.url}}"><div class="link">{{link.name}}</div></a>
+        {% else %}
+          <a href="{{ link.url | prepend: site.baseurl }}"><div class="link">{{link.name}}</div></a>
+        {% endif %}
+      {% endfor %}
+      </li>
   </ul>
   {% endif %}
   <div class="mainText">
@@ -62,6 +64,10 @@ layout: default
   }
   h3,h4,h5{
     color:#{{ page.color }}
+  }
+
+  .project ul.metas a{
+    background-color:#{{ page.color }}
   }
   strong{
     color:#{{ page.color }};
