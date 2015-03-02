@@ -38,14 +38,29 @@ body{
         width:700px;
         transition:.5s all;
     }
-    p.first:first-letter{
-        font-size:130px;
-        float:left;
-        position:relative;
-        margin-top:-60px;
-        margin-bottom:-30px;
-        margin-left:30px;
-    }
+         p.first:first-letter{
+                font-size:130px;
+                float:left;
+                margin-left:30px;
+                line-height: 120px;
+                margin-top:-10px;
+                //line-height:0;
+                font-weight: 600;
+
+        }
+        @-moz-document url-prefix()
+        {
+                p.first:first-letter{
+                font-size:130px;
+                float:left;
+                margin-left:30px;
+                line-height: 120px;
+                //line-height:0;
+                font-weight: 600;
+                margin-top:9px;
+                } 
+        }
+    
     p.first:first-line{
         font-weight:600;
     }
