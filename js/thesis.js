@@ -2,9 +2,6 @@ var text = document.getElementsByClassName("text")[0];
 var ps = text.getElementsByTagName("p");
 
 var note = 1
-
-
-
 var p = text;
 var output = "";
 var t= p.innerHTML;
@@ -118,13 +115,7 @@ notes.innerHTML = output;
 var ids = [];
 var menuAs = [];
 
-function whenLoaded(){
-	console.log("in");
-	document.body.style.display ="block";
-	Array.prototype.push.apply(ids,text.getElementsByTagName("h1"));
-	 Array.prototype.push.apply(ids,text.getElementsByTagName("h2"));
-	 
-	 Array.prototype.push.apply(menuAs,document.getElementsByClassName("thesisMenu")[0].getElementsByTagName("a"));
+function layoutNotes(){
 	var lastTop = 0;
 	var leftNotes = notes.getElementsByTagName("div");
 	var noteNb = 0;
@@ -154,7 +145,19 @@ function whenLoaded(){
 			lastTop = parseInt(leftNotes[noteNb].style.top) + leftNotes[noteNb].clientHeight + 20;
 			noteNb++;
 	}
+}
 
+function whenLoaded(){
+	console.log("in");
+	document.body.style.display ="block";
+	Array.prototype.push.apply(ids,text.getElementsByTagName("h1"));
+	 Array.prototype.push.apply(ids,text.getElementsByTagName("h2"));
+	 
+	Array.prototype.push.apply(menuAs,document.getElementsByClassName("thesisMenu")[0].getElementsByTagName("a"));
+	
+
+
+	layoutNotes();
 
 
 	for (var i = 0; i < noteCouples.length; i++) {
@@ -280,4 +283,14 @@ function scroll(){
 
 }
 
+var img = document.getElementsByTagName("img");
+
+for (var i = 0; i < img.length; i++) {
+	(function(i){
+		img[i].onload = layoutNotes;
+	})(i)
+	
+};
+
+window.onload = whenLoaded();
 window.onscroll = scroll;
