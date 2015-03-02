@@ -4,6 +4,7 @@
 {% include head.html %}
 
 <body>
+<link rel="stylesheet" href="{{ "css/thesis.css" | prepend: site.baseurl }}">
 <header class="site-header">
     <a href="{{site.baseurl}}">
       <canvas class="logo">RK</canvas></a>
@@ -36,6 +37,8 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="{{ "js/thesis.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript">whenLoaded();</script>
     <script type="text/javascript" src="{{ "js/rk.js" | prepend: site.baseurl }}"></script>
     
     <script>

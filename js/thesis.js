@@ -118,8 +118,9 @@ notes.innerHTML = output;
 var ids = [];
 var menuAs = [];
 
-
 function whenLoaded(){
+	console.log("in");
+	document.body.style.display ="block";
 	Array.prototype.push.apply(ids,text.getElementsByTagName("h1"));
 	 Array.prototype.push.apply(ids,text.getElementsByTagName("h2"));
 	 
@@ -280,6 +281,3 @@ function scroll(){
 }
 
 window.onscroll = scroll;
-
-
-window.onload = whenLoaded;
