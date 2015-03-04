@@ -1,5 +1,6 @@
 ---
 ---
+
 $dark-gray: #333;
 
 $menuNotSelected : #FFFFFF;
@@ -13,7 +14,7 @@ $bckground: #F9F9F9;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Open Sans";
-$titleFont : "Open Sans";
+$titleFont : "Montserrat";
 $mainTextSize : 16px;
 $bigdarkgray : #000000;
 $headerColor : $menuNotSelected;
@@ -187,7 +188,7 @@ body{
     position:absolute;
     list-style-type: none;
     //text-transform:uppercase;
-    font-weight:100;
+    font-weight:light;
     font-size:14px;
     margin:0;
     padding:0;
@@ -527,14 +528,14 @@ width:650px;
     } 
 
     span.left{
-      font-weight:600;
+      font-weight:bold;
       margin-right:5px;
       vertical-align : top;
       float:left;
     }
     span.right{
       float:left;
-      font-weight:400;
+      font-weight:normal;
       
   }
 }
@@ -652,7 +653,7 @@ h3,h4,h5{
     span.title{
       font-size:16px;
       text-transform:uppercase;
-      font-weight:800;
+      font-weight:bold;
     }
 
     span.separator{
@@ -665,7 +666,7 @@ h3,h4,h5{
     {
       text-transform:uppercase;
       font-size:14px;
-      font-weight:300;
+      font-weight:normal;
     }
   }
   div.schwing{
@@ -740,7 +741,7 @@ h3,h4,h5{
     span.title{
       font-size:16px;
       text-transform:uppercase;
-      font-weight:600;
+      font-weight:bold;
     }
 
     span.separator{
@@ -754,7 +755,7 @@ h3,h4,h5{
     {
       text-transform:uppercase;
       font-size:14px;
-      font-weight:100;
+      font-weight:normal;
     }
 
 
