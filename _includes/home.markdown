@@ -10,3 +10,5 @@ I don't really want to choose between being a designer or a being a developer, s
 
 You can find my CV [Here]({{ "assets/cv.pdf" | prepend: site.baseurl }}).
 If you want to see older projects of mine, have a look at the portfolios I sent to [Gobelins]({{ "assets/gobelins2010.pdf" | prepend: site.baseurl }}) and [Head]({{ "assets/head2012.pdf" | prepend: site.baseurl }})
+
+ (◡‿◡✿)
