@@ -23,7 +23,6 @@ media :
 
 ###Contemplative flower generator
 Flora is a small jam game that we made at the Zoomachine festival in november.
-
 At first it was going to be a gardening simulator where you had to tend to various alien shaped flowers, but the lack of time transformed it into a contemplative experience where you watch flowers grow slowly from a simple stem to a gigantic tree.
 
 

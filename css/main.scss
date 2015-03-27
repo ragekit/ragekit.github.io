@@ -265,16 +265,16 @@ canvas{
   //  font-family: 'Roboto Slab', sans-serif;
 }
 strong{
-  font-style:italic;
-//  font-weight:normal;
+  font-weight:bold;
 }
 
 a:link,a:hover,a:visited,a:active{
   color: #111;
-  text-transform:underline;
+  text-decoration:none;
+  border-bottom:2px solid black;
 }
 a:hover{
-  opacity:.5;
+  color:#4572B8;
 }
 
 h5 + p{
@@ -283,11 +283,11 @@ h5 + p{
 }
 
 p:first-of-type:first-letter{
-  font-size:60px;
+  font-size:55px;
   float:left;
   line-height:40px;
-  margin-top:5px;
-  margin-right:1px;
+  margin-top:8px;
+  margin-right:13px;
 }
 
 img:first-child{
