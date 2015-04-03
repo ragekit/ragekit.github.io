@@ -45,43 +45,74 @@
       lis.splice(i, 1);
     }
   }
-
-
-
+  var minWidth =parseInt(window.getComputedStyle(document.getElementsByClassName("page-content")[0]).minWidth);
+  var bodyCS = window.getComputedStyle(document.getElementsByClassName("page-content")[0]);
+  var normalPadding = {
+    paddingLeft:bodyCS.paddingLeft,
+    paddingRight:bodyCS.paddingRight
+  }
   function resize() {
+        if((window.innerWidth - 100) <= minWidth -20)
+        {
+          var paddingValue = parseInt(normalPadding.paddingLeft)- (minWidth  +100- window.innerWidth)/2;
+            document.getElementsByClassName("page-content")[0].style.paddingLeft = paddingValue >0 ? paddingValue+ "px" : 0;
+            document.getElementsByClassName("page-content")[0].style.paddingRight = paddingValue >0 ? paddingValue+ "px" : 0;
+            cover.style.left = paddingValue >0 ? paddingValue+ "px" : 0;
+            cover.style.right = paddingValue >0 ? paddingValue+ "px" : 0;
+            if(paddingValue <=0)
+            {
+              document.body.style.overflowX = null;
+            }else
+            {
+              document.body.style.overflowX = "hidden";
+            }
+        }else
+        {
+          document.getElementsByClassName("page-content")[0].style.paddingLeft = null;
+          document.getElementsByClassName("page-content")[0].style.paddingRight = null;
+          cover.style.left = normalPadding.paddingLeft;
+          cover.style.right = normalPadding.paddingRight;
+          document.body.style.overflowX  = "hidden";
+        }
 
-
-    if (!home) {
-          ulContainer.style.height = window.innerHeight + "px";
-    menuUl.style.height = (window.innerHeight - menuHeightClosed) + "px";
-      projects[0].style.top = (window.innerHeight - menuHeightClosed -100) +
-      "px";
+      ulContainer.style.height = window.innerHeight + "px";
+      menuUl.style.height = (window.innerHeight - menuHeightClosed) + "px";
+      projects[0].style.top = (window.innerHeight - menuHeightClosed -100) +"px";
       projects[0].style.position = "relative";
-      menuDiv.style.width = document.body.clientWidth -100 + "px";
-      var scrollValue = document.documentElement.scrollTop || document.body
-      .scrollTop;
-      if (scrollValue > parseInt(projects[0].style.top, 10) +100 || scrollValue <=
-        0) {
+      var scrollValue = document.documentElement.scrollTop || document.body.scrollTop;
+      
+       var correction = window.getComputedStyle(document.getElementsByClassName("page-content")[0]).paddingLeft;
+      correction = parseInt(correction)*2;
+
+      void 0
+
+      
+
         menuUl.style.overflowY = "scroll";
-        //  menuUl.style.width = (window.innerWidth -15) + "px";
-        menuUl.style.width = document.body.clientWidth -100+20+ "px";
-        menuUl.style.paddingRight = "20px";
+      
+        menuDiv.style.width = window.getComputedStyle(document.getElementsByClassName("project")[0]).width;
+        menuUl.style.width = parseInt(menuDiv.style.width) + 20 + "px";
+        //menuUl.style.width = document.body.clientWidth20+ "px";
 
-      } else {
+        for (var i = 0; i < lis.length; i++) {
+          lis[i].style.width = parseInt(menuUl.style.width) -20+ "px" ;
+        }
+      var leftScroll = document.documentElement.scrollLeft || document.body
+      .scrollLeft
 
-        menuUl.style.overflowY = "hidden";
-        menuUl.style.width = document.body.clientWidth -100+ "px";
-        menuUl.style.paddingRight = 0;
-        //  menuUl.style.width = (window.innerWidth) + "px";
-      }
-      if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
-        
+     if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
         menuDiv.style.position = "fixed";
+        menuDiv.style.left = -leftScroll + parseInt(window.getComputedStyle(document.getElementsByClassName("page-content")[0]).paddingLeft) +"px";
+        siteHeader.style.left = -leftScroll + "px";
+
       } else {
         menuDiv.style.position = "absolute";
+        menuDiv.style.left = 0;
+        siteHeader.style.left = -leftScroll + "px";
+
 
       }
-    }
+
     if ((lis.length * liHeight) + menuHeightClosed > window.innerHeight) {
       if (menuOpened) {
         if (openedUp) {
@@ -94,6 +125,7 @@
     }
     if(menuOpened) shadow();
     resizeMedia();
+
   }
 
   function resizeMedia() {
@@ -121,14 +153,14 @@
 
       if(cover != null)
       {
-        cover.style.left = -leftScroll + 50 + "px";
+       // cover.style.left = -leftScroll + "px";
 
       }
 
 
       if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
         menuDiv.style.position = "fixed";
-        menuDiv.style.left = -leftScroll +50 +"px";
+        menuDiv.style.left = -leftScroll + parseInt(window.getComputedStyle(document.getElementsByClassName("page-content")[0]).paddingLeft) +"px";
         siteHeader.style.left = -leftScroll + "px";
 
       } else {
@@ -145,13 +177,13 @@
         0) {
         menuUl.style.overflowY = "scroll";
         //  menuUl.style.width = (window.innerWidth -15) + "px";
-        menuUl.style.width = document.body.clientWidth -100+20+ "px";
-        menuUl.style.paddingRight = "20px";
+       // menuUl.style.width = document.body.clientWidth -100+20+ "px";
+       // menuUl.style.paddingRight = "20px";
 
       } else {
 
         menuUl.style.overflowY = "hidden";
-        menuUl.style.width = document.body.clientWidth -100+ "px";
+        //menuUl.style.width = document.body.clientWidth -100+ "px";
         menuUl.style.paddingRight = 0;
         //  menuUl.style.width = (window.innerWidth) + "px";
       }
@@ -167,14 +199,14 @@
             menuOut(function() {
               //openMenu(false)
             });
-            console.log("menu was up change for down")
+            void 0
           }
         } else {
           if ((menuPos.top + menuHeightClosed / 2) > window.innerHeight / 2) {
             menuOut(function() {
               //openMenu(true)
             });
-            console.log("menu was down change for up")
+            void 0
           }
         }
       }
@@ -417,7 +449,7 @@ function showBottomShadow(){
             });
           }
         } else {
-          console.log("in");
+          void 0;
           TweenLite.to(lis[i], timeAp, {
             opacity: 0,
             delay: delay * (lis.length - 1 - i),
@@ -520,7 +552,7 @@ function showBottomShadow(){
     liBackground = Array.prototype.slice.call(liBackground, 0);
 
     for (var i = 0; i < liBackground.length; i++){
-      console.log(liBackground[i].src);
+      void 0;
       var parent = liBackground[i].parentNode;
       var im = new Image();
       parent.style.display = "none";
@@ -528,7 +560,7 @@ function showBottomShadow(){
         parent.style.backgroundImage = "url(" + liBackground[i].src + ")";
         
         while (parent.firstChild) {
-          console.log("in");
+          void 0;
           parent.removeChild(parent.firstChild);
         }
         TweenLite.to(parent, .3, {
@@ -543,7 +575,7 @@ function showBottomShadow(){
     //KEYBOARD NAV
 
     document.addEventListener('keydown', function(e) {
-      console.log(e.keyCode);
+      void 0;
       if (e.keyCode == "27") {
         e.preventDefault();
 
@@ -607,7 +639,7 @@ function showBottomShadow(){
   window.onscroll = throttle(0,scroll);
   window.onresize = resize;
 
+  //window.onload = function(){resize()};
   resize();
-
 
 })()

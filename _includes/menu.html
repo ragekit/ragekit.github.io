@@ -1,13 +1,13 @@
 <div class="menu" id="anchor">
   <div class="selected">
-    {% if page.next.url != nil %}
+  <!--   {% if page.next.url != nil %}
     <a class="prevArrow" href="{{ page.next.url }}">
       <img src="{{ "assets/left.svg" | prepend: site.baseurl }}"/>
     </a>
     {% endif %}
     {% if page.previous.url != nil %}
     <a class="nextArrow" href="{{ page.previous.url }}"><img src="{{ "assets/right.svg" | prepend: site.baseurl }}"/></a>
-    {% endif %}
+    {% endif %} -->
 
     <div class="innerSelected blink"><span class="title">{{ page.title }}</span><span class="separator">—</span><span class="subtitle">{{ page.subtitle }} ▾ </span></div>
   </div>
