@@ -3,7 +3,7 @@ layout: project
 title:  "Void"
 subtitle: "Adventure on an unknown planet"
 permalink: void
-cover: void/void.png
+cover: /void/void.png
 shortDes : Tablet-based adventure game, using a physical artefact for interaction.
 color: 727272
 what: Concept/Game-Design/Development
@@ -14,11 +14,11 @@ link :
     url : "http://www.void-spaceartifact.com/"
 type: Game
 media :
-  - assets/void/0.png
-  - assets/void/1.png
-  - assets/void/2.png
-  - assets/void/3.jpg
-  - assets/void/4.png
+  - /assets/void/0.png
+  - /assets/void/1.png
+  - /assets/void/2.png
+  - /assets/void/3.jpg
+  - /assets/void/4.png
 ---
 
 ###New tactile interaction on tablet

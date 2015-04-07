@@ -3,19 +3,19 @@ layout: project
 title:  "Impossible Architecture"
 subtitle: "Virtuality-allowed gigantism"
 permalink: impossiblearchitecture
-cover: impossible/1.png
+cover: /impossible/1.png
 shortDes: Reflection and experimentation about architecture outside of the constraints of physical reality
 color: 27275E
 what: Everything
 where: Geneva
 type : "3D"
 media :
-  - assets/impossible/2.png
-  - assets/impossible/3.png
-  - assets/impossible/4.png
-  - assets/impossible/5.png
-  - assets/impossible/6.png
-  - assets/impossible/7.png
+  - /assets/impossible/2.png
+  - /assets/impossible/3.png
+  - /assets/impossible/4.png
+  - /assets/impossible/5.png
+  - /assets/impossible/6.png
+  - /assets/impossible/7.png
 ---
 
 ###Uncanny architecture outside of reality

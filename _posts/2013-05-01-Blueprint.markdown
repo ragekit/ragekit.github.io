@@ -3,15 +3,15 @@ layout: project
 title:  "Blueprint"
 subtitle: "A duo of secret agents and a briefcase"
 permalink: blueprint
-cover: blueprint/blueprint.png
+cover: /blueprint/blueprint.png
 shortDes : A two player coop roguelike-like-like-like game about infiltration and treachery
 color: 7682A8
 what: Everything
 where: Geneva
 type: Game
 media :
-  - assets/blueprint/blueprint.png
-  - assets/blueprint/1.png
+  - /assets/blueprint/blueprint.png
+  - /assets/blueprint/1.png
 ---
 
 ###Cooperate First...

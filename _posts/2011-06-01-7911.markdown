@@ -3,7 +3,7 @@ layout: project
 title:  "7911"
 subtitle: "Alternate reality Biological Computers"
 permalink: "7911"
-cover: 7911/7911.png
+cover: /7911/7911.png
 shortDes : Real time strategy game taking place inside your computer.
 color: 5DA333
 what: "Concept/Game-Design/Development"
@@ -11,11 +11,11 @@ with: Charles Chalas
 where: Paris
 type: Game
 media :
-  - assets/7911/0.png
-  - assets/7911/1.png
-  - assets/7911/2.png
-  - assets/7911/3.png
-  - assets/7911/4.png
+  - /assets/7911/0.png
+  - /assets/7911/1.png
+  - /assets/7911/2.png
+  - /assets/7911/3.png
+  - /assets/7911/4.png
 ---
 
 ###Vitruvia Science, gateway to the future

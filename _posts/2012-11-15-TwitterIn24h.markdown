@@ -3,7 +3,7 @@ layout: project
 title:  "Twitter in 24h"
 subtitle: "Choose your own Twitter adventure"
 permalink: twitterin24h
-cover: twitter/twitter.jpg
+cover: /twitter/twitter.jpg
 shortDes:  A snapshot of 24 hours of my twitter feed built like a choose-your-own-adventure book
 color: 55ACEE
 what: Concept/Development
@@ -11,11 +11,11 @@ with: Julia Andreone
 where: Lausanne
 type : "print"
 media :
-  - assets/twitter/1.jpg
-  - assets/twitter/2.jpg
-  - assets/twitter/3.jpg
-  - assets/twitter/4.jpg
-  - assets/twitter/5.jpg
+  - /assets/twitter/1.jpg
+  - /assets/twitter/2.jpg
+  - /assets/twitter/3.jpg
+  - /assets/twitter/4.jpg
+  - /assets/twitter/5.jpg
 ---
 
 ###Experiment on digital editing made during a workshop at Ecal

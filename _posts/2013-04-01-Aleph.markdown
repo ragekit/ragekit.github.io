@@ -3,17 +3,17 @@ layout: project
 title:  "Aleph"
 subtitle: "A collaborative reading framework"
 permalink: aleph
-cover: aleph/aleph.png
+cover: /aleph/aleph.png
 shortDes: A concept about reading and shaping stories together.
 color: A59F26
 what: Everything
 where: Geneva
 link : 
   - name: "pdf"
-    url : assets/aleph/explanation.pdf
+    url : /assets/aleph/explanation.pdf
 type : "Concept"
 media :
-  - assets/aleph/1.png
+  - /assets/aleph/1.png
 ---
 
 ###Multiplayer reading

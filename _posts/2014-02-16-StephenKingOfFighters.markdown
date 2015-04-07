@@ -3,21 +3,21 @@ layout: project
 title:  "Stephen King of Fighters"
 subtitle: "Probably a master thesis"
 permalink: thesis
-cover: thesis/thesis.JPG
+cover: /thesis/thesis.JPG
 shortDes : A master thesis around the new kind of narration that can be found in videogames.
 color: 4572B8
 what: Everything
 where: Geneva
 link : 
   - name: "pdf"
-    url: "assets/thesis/Stephen King of Fighters Benjamin Gattet.pdf"
+    url: "/assets/thesis/Stephen King of Fighters Benjamin Gattet.pdf"
   - name: "web"
-    url: "masterthesis/"
+    url: "/masterthesis/"
 type: "research"
 media :
-  - assets/thesis/1.JPG
-  - assets/thesis/2.JPG
-  - assets/thesis/3.JPG
+  - /assets/thesis/1.JPG
+  - /assets/thesis/2.JPG
+  - /assets/thesis/3.JPG
 ---
 
 ###An old question under a new light

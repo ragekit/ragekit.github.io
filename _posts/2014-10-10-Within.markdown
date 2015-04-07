@@ -3,7 +3,7 @@ layout: project
 title:  "Within"
 subtitle: "Experimental spatial video game"
 permalink: within
-cover: within/within.png
+cover: /within/within.png
 shortDes:  An experimental game questioning the notion of space in a virtual world.
 color: 4572B8
 what: Everything
@@ -13,10 +13,10 @@ link :
     url: http://ragekit.itch.io/within"
 type: Game
 media :
-  - assets/within/1.png
-  - assets/within/2.png
-  - assets/within/3.png
-  - assets/within/4.png
+  - /assets/within/1.png
+  - /assets/within/2.png
+  - /assets/within/3.png
+  - /assets/within/4.png
 ---
 
 ###An experimentation around the notion space
