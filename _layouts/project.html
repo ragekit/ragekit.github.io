@@ -23,7 +23,7 @@ layout: default
       {% if page.with != null %}
       <li class="with"><span class="left">With :</span> <span class="right">{{page.with | replace:'/','<br/>'}}</span></li>
       {% endif %}
-      <li>
+       <li>
       {% for link in page.link %}
         {% if page.link contains "http" %}
           <a href="{{link.url}}"><div class="link">{{link.name}}</div></a>
@@ -31,7 +31,7 @@ layout: default
           <a href="{{ link.url | prepend: site.baseurl }}"><div class="link">{{link.name}}</div></a>
         {% endif %}
       {% endfor %}
-      </li>
+      </li> 
   </ul>
   {% endif %}
   <div class="mainText">

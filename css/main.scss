@@ -15,7 +15,7 @@ $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Open Sans";
 $titleFont : "Montserrat";
-$mainTextSize : 16px;
+$mainTextSize : 15px;
 $bigdarkgray : #000000;
 $headerColor : $menuNotSelected;
 $mainLineHeight : 1.7;
@@ -422,7 +422,7 @@ width:650px;
   .project-content
   {
 
-    width:752px;
+    width:700px;
     //top:100px;
     //position:relative;
     padding-top:$menuSize + 200px;
@@ -444,7 +444,7 @@ width:650px;
   }
 
   hr{
-    width:700px;
+    //width:700px;
     margin:0;
     margin-top:40px;
     margin-bottom:50px;
@@ -454,19 +454,18 @@ width:650px;
 
   ul.metas{
     //border-left:dotted 1px;
-    font-family: $titleFont;
+    font-family: $mainFont;
     font-size:12px;
-    line-height:22.5px;
     float:right;
     width:160px;
-    margin:0;
-    margin-right:50px;
     padding:0;
+    margin:0;
     list-style-type: none;
     a{
       clear:both;
       display:block;
       background:#111;
+      width:100%;
       .link{
         width : 100%;
         background:linear-gradient( #555, #555) no-repeat;
@@ -487,7 +486,6 @@ width:650px;
       letter-spacing:1px;
 
       //margin-top:15px;
-      margin-left:-7px;
 
     }
     a .link:hover{
@@ -496,52 +494,24 @@ width:650px;
       //color:$dark-gray !important;
     }
     li{
-      display:block;
+      margin-bottom:10px;
     }
     li:last-child{
-      margin-top:15px;
+      margin-top:25px;
     }
+    
 
-      li:after{
-       content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
-      }
-
-     li.type{
-      position:relative;
-      left:7px;
-    }
-
-    li.when{
-      position:relative;
-      left:1px;
-    }
-    li.where{
-      position:relative;
-      left:-4px;
-    }
-    li.what{
-      position:relative;
-      left:3px;
-    }
-    li.with{
-      position:relative;
-      left:6px;
-    } 
-
+  
     span.left{
       font-weight:bold;
-      margin-right:5px;
-      vertical-align : top;
-      float:left;
+      //margin-left:-45px;
+
     }
     span.right{
-      float:left;
+      //float:left;
       font-weight:normal;
-      
+      font-style:italic;
+      //left:20px;
   }
 }
 h3,h5{
@@ -646,7 +616,7 @@ h3,h4,h5{
     //background-color:white;
     div.liCenter,a{
       cursor: pointer; cursor: hand;
-      width:752px;
+      width:700px;
       margin:0 auto;
       display:block;
       height:100%;
@@ -733,7 +703,7 @@ h3,h4,h5{
     background-color:$headerColor;
     div.innerSelected{
       cursor: pointer; cursor: hand;
-      width:752px;
+      width:700px;
       height:100%;
       color:black !important;
       text-decoration:none;
