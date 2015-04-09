@@ -10,7 +10,7 @@ $menuSize : 100px;
 $footerSize : 50px;
 $minWidth : 1214px;
 $light-gray:#E0E0E0;
-$bckground: #F9F9F9;
+$bckground: #fff;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Open Sans";
@@ -29,7 +29,7 @@ body{
 }
 
 .page-content{
-  padding:100px 50px 50px 50px;
+  padding:100px 50px 0px 50px;
   min-width:$minWidth;
 }
 
@@ -142,11 +142,11 @@ body{
   width:100%;
   bottom:0;
   font-family: $titleFont;
-  margin-bottom:50px;
-  padding-bottom:10px;
+  //margin-bottom:50px;
+  padding-bottom:5px;
     hr{
       margin:0 !important;
-      opacity:.3;
+      opacity:.5;
       width:100% !important;
     }
 
@@ -156,7 +156,7 @@ body{
     font-size:12px;
     line-height:$footerSize;
     opacity:.7;
-    width:752px;
+    width:700px;
     
     span.author{
       font-weight:600;
