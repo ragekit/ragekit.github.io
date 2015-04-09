@@ -10,14 +10,14 @@ $menuSize : 100px;
 $footerSize : 50px;
 $minWidth : 1214px;
 $light-gray:#E0E0E0;
-$bckground: #fff;
+$bckground: #F5F5F5;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Open Sans";
 $titleFont : "Montserrat";
 $mainTextSize : 15px;
 $bigdarkgray : #000000;
-$headerColor : $menuNotSelected;
+$headerColor : white;
 $mainLineHeight : 1.7;
 $retraitMaintextGauche :75px;
 
@@ -141,6 +141,7 @@ body{
   background-color:$bckground;
   width:100%;
   bottom:0;
+  background-color: white;
   font-family: $titleFont;
   //margin-bottom:50px;
   padding-bottom:5px;
@@ -155,7 +156,8 @@ body{
     margin:0 auto;
     font-size:12px;
     line-height:$footerSize;
-    opacity:.7;
+    opacity:.5;
+
     width:700px;
     
     span.author{
@@ -768,7 +770,7 @@ h3,h4,h5{
     }
 
     div.liCover{
-      background-color:white;
+      background-color:$headerColor;
       transition:opacity .5s;
       width:100%;
       height:100%;
