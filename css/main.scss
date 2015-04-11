@@ -7,10 +7,10 @@ $menuNotSelected : #FFFFFF;
 $menuNotSelectedColor : #AAA;
 $headerSize : 100px;
 $menuSize : 100px;
-$footerSize : 50px;
+$footerSize : 100px;
 $minWidth : 1214px;
 $light-gray:#E0E0E0;
-$bckground: #F5F5F5;
+$bckground: #EFEFEF;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Open Sans";
@@ -29,7 +29,7 @@ body{
 }
 
 .page-content{
-  padding:100px 50px 0px 50px;
+  padding:100px 0 0 0;
   min-width:$minWidth;
 }
 
@@ -152,20 +152,42 @@ body{
     }
 
   div{
-    width:100%;
-    margin:0 auto;
-    font-size:12px;
-    line-height:$footerSize;
-    opacity:.5;
+    padding-top:45px;
+    //text-align:right;
 
+    a:link,a:hover,a:visited,a:active{
+      color: #000;
+      text-decoration:none;
+      //border-bottom:2px solid black;
+    }
+    p{
+      margin:0;
+      padding:0;
+      display:inline-block;
+    }
+
+    p:not(:last-child):after{
+      content:" —";
+    }
+
+    margin-left:50px;
+    margin-right:50px;
+    font-size:12px;
+    line-height:18px;
+    //opacity:.5;
+    margin: 0 auto;
     width:700px;
     
     span.author{
       font-weight:600;
     }
+    .links{
+      opacity:.8;
+    }
 
     span.time{
       font-style:italic;
+      opacity: .3;
     }
   }
 }
@@ -224,7 +246,7 @@ body{
   canvas{
     position:absolute;
     margin-top:20px;
-    margin-left:100px;
+    margin-left:50px;
     z-index:1000;
   }
 }
