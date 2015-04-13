@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="lightbox"></div>
 <div class="cover">
   <img src="{{site.baseurl}}/assets{{ page.cover }}"/>
@@ -14,7 +13,11 @@ layout: default
 
   <div class="shortDes">{{page.shortDes}}</div>
   <hr/>
-  {% if page.type != null %}
+ 
+  <div class="mainText">
+    {{ content }}
+  </div>
+   {% if page.type != null %}
   <ul class="metas">
     <li class="type"><span class="left">Type :</span> <span class="right">{{page.type}}</span></li>
     <li class="when"><span class="left">When :</span> <span class="right">{{page.date | date: "%Y"}}</span></li>
@@ -24,19 +27,16 @@ layout: default
       <li class="with"><span class="left">With :</span> <span class="right">{{page.with | replace:'/','<br/>'}}</span></li>
       {% endif %}
        <li>
-      {% for link in page.link %}
+      <!-- {% for link in page.link %}
         {% if page.link contains "http" %}
           <a href="{{link.url}}"><div class="link">{{link.name}}</div></a>
         {% else %}
           <a href="{{ link.url | prepend: site.baseurl }}"><div class="link">{{link.name}}</div></a>
-        {% endif %}
-      {% endfor %}
+        {% endif %} 
+      {% endfor %}-->
       </li> 
   </ul>
   {% endif %}
-  <div class="mainText">
-    {{ content }}
-  </div>
   <div style="clear:both"></div>
   </article>
 

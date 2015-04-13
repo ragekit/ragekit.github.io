@@ -8,17 +8,17 @@ $menuNotSelectedColor : #AAA;
 $headerSize : 100px;
 $menuSize : 100px;
 $footerSize : 100px;
-$minWidth : 1214px;
+$minWidth : 0;
 $light-gray:#E0E0E0;
 $bckground: #EFEFEF;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
-$mainFont : "Open Sans";
+$mainFont : "Georgia";
 $titleFont : "Montserrat";
-$mainTextSize : 16px;
+$mainTextSize : 22px;
 $bigdarkgray : #000000;
 $headerColor : white;
-$mainLineHeight : 1.7;
+$mainLineHeight : 1.5;
 $retraitMaintextGauche :75px;
 
 body{
@@ -30,13 +30,12 @@ body{
 
 .page-content{
   padding:100px 0 0 0;
-  min-width:$minWidth;
 }
 
-.leftTab{
+/* .leftTab{
   position:relative;
   left:$retraitMaintextGauche;
-}
+} */
 
 .show{
   opacity: .2 !important;
@@ -205,6 +204,12 @@ body{
   z-index:300;
   min-width:$minWidth;
 
+  @media screen and (max-width: 1300px){
+    ul.right{
+      display: none;
+    }
+  }
+
   ul.right{
       right:50px;
   }
@@ -279,14 +284,15 @@ canvas{
 
 
 .mainText{
-  
+  width:calc(98vw - 210px);
   margin:0;
-  
+  display: inline-block;
+  max-width: 700px;
   p{
     font-size:$mainTextSize;
     font-weight:400;
     //font-weight:bold;
-    width:500px;
+    //max-width:700px;
     line-height:$mainLineHeight;
     color:#111;
     margin:0 0 1.5em 0;
@@ -304,11 +310,11 @@ a:link,a:hover,a:visited,a:active{
 a:hover{
   color:#4572B8;
 }
-
+/* 
 h5 + p{
   margin-left:$retraitMaintextGauche;
   //left:$retraitMaintextGauche;
-}
+} */
 
 p:first-of-type:first-letter{
   font-size:55px;
@@ -446,29 +452,33 @@ width:650px;
   .project-content
   {
 
-    width:700px;
+    max-width:900px;
     //top:100px;
     //position:relative;
+
+    white-space:nowrap;
     padding-top:$menuSize + 200px;
     padding-bottom:200px;
     margin:0 auto;
-    //padding:0 0;
+    padding-left:2vw;
+    padding-right:2vw;
   }
   .shortDes{
     font-family: $titleFont;
     margin-top:0 ;
-    width : 600px;
+    max-width : 600px;
     line-height: 1.7;
     font-size:30px;
     font-weight: 300;
     color:#000;
+    white-space:normal;
   }
   p{
-   // text-align:justify;
+    white-space:normal;
   }
 
   hr{
-    //width:700px;
+    max-width:700px;
     margin:0;
     margin-top:40px;
     margin-bottom:50px;
@@ -478,13 +488,17 @@ width:650px;
 
   ul.metas{
     //border-left:dotted 1px;
-    font-family: $mainFont;
-    font-size:12px;
-    float:right;
-    width:160px;
+    font-family: $titleFont;
+    font-size:13px;
+    //float:right;
+    width:150px;
     padding:0;
-    margin:0;
+    margin:0 0 0 5vw;
+    line-height: 1.8;
     list-style-type: none;
+    //float:right;
+    display: inline-block;
+    vertical-align: top;
     a{
       clear:both;
       display:block;
@@ -518,7 +532,6 @@ width:650px;
       //color:$dark-gray !important;
     }
     li{
-      margin-bottom:10px;
     }
     li:last-child{
       margin-top:25px;
@@ -528,13 +541,14 @@ width:650px;
   
     span.left{
       font-weight:bold;
+      display: block;
       //margin-left:-45px;
 
     }
     span.right{
       //float:left;
       font-weight:normal;
-      font-style:italic;
+
       //left:20px;
   }
 }
@@ -542,11 +556,17 @@ h3,h5{
   float:left;
   position:relative;
   //  left:-150px;
-  margin-right:45px;
-  margin-left:-220px;
+  margin-right:20px;
+  margin-left:calc(900px - 100vw);
 
 }
 
+@media screen and (max-width: 900px){
+  h3,h5{
+  display: none;
+
+}
+}
 
 h4{
   float:right;
@@ -558,10 +578,11 @@ h4{
 
 h3,h4,h5{
     //color:$dark-gray;
-    font-size:20px;
+    font-size:22px;
     width:250px;
+    white-space:normal;
     //height:35px;
-    line-height:1.3;
+    line-height:1.5;
     text-align:center;
     font-weight:700;
     transition: all .3s;
