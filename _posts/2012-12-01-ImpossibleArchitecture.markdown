@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  "Impossible Architecture"
-subtitle: "Virtuality-allowed gigantism"
+subtitle: "Virtual gigantism"
 permalink: impossiblearchitecture
 cover: /impossible/1.png
 shortDes: Reflection and experimentation about architecture outside of the constraints of physical reality

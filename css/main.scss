@@ -10,7 +10,7 @@ $menuSize : 100px;
 $footerSize : 100px;
 $minWidth : 0;
 $light-gray:#E0E0E0;
-$bckground: #EFEFEF;
+$bckground: #F5F5F5;
 $hover : #CCC;
 $menuSelected : #EFEFEF;
 $mainFont : "Georgia";
@@ -22,14 +22,15 @@ $mainLineHeight : 1.5;
 $retraitMaintextGauche :75px;
 
 body{
-  
+
   font-family: $mainFont, serif;
   margin:0;
-  //min-width:$minWidth;
+  min-width:450px;
 }
 
 .page-content{
   padding:100px 0 0 0;
+  width:100%;
 }
 
 /* .leftTab{
@@ -85,39 +86,39 @@ body{
 
 }
 
- .blink:hover {
-      animation: blink .3s 1;
-      -webkit-animation: blink .3s 1;
-    }
-    @keyframes blink {
-      from{
-        opacity:0;
-      }
-      33%{
-        opacity:.5;
-      }
-      66%{
-        opacity:0;
-      }
-      to{
-        opacity:1;
-      }
+.blink:hover {
+  animation: blink .3s 1;
+  -webkit-animation: blink .3s 1;
+}
+@keyframes blink {
+  from{
+    opacity:0;
+  }
+  33%{
+    opacity:.5;
+  }
+  66%{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
 
-    }
-    @-webkit-keyframes blink {
-      from{
-        opacity:0;
-      }
-      33%{
-        opacity:.5;
-      }
-      66%{
-        opacity:0;
-      }
-      to{
-        opacity:1;
-      }
-    }
+}
+@-webkit-keyframes blink {
+  from{
+    opacity:0;
+  }
+  33%{
+    opacity:.5;
+  }
+  66%{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
 
 .lightbox {
   position:fixed;
@@ -144,11 +145,11 @@ body{
   font-family: $titleFont;
   //margin-bottom:50px;
   padding-bottom:5px;
-    hr{
-      margin:0 !important;
-      opacity:.5;
-      width:100% !important;
-    }
+  hr{
+    margin:0 !important;
+    opacity:.5;
+    width:100% !important;
+  }
 
   div{
     padding-top:45px;
@@ -175,7 +176,7 @@ body{
     line-height:18px;
     //opacity:.5;
     margin: 0 auto;
-    width:700px;
+    max-width:700px;
     
     span.author{
       font-weight:600;
@@ -204,14 +205,21 @@ body{
   z-index:300;
   min-width:$minWidth;
 
-  @media screen and (max-width: 1300px){
-    ul.right{
-      display: none;
+ @media screen and (max-width: 1100px){
+    ul.right {
+      li:nth-child(4),li:nth-child(5){
+        display: none;
+      }
     }
-  }
+  } 
+   @media screen and (max-width: 1000px){
+    ul.right {
+      display:none;
+    }
+  } 
 
   ul.right{
-      right:50px;
+    right:50px;
   }
 
   ul.left{
@@ -251,8 +259,13 @@ body{
   canvas{
     position:absolute;
     margin-top:20px;
-    margin-left:50px;
+    margin-left:3%;
     z-index:1000;
+
+    @media screen and (max-width: 570px)
+    {
+      display:none;
+    }
   }
 }
 
@@ -317,10 +330,10 @@ h5 + p{
 } */
 
 p:first-of-type:first-letter{
-  font-size:55px;
+  font-size:70px;
   float:left;
   line-height:40px;
-  margin-top:5px;
+  margin-top:13px;
   margin-right:5px;
 }
 
@@ -339,6 +352,12 @@ img:hover{
   background-color:$hover;
   transition:all .5s;
 }
+}
+
+@media screen and (max-width: 650px){
+  .mainText{
+    width: auto;
+  }
 }
 
 .media {
@@ -449,16 +468,16 @@ width:650px;
   min-width:$minWidth;
  // width:100%;
 
-  .project-content
-  {
+ .project-content
+ {
 
-    max-width:900px;
+  max-width:900px;
     //top:100px;
     //position:relative;
 
     white-space:nowrap;
-    padding-top:$menuSize + 200px;
-    padding-bottom:200px;
+    padding-top:$menuSize + 150px;
+    padding-bottom:150px;
     margin:0 auto;
     padding-left:2vw;
     padding-right:2vw;
@@ -486,6 +505,8 @@ width:650px;
   }
 
 
+
+
   ul.metas{
     //border-left:dotted 1px;
     font-family: $titleFont;
@@ -493,8 +514,8 @@ width:650px;
     //float:right;
     width:150px;
     padding:0;
-    margin:0 0 0 5vw;
-    line-height: 1.8;
+    margin:0 0 0 3vw;
+    line-height: 1.5;
     list-style-type: none;
     //float:right;
     display: inline-block;
@@ -505,6 +526,7 @@ width:650px;
       background:#111;
       width:100%;
       .link{
+        font-size: 12px;
         width : 100%;
         background:linear-gradient( #555, #555) no-repeat;
         background-size:0% 100%;
@@ -514,14 +536,14 @@ width:650px;
         padding-bottom:5px;
         transition: all .3s;
         color:$light-gray !important;
-        margin-bottom:1px;
+        margin-bottom:2px;
       }
       //background-color:#999;
 
       text-decoration:none;
       text-transform:uppercase;
       font-weight:300;
-      letter-spacing:1px;
+      letter-spacing:2px;
 
       //margin-top:15px;
 
@@ -532,13 +554,14 @@ width:650px;
       //color:$dark-gray !important;
     }
     li{
+      margin-bottom: 10px;
     }
     li:last-child{
       margin-top:25px;
     }
     
 
-  
+
     span.left{
       font-weight:bold;
       display: block;
@@ -550,30 +573,45 @@ width:650px;
       font-weight:normal;
 
       //left:20px;
+    }
   }
-}
-h3,h5{
-  float:left;
-  position:relative;
-  //  left:-150px;
-  margin-right:20px;
-  margin-left:calc(900px - 100vw);
 
-}
+  @media screen and (max-width: 650px){
+    ul.metas{
+      display: none;
 
-@media screen and (max-width: 900px){
+    }
+  }
   h3,h5{
-  display: none;
+    float:left;
+    position:relative;
+  //  left:-150px;
+  margin-right:50px;
+  margin-left:calc((700px - 100vw)/6);
 
 }
-}
+
+
+
+@media screen and (min-width: 1700px){
+  h3,h5{
+   margin-left:-170px;
+ }
+} 
 
 h4{
   float:right;
   position:relative;
   margin-left:30px;
-  margin-right:10px
+  margin-right:-150px
 
+}
+
+@media screen and (max-width: 990px){
+  h3,h4,h5{
+    display: none;
+
+  }
 }
 
 h3,h4,h5{
@@ -589,34 +627,34 @@ h3,h4,h5{
     //color:#111;
     margin-top:26px;
     margin-bottom:20px;
-  
+
   }
 
   h3:hover,h4:hover,h5:hover{
  //   background-size:100% 100%;
-    transition: all .3s;
-    transform:scale(1.1)
-    
-  }
+ transition: all .3s;
+ transform:scale(1.1)
 
-  h3:hover:before,h4:hover:before,h5:hover:before{
- //   background-size:100% 100%;
-      
-      left:-50px;
-      opacity: 0;
-  }
+}
 
-  h3:hover:after,h4:hover:after,h5:hover:after{
+h3:hover:before,h4:hover:before,h5:hover:before{
  //   background-size:100% 100%;
-      
+
+ left:-50px;
+ opacity: 0;
+}
+
+h3:hover:after,h4:hover:after,h5:hover:after{
+ //   background-size:100% 100%;
+
       /* margin-left:50px;
       margin-right:-50px; */
       left:50px;
       opacity: 0;
-  }
+    }
 
-   h3:before,h4:before,h5:before{
-    content:"\"";
+    h3:before,h4:before,h5:before{
+      content:"\"";
     //font-size:20px;
     //font-weight:600;
     position:relative;
@@ -631,9 +669,9 @@ h3,h4,h5{
     transition: all .3s;
     //font-size:20px;
    // font-weight:600;
-    position:relative;
-    opacity:1;
-    left:0px;
+   position:relative;
+   opacity:1;
+   left:0px;
     //top:2px;
     //left:5px;
   }
@@ -642,7 +680,7 @@ h3,h4,h5{
     font-size:17px;
     color: $bigdarkgray;
   //  text-decoration:underline;
-  } 
+} 
 
 }
 
@@ -662,13 +700,13 @@ h3,h4,h5{
     div.liCenter,a{
       cursor: pointer; cursor: hand;
       width:700px;
-      margin:0 auto;
       display:block;
       height:100%;
       line-height:$menuSize;
       color:black !important;
       text-decoration:none;
       letter-spacing:2.5px;
+      margin:0 auto;
     }
     span.title{
       font-size:16px;
@@ -755,6 +793,7 @@ h3,h4,h5{
       letter-spacing:2.5px;
       text-align:left;
       margin:0 auto;
+
     }
     span{
     }
@@ -778,7 +817,7 @@ h3,h4,h5{
       font-weight:normal;
     }
 
-
+     
 
   }
 
@@ -856,9 +895,9 @@ h3,h4,h5{
     .background{
        //background-position: 0 51%;
        transform:scale(2);
-      transition:all 50s;
-      transition-timing-function:linear;
-    }
+       transition:all 50s;
+       transition-timing-function:linear;
+     }
 
 
     // height:100px;
@@ -866,3 +905,29 @@ h3,h4,h5{
 }
 
 }
+@media screen and (min-width: 800px) and (max-width: 1300px){
+  .menu{
+    div.liCenter,div.innerSelected{
+      margin:0 0 0 calc(8% + 50px) !important;
+    }
+}
+}
+
+@media screen and (max-width: 800px){
+  .menu{
+    div.innerSelected{
+      width:auto !important;
+      display:inline-block !important;
+    }
+    .menuUl{
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+      span.separator,span.subtitle{
+        display:none;
+      }
+    } 
+
