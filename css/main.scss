@@ -297,7 +297,7 @@ canvas{
 
 
 .mainText{
-  width:calc(98vw - 210px);
+  width:calc(98vw - 240px);
   margin:0;
   display: inline-block;
   max-width: 700px;
@@ -471,7 +471,7 @@ width:650px;
  .project-content
  {
 
-  max-width:900px;
+  max-width:910px;
     //top:100px;
     //position:relative;
 
@@ -497,7 +497,7 @@ width:650px;
   }
 
   hr{
-    max-width:700px;
+    //max-width:700px;
     margin:0;
     margin-top:40px;
     margin-bottom:50px;
@@ -510,11 +510,14 @@ width:650px;
   ul.metas{
     //border-left:dotted 1px;
     font-family: $titleFont;
-    font-size:13px;
+    font-size:15px;
     //float:right;
     width:150px;
     padding:0;
-    margin:0 0 0 3vw;
+    //margin:0 0 0 4vw;
+    right:0;
+    float:right;
+    margin:0;
     line-height: 1.5;
     list-style-type: none;
     //float:right;
@@ -587,13 +590,13 @@ width:650px;
     position:relative;
   //  left:-150px;
   margin-right:50px;
-  margin-left:calc((700px - 100vw)/6);
+  margin-left:calc((990px - 100vw)/2.5);
 
 }
 
 
 
-@media screen and (min-width: 1700px){
+@media screen and (min-width: 1400px){
   h3,h5{
    margin-left:-170px;
  }
