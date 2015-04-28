@@ -124,7 +124,7 @@
       }
     }
     if(menuOpened) shadow();
-    resizeMedia();
+    //resizeMedia();
 
   }
 

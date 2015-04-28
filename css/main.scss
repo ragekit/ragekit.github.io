@@ -368,10 +368,12 @@ img:hover{
   div.image{
     cursor: pointer; cursor: hand;
     width:100%;
+    width:80vw;
+    height:80vh;
     //set in js ?
   //  height:550px;
 //    height:500px;
-margin-bottom:10px;
+margin:0 auto 5vw auto;
 background-position: center;
 background-size: cover;
 background-repeat : no-repeat;
