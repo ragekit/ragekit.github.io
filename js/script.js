@@ -77,7 +77,7 @@
 
       ulContainer.style.height = window.innerHeight + "px";
       menuUl.style.height = (window.innerHeight - menuHeightClosed) + "px";
-      projects[0].style.top = (window.innerHeight - menuHeightClosed -100) +"px";
+      projects[0].style.top = (window.innerHeight - menuHeightClosed) +"px";
       projects[0].style.position = "relative";
       var scrollValue = document.documentElement.scrollTop || document.body.scrollTop;
       
@@ -100,7 +100,7 @@
       var leftScroll = document.documentElement.scrollLeft || document.body
       .scrollLeft
 
-     if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
+     if (scrollValue > parseInt(projects[0].style.top, 10)) {
         menuDiv.style.position = "fixed";
         menuDiv.style.left = -leftScroll + parseInt(window.getComputedStyle(document.getElementsByClassName("page-content")[0]).paddingLeft) +"px";
         siteHeader.style.left = -leftScroll + "px";
@@ -158,7 +158,7 @@
       }
 
 
-      if (scrollValue > parseInt(projects[0].style.top, 10)+100) {
+      if (scrollValue > parseInt(projects[0].style.top, 10)) {
         menuDiv.style.position = "fixed";
         menuDiv.style.left = -leftScroll + parseInt(window.getComputedStyle(document.getElementsByClassName("page-content")[0]).paddingLeft) +"px";
         siteHeader.style.left = -leftScroll + "px";
@@ -173,7 +173,7 @@
 
       menuUl.style.overflowX = "hidden";
 
-      if (scrollValue > parseInt(projects[0].style.top, 10) +100 || scrollValue <=
+      if (scrollValue > parseInt(projects[0].style.top, 10) || scrollValue <=
         0) {
         menuUl.style.overflowY = "scroll";
         //  menuUl.style.width = (window.innerWidth -15) + "px";
