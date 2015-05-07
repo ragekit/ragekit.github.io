@@ -18,7 +18,7 @@ $titleFont : "Montserrat";
 $mainTextSize : 22px;
 $bigdarkgray : #000000;
 $headerColor : white;
-$mainLineHeight : 1.5;
+$mainLineHeight : 1.6;
 $retraitMaintextGauche :75px;
 
 body{
@@ -600,7 +600,7 @@ width:650px;
 
 @media screen and (min-width: 1400px){
   h3,h5{
-   margin-left:-170px;
+   margin-left:-130px;
  }
 } 
 
@@ -608,7 +608,7 @@ h4{
   float:right;
   position:relative;
   margin-left:30px;
-  margin-right:-150px
+  margin-right:-100px
 
 }
 
@@ -622,12 +622,13 @@ h4{
 h3,h4,h5{
     //color:$dark-gray;
     font-size:22px;
-    width:250px;
+    width:200px;
     white-space:normal;
     //height:35px;
-    line-height:1.5;
+    line-height:$mainLineHeight;
     text-align:center;
-    font-weight:700;
+    font-weight:normal;
+    color:#00AEEF;
     transition: all .3s;
     //color:#111;
     margin-top:26px;
@@ -659,7 +660,7 @@ h3:hover:after,h4:hover:after,h5:hover:after{
     }
 
     h3:before,h4:before,h5:before{
-      content:"\"";
+    //  content:"\"";
     //font-size:20px;
     //font-weight:600;
     position:relative;
@@ -670,7 +671,7 @@ h3:hover:after,h4:hover:after,h5:hover:after{
     //left:-3px;
   }
   h3:after,h4:after,h5:after{
-    content:"\"";
+    //content:"\"";
     transition: all .3s;
     //font-size:20px;
    // font-weight:600;
