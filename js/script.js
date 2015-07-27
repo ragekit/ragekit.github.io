@@ -52,6 +52,7 @@
     paddingRight:bodyCS.paddingRight
   }
   function resize() {
+        //document.getElementsByClassName("project")[0].style.height = "20000px";
         if((window.innerWidth - 100) <= minWidth -20)
         {
           var paddingValue = parseInt(normalPadding.paddingLeft)- (minWidth  +100- window.innerWidth)/2;
@@ -80,16 +81,16 @@
       projects[0].style.top = (window.innerHeight - menuHeightClosed) +"px";
       projects[0].style.position = "relative";
       var scrollValue = document.documentElement.scrollTop || document.body.scrollTop;
-      
+
        var correction = window.getComputedStyle(document.getElementsByClassName("page-content")[0]).paddingLeft;
       correction = parseInt(correction)*2;
 
       void 0
 
-      
+
 
         menuUl.style.overflowY = "scroll";
-      
+
         menuDiv.style.width = window.getComputedStyle(document.getElementsByClassName("project")[0]).width;
         menuUl.style.width = parseInt(menuDiv.style.width) + 20 + "px";
         //menuUl.style.width = document.body.clientWidth20+ "px";
@@ -123,7 +124,11 @@
         }
       }
     }
-    if(menuOpened) shadow();
+    if(menuOpened){
+        if(openedUp){
+            ulContainer.style.top = (-Math.min(menuUl.offsetHeight,lis.length*100)  - menuHeightClosed) + "px";
+        }
+    }
     //resizeMedia();
 
   }
@@ -309,7 +314,7 @@ function showBottomShadow(){
 
   function hideShadow() {
     hideTopShadow();
-    hideBottomShadow();  
+    hideBottomShadow();
   }
 
   function menuOver(e) {
@@ -403,8 +408,7 @@ function showBottomShadow(){
 
     if (up) {
 
-      ulContainer.style.top = (-menuUl.offsetHeight - menuHeightClosed) +
-      "px";
+      ulContainer.style.top = (-Math.min(menuUl.offsetHeight,lis.length*100)  - menuHeightClosed) + "px";
       menuUl.scrollTop = 500000;
     } else {
       ulContainer.style.top = 0;
@@ -501,7 +505,7 @@ function showBottomShadow(){
     {
       imgs = [];
     }
-  
+
 
     projectStartHeight = projects[0].offsetHeight;
 
@@ -546,7 +550,7 @@ function showBottomShadow(){
 
     }
     }
-    
+
 
     var liBackground = menuUl.getElementsByTagName("img");
     liBackground = Array.prototype.slice.call(liBackground, 0);
@@ -558,7 +562,7 @@ function showBottomShadow(){
       parent.style.display = "none";
       im.onload = (function(i) {
         parent.style.backgroundImage = "url(" + liBackground[i].src + ")";
-        
+
         while (parent.firstChild) {
           void 0;
           parent.removeChild(parent.firstChild);
@@ -567,7 +571,7 @@ function showBottomShadow(){
           autoAlpha: 1
         });
       })(i)
-      
+
       im.src = liBackground[i].src;
 
     }
