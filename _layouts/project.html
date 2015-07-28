@@ -41,6 +41,9 @@ layout: default
   </article>
 
   <div class="media">
+   {% for media in page.externalMedia %}
+    <iframe src={{media}} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+    {% endfor %}
     {% for media in page.media %}
     <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})>
     </div>

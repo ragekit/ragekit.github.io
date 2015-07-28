@@ -366,7 +366,9 @@ img:hover{
   // margin-right : auto;
   //padding:50px;
   //padding: 0 20px;
-  div.image{
+
+  div.image, iframe{
+    display:block;
     cursor: pointer; cursor: hand;
     width:100%;
     width:80vw;
@@ -626,7 +628,8 @@ h3,h4,h5{
     width:200px;
     white-space:normal;
     //height:35px;
-    line-height:$mainLineHeight;
+    line-height:1.3;
+    text-transform: capitalize;
     text-align:center;
     font-weight:normal;
     color:#00AEEF;

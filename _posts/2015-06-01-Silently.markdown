@@ -5,13 +5,15 @@ subtitle: "You won't make it"
 permalink: silently
 cover: /silently/cover.jpg
 shortDes:  No matter what you do, you won't be able to handle everything
-color: 805A1B
+color: 555555
 what: Everything
 where: Albi
 type: "Game"
 link :
     - name: "Bundle Page"
       url : "https://www.indiegogo.com/projects/the-magpie-collection#/story"
+externalMedia :
+    - https://sketchfab.com/models/d375c45c9b4b409f99769deca9a55b13/embed
 media :
     - /assets/silently/01.jpg
     - /assets/silently/02.jpg
@@ -20,6 +22,8 @@ media :
     - /assets/silently/05.jpg
 ---
 
+
+###Drifting and Explosions
 Silently I Fall, is a small game I made for the Magpie Bundle initiated by Dominik Johann and William Pugh.
 
 It's a small drifter game about fixing things and losing control.
@@ -28,4 +32,7 @@ The Bundle was set up as a way to gather money to reimburse stuffs that were sto
 
 All together we managed to get 12 833 euros of the 17 000 asked, and that's pretty cool.
 
+####A 3D modelling excercise
 This also allowed me to learn a bit of 3D modelling, UV unwrapping and texturing, and set-up different workflows from 3D software to Unity.
+
+The game was only available during the duration of the bundle so if you didn't purchase it then, it is lost FOREVER !

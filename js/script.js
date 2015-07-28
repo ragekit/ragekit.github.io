@@ -138,6 +138,7 @@
       var im = imgs[i];
       im.style.height = window.innerHeight - 150 + "px";
     }
+
   }
 
   function scroll() {
