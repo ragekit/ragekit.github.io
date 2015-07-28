@@ -141,6 +141,7 @@ body{
   background-color:$bckground;
   width:100%;
   bottom:0;
+  //position:absolute;
   background-color: white;
   font-family: $titleFont;
   //margin-bottom:50px;
@@ -177,7 +178,7 @@ body{
     //opacity:.5;
     margin: 0 auto;
     max-width:700px;
-    
+
     span.author{
       font-weight:600;
     }
@@ -211,12 +212,12 @@ body{
         display: none;
       }
     }
-  } 
+  }
    @media screen and (max-width: 1000px){
     ul.right {
       display:none;
     }
-  } 
+  }
 
   ul.right{
     right:50px;
@@ -323,7 +324,7 @@ a:link,a:hover,a:visited,a:active{
 a:hover{
   color:#4572B8;
 }
-/* 
+/*
 h5 + p{
   margin-left:$retraitMaintextGauche;
   //left:$retraitMaintextGauche;
@@ -564,7 +565,7 @@ width:650px;
     li:last-child{
       margin-top:25px;
     }
-    
+
 
 
     span.left{
@@ -602,7 +603,7 @@ width:650px;
   h3,h5{
    margin-left:-130px;
  }
-} 
+}
 
 h4{
   float:right;
@@ -686,7 +687,7 @@ h3:hover:after,h4:hover:after,h5:hover:after{
     font-size:17px;
     color: $bigdarkgray;
   //  text-decoration:underline;
-} 
+}
 
 }
 
@@ -695,7 +696,7 @@ h3:hover:after,h4:hover:after,h5:hover:after{
   min-width:$minWidth;
   z-index:10;
   top:0;
-  width:100%; 
+  width:100%;
   position: fixed;
   li{
 
@@ -757,7 +758,7 @@ h3:hover:after,h4:hover:after,h5:hover:after{
       }
     }
 
-    $leftArrowPos : -460px; 
+    $leftArrowPos : -460px;
     $rightArrowPos : $leftArrowPos + 30px;
     .prevArrow{
       margin-left:$leftArrowPos;
@@ -823,7 +824,7 @@ h3:hover:after,h4:hover:after,h5:hover:after{
       font-weight:normal;
     }
 
-     
+
 
   }
 
@@ -938,5 +939,4 @@ h3:hover:after,h4:hover:after,h5:hover:after{
       span.separator,span.subtitle{
         display:none;
       }
-    } 
-
+    }
