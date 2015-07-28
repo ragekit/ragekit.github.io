@@ -1,0 +1,31 @@
+---
+layout: project
+title:  "Silently, I fall"
+subtitle: "You won't make it"
+permalink: silently
+cover: /silently/cover.jpg
+shortDes:  No matter what you do, you won't be able to handle everything
+color: 805A1B
+what: Everything
+where: Albi
+type: "Game"
+link :
+    - name: "Bundle Page"
+      url : "https://www.indiegogo.com/projects/the-magpie-collection#/story"
+media :
+    - /assets/silently/01.jpg
+    - /assets/silently/02.jpg
+    - /assets/silently/03.jpg
+    - /assets/silently/04.jpg
+    - /assets/silently/05.jpg
+---
+
+Silently I Fall, is a small game I made for the Magpie Bundle initiated by Dominik Johann and William Pugh.
+
+It's a small drifter game about fixing things and losing control.
+
+The Bundle was set up as a way to gather money to reimburse stuffs that were stolen (probably by magpies), during the 2015 edition of Amaze Festival in Berlin. Dom and Will asked game designers that were present at the festival to come up with a small contribution for the bundle.
+
+All together we managed to get 12 833 euros of the 17 000 asked, and that's pretty cool.
+
+This also allowed me to learn a bit of 3D modelling, UV unwrapping and texturing, and set-up different workflows from 3D software to Unity.
