@@ -1,15 +1,18 @@
 
+Benjamin Gattet is an **interdisciplinary Artist/Designer/Hacker** specialized in playful interactions, game design, and exploring uncharted territories.
 
-Welcome. I'm Benjamin Gattet, a French multimedia **artist/Hacker** specialized in playful interactions, gamedesign, and exploring uncharted territories.
+His work revolves around **atypical experiences**, new forms of narration (wordless, environmental, purely diegetic or systemic), procedurality and the phenomenology of play.
 
-I'm freshly out of the the University of Art and Design of Geneva **HEAD** where I studied media design. Before that, I studied multimedia and digital design at **Gobelins, Paris**.
-I did websites and digital art before, and now I make games.
-{: .leftTab}
+He is doing a ***PhD in Game Design and Game Criticism***.
 
-I don't really want to choose between being a designer or a being a developer, since I'm interested in what can spawn between art and technology, and learning new things all the time. I prefer to identify as a **maker**.
+He holds a ***MA in Media Design*** from the ***University of Geneva HEAD***, where his final dissertation was about the new kind in narration found in videogames. To explore the ideas of his thesis, he made a small videogame : Within, which can be found on his itch.io page.
 
-You can find my CV [Here]({{ "/assets/cv.pdf" | prepend: site.baseurl }}).
-If you want to see older projects of mine, have a look at the portfolios I sent to [Gobelins]({{ "/assets/gobelins2010.pdf" | prepend: site.baseurl }}) and [Head]({{ "/assets/head2012.pdf" | prepend: site.baseurl }})
+Before that he studied **multimedia and digital design at Gobelins, Paris**.
+
+Benjamin is interested in what can spawn **between art and technology**, that’s why he doesn’t want to clearly identify either as a designer or as a developer, but rather as a **maker**.
+
+You can find his CV [Here]({{ "/assets/cv.pdf" | prepend: site.baseurl }}).
+If you want to see older projects of his, have a look at the portfolios he sent to [Gobelins]({{ "/assets/gobelins2010.pdf" | prepend: site.baseurl }}) and [Head]({{ "/assets/head2012.pdf" | prepend: site.baseurl }})
 
  (◡‿◡✿)
 
