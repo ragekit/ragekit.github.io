@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="lightbox"></div>
 <div class="cover">
-  <img src="{{site.baseurl}}/assets{{ page.cover }}"/>
+  <img src="assets/{{ page.cover }}"/>
   <canvas class="loader">RK</canvas>
 </div>
 <div class="project">
@@ -31,7 +31,7 @@ layout: default
         {% if page.link contains "http" %}
           <a href="{{link.url}}"><div class="link">{{link.name}}</div></a>
         {% else %}
-          <a href="{{ link.url | prepend: site.baseurl }}"><div class="link">{{link.name}}</div></a>
+          <a href="{{ link.url }}"><div class="link">{{link.name}}</div></a>
         {% endif %} 
       {% endfor %}
       </li> 
@@ -45,7 +45,7 @@ layout: default
     <iframe src={{media}} frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
     {% endfor %}
     {% for media in page.media %}
-    <div class="image" style=background-image:url({{ media | prepend : site.baseurl }})>
+    <div class="image" style="background-image:url({{ media }})">
     </div>
     {% endfor %}
     <!-- {% for media in page.media %}
@@ -83,4 +83,4 @@ layout: default
 
   <div style="clear:both"></div>
 </div>
-<script type="text/javascript" src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="js/script.js"></script>

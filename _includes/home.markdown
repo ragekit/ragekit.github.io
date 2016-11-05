@@ -11,8 +11,8 @@ Before that he studied **multimedia and digital design at Gobelins, Paris**.
 
 Benjamin is interested in what can spawn **between art and technology**, that’s why he doesn’t want to clearly identify either as a designer or as a developer, but rather as a **maker**.
 
-You can find his CV [Here]({{ "/assets/cv.pdf" | prepend: site.baseurl }}).
-If you want to see older projects of his, have a look at the portfolios he sent to [Gobelins]({{ "/assets/gobelins2010.pdf" | prepend: site.baseurl }}) and [Head]({{ "/assets/head2012.pdf" | prepend: site.baseurl }})
+You can find his CV [Here]("assets/cv.pdf").
+If you want to see older projects of his, have a look at the portfolios he sent to [Gobelins]("assets/gobelins2010.pdf") and [Head]("assets/head2012.pdf"}})
 
  (◡‿◡✿)
 

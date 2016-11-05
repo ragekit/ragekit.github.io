@@ -3,7 +3,7 @@ layout: project
 title:  "Twitter in 24h"
 subtitle: "Choose your own Twitter adventure"
 permalink: twitterin24h
-cover: /twitter/twitter.jpg
+cover: twitter/twitter.jpg
 shortDes:  A snapshot of 24 hours of my twitter feed built like a choose-your-own-adventure book
 color: 55ACEE
 what: Concept/Development
@@ -11,14 +11,14 @@ with: Julia Andreone
 where: Lausanne
 type : "print"
 media :
-  - /assets/twitter/1.jpg
-  - /assets/twitter/2.jpg
-  - /assets/twitter/3.jpg
-  - /assets/twitter/4.jpg
-  - /assets/twitter/5.jpg
+  - assets/twitter/1.jpg
+  - assets/twitter/2.jpg
+  - assets/twitter/3.jpg
+  - assets/twitter/4.jpg
+  - assets/twitter/5.jpg
 ---
 
-###Experiment on digital editing made during a workshop at Ecal
+### Experiment on digital editing made during a workshop at Ecal
 This was a project made during a workshop at Ecal in Lausanne, centered around digital editing and algorithmic layouts. This main material used to build the book was a collection of all tweets present in my timeline during a 24h timespan. Each content (twitter bio, avatar, multimedia content, text) was separated and put on a different page, accompanied by a small glyph to represent their type, and linked together by page numbers. This makes the experience of reading this book like the one of reading a choose your own adventure book.
 
 A small program was built to create the book easily so it could be done by anyone on with any Twitter account. It will probably be open-sourced in the future but you can ask me for the code if you're interested.

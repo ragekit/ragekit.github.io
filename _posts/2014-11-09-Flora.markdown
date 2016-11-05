@@ -3,7 +3,7 @@ layout: project
 title:  "Flora"
 subtitle: "Procedural Flower Generator"
 permalink: flora
-cover: /flora/zoomachines.jpg
+cover: flora/zoomachines.jpg
 shortDes:  Generative flowers that grow infinitely and burn your CPU
 color: E2760C
 what: Game Design/Development
@@ -14,14 +14,14 @@ link :
       url : "http://ragekit.itch.io/flora"
 type: "Jam Game"
 media :
-    - /assets/flora/2.png
-    - /assets/flora/1.png
-    - /assets/flora/flora.png
-    - /assets/flora/3.png
+    - assets/flora/2.png
+    - assets/flora/1.png
+    - assets/flora/flora.png
+    - assets/flora/3.png
 ---
 
 
-###Contemplative flower generator
+### Contemplative flower generator
 Flora is a small jam game that we made at the Zoomachine festival in november.
 At first it was going to be a gardening simulator where you had to tend to various alien shaped flowers, but the lack of time transformed it into a contemplative experience where you watch flowers grow slowly from a simple stem to a gigantic tree.
 
